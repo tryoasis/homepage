@@ -258,7 +258,7 @@ html[data-theme="light"] {
   --rbrh-text-link-hover: inherit;
   --rbrh-text-link: var(--rbrh-white);
 
-  --rbrh-shadow-focus: 0 0 0 0.3rem var(--rbrh-blue-400);
+  --rbrh-shadow-focus: none
 }
 
 /* Font-family & background-color
@@ -300,7 +300,7 @@ html[data-theme="dark"] {
   --rbrh-text-link-hover: var(--rbrh-white);
   --rbrh-text-link: var(--rbrh-white);
 
-  --rbrh-shadow-focus: 0 0 0 0.3rem var(--rbrh-magenta-300);
+  --rbrh-shadow-focus: none;
 }
 
 /* Breakpoint mixins
