@@ -1,9 +1,9 @@
 export default {
-	name: "Zauberhaft modern Astro Agency Template",
-	description: "Build modern & unique agency portfolio websites that convert. Supercharge your online presence & get more customers with responsive & high performance dark mode Astro template. Easily customize the template with utility classes & CSS custom properties.",
-	keywords: "Free HTML template, agency HTML template, free responsive HTML template, zero configuration, lightweight & minimal CSS library, dark mode HTML template, modern HTML template, HTML kit, UI template, HTML template, free HTML, free HTML responsive, Astro template, Free Astro template, Astro starter, Nextjs template, Free Nextjs template, Nextjs starter, Gatsby template, Free Gatsby template, Gatsby starter",
-	author: "Ariq N",
-	siteUrl: "https://zauberhaft.ravenbright.design",
-	GitHubUrl: "https://github.com/ariqnrnns/zauberhaft-astro",
+	name: "Uppercut - The best solution for tech partnerships and third-party integrations",
+	description: "Uppercut is the only integration developer that guarantees savings on time to market and costs or your money back. Tackle roadmaps at lightning speed ⚡️ while leveraging OSS tools without relying on a flaky SaaS platform",
+	keywords: "integrations, tech partnerships, third-party integrations, integration developer, integration development, integrations agency, saas, startups, tech, software, software development, tech partnership agency",
+	author: "James Bohrman",
+	siteUrl: "https://www.uppercut.io",
+	GitHubUrl: "https://github.com/uppercut-ip",
 	language: "English"
 };
