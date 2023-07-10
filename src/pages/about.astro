@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="About"
+>
+  <main>
+    <section class="xs-p-y-16 md-p-y-28 bg-gray-50 dark-bg-gray-900">
+        <div class="container container-xl">
+          <div class="split-screen items-center">
+            <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
+              <h2 class="m-b-6 font-semibold">
+                About Us
+              </h2>
+              <!--advantages-->
+              <div class="flex flex-column m-b-8">
+                <p class="m-b-4">
+                  Uppercut is a small team of developers and OSS enthusiasts in Knoxville, TN that are passionate about accelerating product roadmaps and tech partnerships. We have a proven track record of building and scaling roadmaps using OSS tools. 
+              </div>
+              <a
+                href="https://meetings.hubspot.com/james-bohrman"
+                class="btn black dark-bg-magenta-400 btn-lg shadow-lg"
+                role="button"
+                aria-label="Download Astro template"
+                id="track"
+              >
+                Schedule a call
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler m-l-3 icon-tabler-phone-call" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                  <path d="M15 7a2 2 0 0 1 2 2"></path>
+                  <path d="M15 3a6 6 0 0 1 6 6"></path>
+               </svg>
+              </a>
+            </div>
+            <img
+              class="radius-md m-b-6 md-w-50"
+              src="/team.jpg"
+              loading="lazy"
+              width="560" height="320"
+              alt="Business & work - Unsplash image by @brookecagle - https://unsplash.com/photos/-uHVRvDr7pg"
+            />
+          </div>
+        </div>
+      </section>
+  </main>
+</Layout>

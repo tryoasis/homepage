@@ -11,12 +11,12 @@
   "description": "Build modern & unique agency portfolio websites that convert. Supercharge your online presence & get more customers with responsive & high performance dark mode Astro template. Easily customize the template with utility classes & CSS custom properties",
   "style": "dist/ravenbright.min.css",
   "scripts": {
-		"start": "astro dev",
-		"css-development": "postcss src/styles/main.css --output src/styles/dist/ravenbright.min.css --watch",
-		"css-production": "cross-env NODE_ENV=production postcss src/styles/main.css --output src/styles/dist/ravenbright.min.css",
+    "start": "astro dev",
+    "css-development": "postcss src/styles/main.css --output src/styles/dist/ravenbright.min.css --watch",
+    "css-production": "cross-env NODE_ENV=production postcss src/styles/main.css --output src/styles/dist/ravenbright.min.css",
     "dev": "concurrently 'npm:css-development' 'npm:start' ",
-		"astro-build": "astro build",
-		"build": "concurrently 'npm:css-production' 'npm:astro-build' ",
+    "astro-build": "astro build",
+    "build": "concurrently 'npm:css-production' 'npm:astro-build' ",
     "preview": "astro preview"
   },
   "bugs": {
@@ -42,9 +42,13 @@
     "postcss-nested": "^6.0.0"
   },
   "dependencies": {
-    "astro": "^1.6.10",
+    "@astrojs/image": "^0.17.2",
+    "@sendgrid/mail": "^7.7.0",
+    "astro": "^2.8.0",
+    "astro-seo": "^0.7.4",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
-		"cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "utils": "^0.3.1"
   }
 }

@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contact"
+>
+  <main>
+    <section class="xs-p-y-16 md-p-y-28 bg-gray-50 dark-bg-gray-900">
+        <div class="container container-xl">
+          <div class="split-screen items-center">
+            <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
+              <h2 class="m-b-6 font-semibold">
+                Contact Us
+              </h2>
+              <!--advantages-->
+              <div class="flex flex-column m-b-8">
+                <p class="m-b-4">
+                  We're here to help and answer any question you might have. <br> We look forward to hearing more about what you're trying to solve!
+                </p>
+                <p class="m-b-4">
+                    <input type="email" name="email" placeholder="Email" class="w-full p-4 rounded-lg bg-gray-100 dark-bg-gray-800 border border-gray-200 dark-border-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:border-primary-500">
+                </p>
+                <p class="m-t-2 m-b-4">
+                    <textarea name="message" placeholder="Message" class="w-full p-4  rounded-lg bg-gray-100 dark-bg-gray-800 border border-gray-200 dark-border-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:border-primary-500"></textarea>
+                </p>
+                <p class="m-b-4">
+                    <button class="btn btn-primary">
+                        Send
+                    </button>
+                </p>
+              </div>
+            </div>
+            <img
+            class="radius-md m-b-6 md-w-50"
+            src="https://images.pexels.com/photos/3912366/pexels-photo-3912366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            loading="lazy"
+            width="560" height="320"
+            alt="Business & work - Unsplash image by @brookecagle - https://unsplash.com/photos/-uHVRvDr7pg"
+          />
+          </div>
+        </div>
+        </section>
+    </main>
+</Layout>
