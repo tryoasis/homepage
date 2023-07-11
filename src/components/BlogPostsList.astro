@@ -1,0 +1,30 @@
+---
+import BlogPostPreview from "./BlogPostPreview.astro";
+
+const {posts} = Astro.props;
+---
+
+<ul>
+  {posts.map((post) => (
+    <li>
+      <BlogPostPreview post={post} />
+    </li>
+  ))}
+</ul>
+
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 3rem;
+  }
+</style>
