@@ -18,17 +18,37 @@ import Layout from "../layouts/Layout.astro";
                 <p class="m-b-4">
                   We're here to help and answer any question you might have. <br> We look forward to hearing more about what you're trying to solve!
                 </p>
-                <p class="m-b-4">
-                    <input type="email" name="email" placeholder="Email" class="w-full p-4 rounded-lg bg-gray-100 dark-bg-gray-800 border border-gray-200 dark-border-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:border-primary-500">
-                </p>
-                <p class="m-t-2 m-b-4">
-                    <textarea name="message" placeholder="Message" class="w-full p-4  rounded-lg bg-gray-100 dark-bg-gray-800 border border-gray-200 dark-border-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:border-primary-500"></textarea>
-                </p>
-                <p class="m-b-4">
-                    <button class="btn btn-primary">
-                        Send
-                    </button>
-                </p>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script class="padding-25%">
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "40093919",
+                    formId: "038b24ae-f393-4544-baef-9d4622e14011"
+                  });
+                  {`
+                  document.addEventListener("hbspt.forms.postSubmit", function(event) {
+                      const form = event.target;
+                      const firstNameInput = form.querySelector('input[firstname="firstname"]');
+                      const lastNameInput = form.querySelector('input[lastname="lastname"]');
+                      const emailInput = form.querySelector('input[name="email"]');
+                      const companyInput = form.querySelector('input[name="company"]');
+                  });
+                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
+                      if (err) {
+                          console.log(err);
+                          return;
+                      }
+                      console.log(res);
+                      ko.track('form-submission', {
+                          formId: form.id,
+                          email: emailInput.value,
+                          firstname: firstNameInput.value,
+                          lastname: lastNameInput.value,
+                          company: companyInput.value
+                  });
+                });
+                `}
+                </script>
               </div>
             </div>
             <img
