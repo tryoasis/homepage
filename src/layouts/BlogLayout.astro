@@ -34,18 +34,9 @@ const seo = {
           frontmatter.image && (
             <picture>
               <source srcset={`${frontmatter.image}.webp`} type="image/webp" />
-              <img
-                width="1200"
-                height="630"
-                class="post-content__img"
-                loading="eager"
-                src={`${frontmatter.image}.png`}
-                alt={frontmatter.alt}
-              />
             </picture>
           )
         }
-      </div>
       <div class="post-content__content flow fade-in">
         <slot />
       </div>
@@ -77,7 +68,8 @@ const seo = {
   }
   .post-content__title {
     margin: 1rem auto;
-    font-size: var(--step-5);
+    font-size: 3rem;
+    padding: 0 13rem;
   }
   .post-content__date {
     margin: 0 auto;
@@ -90,10 +82,34 @@ const seo = {
     max-width: 50%;
     height: auto;
     border-radius: 2rem;
+    object-fit: contain; /* Use 'contain' to prevent image repetition */
   }
   .post-content__content :global(img) {
     display: block;
     margin: 2rem auto;
     max-width: 100%;
+  }
+
+  .post-content__content {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    padding: 0 1rem; /* Adjust the horizontal padding as needed */
+    text-align: left; /* Add this line to align the text to the left */
+  }
+
+  .post-content__content :global(h2) {
+    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+  }
+
+  .post-content__content :global(h2) {
+    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+  }
+
+  .post-content__content :global(h3) {
+    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+  }
+
+  .post-content__content :global(p) {
+    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
   }
 </style>
