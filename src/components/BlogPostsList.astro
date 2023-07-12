@@ -3,16 +3,23 @@ import BlogPostPreview from "./BlogPostPreview.astro";
 
 const {posts} = Astro.props;
 ---
-
-<ul>
-  {posts.map((post) => (
-    <li>
-      <BlogPostPreview post={post} />
-    </li>
-  ))}
-</ul>
+<div>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <BlogPostPreview post={post} />
+      </li>
+    ))}
+  </ul>
+</div>
 
 <style>
+  div {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 1rem;
+  }
+  
   ul {
     margin: 0;
     padding: 0;

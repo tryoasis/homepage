@@ -1,50 +1,48 @@
 ---
-title: "Looking for a growth buddy? Announcing the Distilled Partnership Program 🌱"
-excerpt: "In today's fast-paced and ever-evolving business landscape, collaboration and partnership are key ingredients for success."
-publishDate: "2023-06-23T10:34:16.50Z"
-image: "https://images.pexels.com/photos/1198171/pexels-photo-1198171.jpeg?auto=compress&cs=tinysrgb&w=800"
-alt: "group with hands in a pile"
+title: "Partnerships and Unified APIs: The Dynamic Duo of Product Growth"
+excerpt: "For many SaaS applications, the ability to support bi-directional data syncing with various third-party APIs is a crucial element for competing in a fast-paced ecosystem. From a CRM that needs to sync analytics from a mailing service, to a community platform that needs to check the status of Github PRs, the demand for integration is there."
+publishedAt: "06/23/2023"
+image: "https://images.pexels.com/photos/6456264/pexels-photo-6456264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+alt: "boxing gloves bumping fists"
 category: "Announcements"
 author: "James Bohrman"
 layout: "../../layouts/BlogLayout.astro"
 tags: [parnerships, growth, distilled]
-slug: partner-program
-ctaTitle: "Ready to grow together?"
-ctaDescription: "Become a Distilled Partner today"
-ctaLinkCopy: "Submit an partnership application"
-ctaLinkUrl: "https://distilled.partnerpage.io/integrations/get-listed/form"
+slug: partnerships-and-unifiedapis
+ctaTitle: "Ready to grow your partnerships?"
+ctaDescription: "Accelerate your roadmap"
+ctaLinkCopy: "Schedule a call"
+ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](https://images.pexels.com/photos/1198171/pexels-photo-1198171.jpeg?auto=compress&cs=tinysrgb&w=800")
+![](https://images.pexels.com/photos/6456264/pexels-photo-6456264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
-In today's fast-paced and ever-evolving business landscape, collaboration and partnership are key ingredients for success. At Distilled, we understand the importance of working together to achieve common goals and create mutually beneficial opportunities. That's why we're thrilled to announce the launch of our Partnership Program—an initiative designed to foster stronger alliances and empower businesses to thrive in the digital era.
+For many SaaS applications, the ability to support bi-directional data syncing with various third-party APIs is a crucial element for competing in a fast-paced ecosystem. From a CRM that needs to sync analytics from a mailing service, to a community platform that needs to check the status of Github PRs, the demand for integration is there.
 
-## What is the Distilled Partner Program?
+The blocker that comes up, however, is that many organizations only have so much time and capital to devote to adding new integrations to their roadmap. When these things begin to stand in the way of progress, what can an organization do to keep moving forward at a decent pace? 
 
-The Distilled Partnership Program is built on the foundation of shared values, trust, and a commitment to excellence. We believe that by joining forces with like-minded organizations, we can enhance our collective capabilities, drive innovation, and deliver even greater value to our clients. Through this program, we aim to create a collaborative ecosystem that brings together diverse expertise, perspectives, and resources, ultimately resulting in accelerated growth and success for all involved. Let's take a closer look at the key components.
+## The Rise of the Unified API 
 
-### Strategic Collaboration
+In the past couple years, a new trend has emerged in how we manage third-party APIs and integrations as a whole. While in the past, people would rely on organizations like [Zapier](https://zapier.com/) to connect various data sources, there was no bidirectional syncing of data. The need for two-way syncing becomes apparent when a team or organization is building anything more than a business automation.
 
-The program provides a platform for strategic collaboration between Distilled and our partners. We believe that by combining our respective strengths, we can tackle complex challenges, leverage new opportunities, and deliver comprehensive solutions to our clients. Whether it's joint marketing initiatives, co-creation of products or services, or shared thought leadership, we are committed to working hand-in-hand with our partners to achieve shared success.
+When building an API integration, data needs to be synced for both your customer, and on the servers of third-party. This is where Unified APIs come in, as a layer between the originating host and the third-party API. With tools like [Nango (YC W23)](https://www.nango.dev) and [Poozle (YC S23)](https://www.poozle.dev), organizations can leverage standardized formatted for integrating with third-party APIs, and pre-made templates for many services out-of-the-box. 
 
-### Knowledge Sharing and Training
+ Being open source projects, Nango and Poozle allow startups to stand up their own instances on their infrastructure ([Or hire us 😎](https://www.tryuppercut.com/)), and connect over 70 third-party services to their product in less than a month. This allow massive cost savings by forgoing the monthly fees of other, cloud-hosted only, Unified API tools such as [Merge](https://www.linkedin.com/company/merge-api/) or [Apideck](https://www.linkedin.com/company/apideck/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BvNTDkiEKTDStrtbyckeFPg%3D%3D).
 
-We understand the power of knowledge and continuous learning. Through our partnership program, we offer access to a wealth of resources, including industry insights, research papers, webinars, and training programs. By fostering a culture of knowledge sharing, we aim to empower our partners with the latest trends, best practices, and cutting-edge strategies that will enable them to stay ahead in today's competitive market.
+But the real beauty of Unified API's is a bit of a hidden feature. 
 
-### Referral Opportunities
+## Rocket fuel for tech partnerships 🚀 
 
-As part of the program, we are excited to extend referral opportunities to our trusted partners. We believe in the strength of collaboration and in referring business to those who share our commitment to excellence. By referring clients to one another, we can expand our networks, build stronger relationships, and create a thriving ecosystem of trusted partners.
+So you've added a whopping 70+ new integrations to your app, and you're super hyped to show off your roadmap progress. It's time to run some Google Ads right? Wrong. One of the amazing things about the sheer scale of what OSS Unified API tools enable, is the ability to scale tech partnerships by at least 40%.
 
-### Exclusive Benefits
+One of the hardest parts about growing a large amount of tech partners, is the ability to grow a large gallery of integrations to fuel tech partnerships. With Unified APIs, this time commitment gets sawed in half, and you can put your focus into growing the relationships that matter for fruitful partnerships. 
 
-We value our partners and believe in rewarding their commitment and dedication. Through our partnership program, we offer exclusive benefits such as priority support, early access to new features and updates, and co-marketing opportunities. These benefits are designed to provide our partners with a competitive edge and ensure their continued growth and success.
+## Connect over 100+ premade integrations 
 
-### Community and Networking
+Both [Nango](https://www.nango.dev) and [Poozle](https://www.poozle.dev) support the ability to connect over 100 pre-made integrations for bi-directional syncing. From accounting tools, banking and finance platforms, and more, there is a massively growing platform of pre-configured API integrations.
 
-The program also aims to create a vibrant community where partners can connect, collaborate, and learn from one another. We understand the power of networking and the immense value that comes from building relationships with like-minded professionals. Through regular meetups, events, and an online forum, we provide a platform for our partners to interact, share insights, and forge valuable connections.
+On top of this, adding new connections only takes a bit of effort, and [we can help](https://meetings.hubspot.com/james-bohrman) with any custom integrations you need help with. 
 
-## Conclusion
+## Conclusion 
 
-At Distilled, we firmly believe that together, we can achieve greatness. The launch of our partnership program reflects our unwavering commitment to collaboration, innovation, and client success. We are excited to embark on this journey with our partners, and we look forward to the incredible opportunities and achievements that lie ahead.
-
-If you're interested in becoming a part of our Partnership Program, we invite you to [submit an application](https://distilled.partnerpage.io/integrations/get-listed/form). Let's join forces, amplify our impact, and shape the future of the digital landscape together. Together, we are stronger, and together, we can achieve remarkable things.
+ If you're a startup that's looking to scale your integrations roadmap, get in touch with us to discuss how we can help you scale your integrations. We have a money-back guarantee, and we promise to launch a suite of integrations you'll be happy with within the span of a month. [Get in touch with us here](https://meetings.hubspot.com/james-bohrman)! 

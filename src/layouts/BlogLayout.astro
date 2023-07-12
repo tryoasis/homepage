@@ -2,6 +2,7 @@
 import Layout from './Layout.astro';
 import Container from '../components/container.astro';
 import { formatDate, slugify } from '../utils/helpers.js';
+import Link from '../components/link.astro';
 
 const { frontmatter } = Astro.props;
 
@@ -27,6 +28,10 @@ const seo = {
         }
         <h1 class="post-content__title">{frontmatter.title}</h1>
         <p class="post-content__date">
+          <span class="text-gray-400">
+            {frontmatter.author}
+          </span>
+          {' '}
           <time>{formatDate(frontmatter.publishedAt)}</time>
         </p>
         <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
@@ -40,6 +45,54 @@ const seo = {
       <div class="post-content__content flow fade-in">
         <slot />
       </div>
+      <div class="text-center mt-8">
+        <hr class="m-y-8" />
+        <h4 class="m-b-6 font-semibold">
+          Stay in touch
+        </h2>
+        <!--advantages-->
+        <div class="flex flex-column m-b-8">
+          <p class="m-b-4">
+            We're here to help and answer any questions you might have. <br> We look forward to hearing more about what you're trying to solve!
+          </p>
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <script class="padding-25%">
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "40093919",
+              formId: "038b24ae-f393-4544-baef-9d4622e14011"
+            });
+            {`
+            document.addEventListener("hbspt.forms.postSubmit", function(event) {
+                const form = event.target;
+                const firstNameInput = form.querySelector('input[firstname="firstname"]');
+                const lastNameInput = form.querySelector('input[lastname="lastname"]');
+                const emailInput = form.querySelector('input[name="email"]');
+                const companyInput = form.querySelector('input[name="company"]');
+            });
+            ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                console.log(res);
+                ko.track('form-submission', {
+                    formId: form.id,
+                    email: emailInput.value,
+                    firstname: firstNameInput.value,
+                    lastname: lastNameInput.value,
+                    company: companyInput.value
+            });
+          });
+          `}
+          </script>
+        <hr class="m-y-8" />
+        <a
+          href="https://localhost:3000/blog"
+          class="px-5 py-6 rounded-md hover:bg-gray-200 transition"
+          >← Back to Blog</a
+        >
+      </div>  
     </article>
   </Container>
 </Layout>

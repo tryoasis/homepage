@@ -41,7 +41,6 @@ import {formatDate} from '../utils/helpers'
 
 .post-preview__category {
   width: fit-content;
-  padding: 0.25rem 0.75rem;
   background-color: var(--theme-surface-1);
   border-radius: 2rem;
   margin-bottom: 0.5rem;
@@ -52,12 +51,12 @@ import {formatDate} from '../utils/helpers'
   transition: transform 0.2s ease-in-out;
 }
 .post-preview__img {
-    width: 250px;
-    height: 160px;
-    object-fit: contain; /* Use 'contain' to prevent image repetition */
-    border-radius: 1rem;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-  }
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
 .post-preview__date {
   font-size: 0.9rem;
   color: var(--color-gray);
