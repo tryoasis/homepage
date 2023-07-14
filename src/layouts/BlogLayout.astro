@@ -13,6 +13,20 @@ const seo = {
 };
 ---
 
+<meta name="description" content={frontmatter.excerpt} />
+<meta property="og:title" content={frontmatter.title} />
+<meta property="og:type" content="article" />
+<meta property="og:url" content={frontmatter.slug} />
+<meta property="og:image" content={frontmatter.image} />
+<meta property="og:image:alt" content={frontmatter.alt} />
+<meta property="twitter:image" content={frontmatter.image} />
+<meta name="twitter:card" content={frontmatter.image} />
+<meta name="twitter:site" content="@getdistilled" />
+<meta name="twitter:title" content={frontmatter.title} />
+<meta name="twitter:description" content={frontmatter.excerpt} />
+<meta name="twitter:image" content={frontmatter.image} />
+<meta name="twitter:image:alt" content={frontmatter.alt} />
+
 <Layout seo={seo}>
   <Container>
     <article class="post-content__article">
