@@ -1,4 +1,3 @@
-
 		<!--Nav for large screens-->
 		<header class="sticky flex items-center bg-white dark-bg-black h-20  lg-p-y-8">
 			<nav class="container container-xl flex justify-between items-center gap-8"
@@ -31,10 +30,23 @@
 						</fieldset>-->
 					</li>
 				</ul>
+
+				<script>
+				    export let Aria = document.getElementById('hamburger-button');
+
+					function menuVisible(Aria) {
+						if (Aria.getAttribute('aria-expanded') === 'false') {
+							Aria.setAttribute('aria-expanded', 'true');
+						} else {
+							Aria.setAttribute('aria-expanded', 'false');
+						}
+					}
+				</script>
 				<!--Hamburger button-->
-				<button class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
-								aria-label="Mobile menu"
-								aria-expanded="false">
+				<button id="hamburger-button" class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
+								aria-label="mobile-menu"
+								aria-expanded="false"
+								onclick="menuVisible()">
 					<svg aria-label="hamburger menu"
 							 xmlns="http://www.w3.org/2000/svg"
 							 width="26"
@@ -51,14 +63,13 @@
 					</svg>
 					Menu
 				</button>
-				<ul
-						class="xs-d-none md-flex  items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
+				<ul id="mobile-menu" class="xs-d-none md-flex items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
 					<!--Button-->
-					<li class="">
-						<a href="https://ravenbrightdesign.gumroad.com"
+					<li class="m-r-8">
+						<a href="https://meetings.hubspot.com/james-bohrman/"
 							 class="btn black
 							 dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm"
-							 aria-label="download Astro template"
+							 aria-label="schedule a call"
 							 role="button">
 							Schedule a call
 							<svg xmlns="http://www.w3.org/2000/svg" class="icon m-l-3 icon-tabler icon-tabler-phone-call" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
