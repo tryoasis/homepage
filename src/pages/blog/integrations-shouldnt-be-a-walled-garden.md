@@ -1,6 +1,6 @@
 ---
 title: "Integrations shouldn't be walled gardens: The problem with closed source Unified API's like Merge and Finch"
-excerpt: "On the surface, Unified API tools seem like a panacea for integration headaches. But there is a major catch - most are closed source proprietary platforms like Merge and Finch. These closed ecosystems create walled gardens that end up limiting companies over the long term."
+excerpt: "On the surface, Unified API tools seem like a panacea for integration headaches. But there is a major catch - most are closed source proprietary platforms like Merge and Finch. These closed ecosystems create walled gardens that end up limiting companies over the long term. "
 publishedAt: "07/16/2023"
 image: "https://images.pexels.com/photos/4995104/pexels-photo-4995104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 alt: "walled garden with pool"
