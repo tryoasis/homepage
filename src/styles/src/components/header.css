@@ -1,7 +1,12 @@
 #mobile-menu {
-    display: none;
-  }
-
-  #mobile-menu.show {
-    display: block;
+  display: none; /* Initially hidden */
+  flex-direction: column; /* Ensures the menu expands downwards */
+  position: fixed; /* Position the menu relative to the viewport */
+  top: 0; /* Position the menu at the top of the viewport */
+  left: 0; /* Position the menu at the left of the viewport */
+  width: 100%; /* Make the menu cover the entire viewport width */
+  height: 100%; /* Make the menu cover the entire viewport height */
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  z-index: 999; /* Set a high z-index to place the menu above other elements */
+  padding: 20px; /* Add some padding to the menu content */
   }

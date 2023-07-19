@@ -1,4 +1,8 @@
-		<!--Nav for large screens-->
+---
+
+---
+
+<!--Nav for large screens-->
 		<header class="sticky flex items-center bg-white dark-bg-black h-20  lg-p-y-8">
 			<nav class="container container-xl flex justify-between items-center gap-8"
 					 aria-label="primary nav">
@@ -29,71 +33,18 @@
 							</label>
 						</fieldset>-->
 					</li>
-				</ul>					
-				<!--Hamburger button-->
-				<button class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
-								aria-label="Mobile menu"
-								aria-expanded="false"
-								aria-controls="menu-button">
-					<svg aria-label="hamburger menu"
-							 xmlns="http://www.w3.org/2000/svg"
-							 width="26"
-							 height="26"
-							 viewBox="0 0 24 24"
-							 fill="none"
-							 stroke="currentColor"
-							 stroke-width="2"
-							 stroke-linecap="round"
-							 stroke-linejoin="round"
-							 class="ai ai-TextAlignJustified m-r-3">
-						<title>Mobile hamburger menu icon</title>
-						<path d="M3 6h18M3 12h18M3 18h18"></path>
-					</svg>
-					Menu
-				</button>
-				<ul
-						class="xs-d-none md-flex  items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap"
-						aria-hidden="true" id="menu-list">
-					<!--Works-->
-					<li class="m-r-6">
-						<a href="#0" class="link-navbar">Works</a>
-					</li>
-					<!--About-->
-					<li class="m-r-6">
-						<a href="#0" class="link-navbar">About</a>
-					</li>
-					<!--Approach-->
-					<li class="m-r-4">
-						<a href="#0"
-							 class="link-navbar">Approach</a>
-					</li>
+				</ul>
+				<ul class="flex flex-col items-center gap-5">
 					<!--Button-->
-					<li class="m-r-8">
-						<a href="https://meetings.hubspot.com/james-bohrman/"
-							 class="btn black
-							 dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm"
-							 aria-label="schedule a call"
-							 role="button">
-							Schedule a call
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon m-l-3 icon-tabler icon-tabler-phone-call" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-								<path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-								<path d="M15 7a2 2 0 0 1 2 2"></path>
-								<path d="M15 3a6 6 0 0 1 6 6"></path>
-							 </svg>
-						</a>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="/blog">Blog</a>
+					</li>
+					<li>
+						<a href="uppercut.copilot.app">Portal</a>
 					</li>
 				</ul>
 			</nav>
-			<script>
-				const menuButton = document.querySelector('[aria-controls="menu-button"]');
-				const menuList = document.getElementById('menu-button');
-				
-				menuButton.addEventListener('click', () => {
-				  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-				
-				  menuButton.setAttribute('aria-expanded', !expanded);
-				  menuList.setAttribute('aria-hidden', expanded);
-				});
-			</script>
 		</header>

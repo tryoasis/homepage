@@ -1,0 +1,71 @@
+					<li class="xs-d-none sm-flex">
+						<!--Toggle for dark mode
+						<fieldset>
+							<legend class="visually-hidden">Toggle for dark mode</legend>
+							<input class="toggle-input visually-hidden"
+										 id="switch"
+										 type="checkbox"
+										 role="switch">
+							<label for="switch"
+										 class="toggle-switch"
+										 aria-label="toggle switch">
+								<span class="visually-hidden">Label for the toggle</span>
+								<span class="toggle-round"></span>
+							</label>
+						</fieldset>-->
+					</li>
+				</ul>
+
+				<script>
+				    export let Aria = document.getElementById('hamburger-button');
+
+					function menuVisible(Aria) {
+						if (Aria.getAttribute('aria-expanded') === 'false') {
+							Aria.setAttribute('aria-expanded', 'true');
+						} else {
+							Aria.setAttribute('aria-expanded', 'false');
+						}
+					}
+				</script>
+				<!--Hamburger button-->
+				<button id="hamburger-button" class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
+								aria-label="mobile-menu"
+								aria-expanded="false"
+								onclick="menuVisible()">
+					<svg aria-label="hamburger menu"
+							 xmlns="http://www.w3.org/2000/svg"
+							 width="26"
+							 height="26"
+							 viewBox="0 0 24 24"
+							 fill="none"
+							 stroke="currentColor"
+							 stroke-width="2"
+							 stroke-linecap="round"
+							 stroke-linejoin="round"
+							 class="ai ai-TextAlignJustified m-r-3">
+						<title>Mobile hamburger menu icon</title>
+						<path d="M3 6h18M3 12h18M3 18h18"></path>
+					</svg>
+					Menu
+				</button>
+				<ul id="mobile-menu" class="xs-d-none md-flex items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
+					<!--Button-->
+					<li class="m-r-8">
+						<a href="https://meetings.hubspot.com/james-bohrman/"
+							 class="btn black
+							 dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm"
+							 aria-label="schedule a call"
+							 role="button">
+							Schedule a call
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon m-l-3 icon-tabler icon-tabler-phone-call" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+								<path d="M15 7a2 2 0 0 1 2 2"></path>
+								<path d="M15 3a6 6 0 0 1 6 6"></path>
+							 </svg>
+						</a>
+					</li>
+				</ul>
+
+			</nav>
+		</header>
