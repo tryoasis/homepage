@@ -12,7 +12,7 @@ const seo = {
   image: frontmatter.image,
 };
 ---
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content={frontmatter.excerpt} />
 <meta property="og:title" content={frontmatter.title} />
 <meta property="og:type" content="article" />
@@ -40,7 +40,7 @@ const seo = {
             </p>
           )
         }
-        <h1 class="post-content__title">{frontmatter.title}</h1>
+        <h2 class="post-content__title">{frontmatter.title}</h1>
         <p class="post-content__date">
           <span class="text-gray-400">
             {frontmatter.author}
@@ -70,7 +70,7 @@ const seo = {
             We're here to help and answer any questions you might have. <br> We look forward to hearing more about what you're trying to solve!
           </p>
           <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-          <script class="padding-25%">
+          <script>
             hbspt.forms.create({
               region: "na1",
               portalId: "40093919",
@@ -135,7 +135,7 @@ const seo = {
   }
   .post-content__title {
     margin: 1rem auto;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0 4rem;
   }
   .post-content__date {
@@ -162,10 +162,6 @@ const seo = {
     max-width: 800px; /* Adjust the maximum width as needed */
     padding: 0 1rem; /* Adjust the horizontal padding as needed */
     text-align: left; /* Add this line to align the text to the left */
-  }
-
-  .post-content__content :global(h2) {
-    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
   }
 
   .post-content__content :global(h2) {

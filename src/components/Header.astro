@@ -29,24 +29,12 @@
 							</label>
 						</fieldset>-->
 					</li>
-				</ul>
-
-				<script>
-				    export let Aria = document.getElementById('hamburger-button');
-
-					function menuVisible(Aria) {
-						if (Aria.getAttribute('aria-expanded') === 'false') {
-							Aria.setAttribute('aria-expanded', 'true');
-						} else {
-							Aria.setAttribute('aria-expanded', 'false');
-						}
-					}
-				</script>
+				</ul>					
 				<!--Hamburger button-->
-				<button id="hamburger-button" class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
-								aria-label="mobile-menu"
+				<button class="btn-md p-0 bg-transparent gray-800 dark-gray-200 xs-d-flex md-d-none"
+								aria-label="Mobile menu"
 								aria-expanded="false"
-								onclick="menuVisible()">
+								aria-controls="menu-button">
 					<svg aria-label="hamburger menu"
 							 xmlns="http://www.w3.org/2000/svg"
 							 width="26"
@@ -63,7 +51,22 @@
 					</svg>
 					Menu
 				</button>
-				<ul id="mobile-menu" class="xs-d-none md-flex items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
+				<ul
+						class="xs-d-none md-flex  items-center gap-5 bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap"
+						aria-hidden="true" id="menu-list">
+					<!--Works-->
+					<li class="m-r-6">
+						<a href="#0" class="link-navbar">Works</a>
+					</li>
+					<!--About-->
+					<li class="m-r-6">
+						<a href="#0" class="link-navbar">About</a>
+					</li>
+					<!--Approach-->
+					<li class="m-r-4">
+						<a href="#0"
+							 class="link-navbar">Approach</a>
+					</li>
 					<!--Button-->
 					<li class="m-r-8">
 						<a href="https://meetings.hubspot.com/james-bohrman/"
@@ -81,6 +84,16 @@
 						</a>
 					</li>
 				</ul>
-
 			</nav>
+			<script>
+				const menuButton = document.querySelector('[aria-controls="menu-button"]');
+				const menuList = document.getElementById('menu-button');
+				
+				menuButton.addEventListener('click', () => {
+				  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+				
+				  menuButton.setAttribute('aria-expanded', !expanded);
+				  menuList.setAttribute('aria-hidden', expanded);
+				});
+			</script>
 		</header>

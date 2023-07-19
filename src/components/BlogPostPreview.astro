@@ -5,85 +5,97 @@ import {formatDate} from '../utils/helpers'
 ---
 
 <a class="post-preview__link fade-in" href={post.url}>
-<article class="post-preview__article">
-  <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
-  <picture>
-    <source srcset={`${post.frontmatter.image}.webp`} type="image/webp">
-    <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
-  </picture>
-  <div class="post-preview__text">
-    {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
-    <h2>{post.frontmatter.title}</h2>
-    <p class="post-preview__date">{formatDate(post.frontmatter.publishedAt)}</p>
-  </div>
-</article>
+  <article class="post-preview__article">
+    <div class="post-preview__content">
+      <div class="post-preview__img-wrapper">
+        <picture>
+          <source srcset={`${post.frontmatter.image}.webp`} type="image/webp">
+          <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
+        </picture>
+      </div>
+      <div class="post-preview__text">
+        {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
+        <h3 class="post-preview__title">{post.frontmatter.title}</h3>
+        <p class="post-preview__date">{formatDate(post.frontmatter.publishedAt)}</p>
+      </div>
+    </div>
+  </article>
 </a>
-  
+
 <style>
-.post-preview__link {
-  text-decoration: none;
-}
-.post-preview__link:hover .post-preview__img {
-  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 20px 0;
-  transform: scale(1.1);
-}
-.post-preview__link:hover .post-preview__text {
-  transform: translateX(0.5rem);
-}
-.post-preview__article {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  align-items: center;
-}
-.post-preview__text h2 {
-  font-size: 1.5rem;
-}
-
-.post-preview__category {
-  width: fit-content;
-  background-color: var(--theme-surface-1);
-  border-radius: 2rem;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: var(--color-gray);
-}
-.post-preview__text {
-  transition: transform 0.2s ease-in-out;
-  padding-left: 2rem;
-}
-.post-preview__img {
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 1rem;
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-.post-preview__date {
-  font-size: 0.9rem;
-  color: var(--color-gray);
-}
-
-@media (max-width: 768px) {
+  .post-preview__link {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
   .post-preview__article {
-    /* Adjust the padding and margin as needed */
-    padding: 1rem;
-    margin: 0 auto;
-    max-width: 800px; /* Adjust the maximum width as needed */
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
-  .post-preview__img {
-    /* Adjust the width and height as needed */
-    width: 100%;
-    height: auto;
-  }
+  
   .post-preview__text {
-    margin-top: 1rem;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
   }
-  .post-preview__link:hover .post-preview__img {
-    box-shadow: none;
-    transform: none;
+  
+  .post-preview__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    max-width: 100%;
   }
-  .post-preview__link:hover .post-preview__text {
-    transform: none;
+  
+  .post-preview__img {
+    max-width: 60%;
+    margin-top: 0.5rem;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
-}
-</style>
+  
+  .post-preview__category {
+    display: inline-block;
+    padding: 0.25rem;
+    padding-top: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: var(--theme-surface-1);
+    border-radius: 2rem;
+    color: var(--color-gray);
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-preview__title {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+  }
+  
+  .post-preview__date {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .post-preview__article {
+      grid-template-columns: 1fr;
+    }
+    .post-preview__link:hover .post-preview__img {
+      box-shadow: none;
+      transform: none;
+    }
+    .post-preview__link:hover .post-preview__text {
+      transform: none;
+    }
+  }
+  </style>
+  

@@ -14,23 +14,55 @@ const {posts} = Astro.props;
 </div>
 
 <style>
-  div {
+  .container {
     margin: 0 auto;
-    max-width: 900px;
     padding: 0 1rem;
+    max-width: 100%;
   }
-  
-  ul {
+
+  .post-list {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-    justify-items: end;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     list-style: none;
   }
 
-  li {
+  .post-list__item {
     margin-bottom: 3rem;
+  }
+
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .post-content__text {
+    margin-bottom: 1rem;
+  }
+
+  .post-content__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Optional: Add media queries for different screen sizes */
+  @media (min-width: 768px) {
+    .post-content {
+      text-align: left;
+    }
+
+    .post-content__text {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 900px;
+    }
   }
 </style>
