@@ -982,6 +982,75 @@ import Layout from "../layouts/Layout.astro";
           </article>
         </div>
       </div>
+      <style>
+        /* Add this CSS style block in your stylesheet or in a <style> tag in the HTML header */
+
+/* Table style */
+.savings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.savings-table th,
+.savings-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.savings-table th {
+  background-color: #f1f1f1; /* Header color */
+}
+      </style>
+      <div class="container container-lg">
+        <div class="m-t-12 m-b-12 bg-white dark-bg-gray-800 xs-p-6 md-p-8 radius-lg">
+          <h3 class="h4 m-b-6 font-bold">Save More with Uppercut! 🥊</h3>
+          <p class="m-b-4 font-default">
+            By choosing Uppercut's services, you can save significantly compared to using Merge or Finch.
+          </p>
+          <span
+          class="badge border-yellow-200 badge-sm bg-yellow-100 font-semibold dark-bg-magenta-200 dark-border-none p-x-5 p-y-3 m-b-4 flex-wrap dark-black xs-font-size-xxs sm-font-size-xs"
+        >
+          Save up to $36,000 per year 💰
+        </span>
+      
+          <!-- Table for potential savings -->
+          <table class="savings-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Potential Savings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Merge ($65/integration/mo)</td>
+                <td>$36,000</td>
+              </tr>
+              <tr>
+                <td>Finch ($50/connection/mo)</td>
+                <td>$27,000/yr</td>
+              </tr>
+              <tr>
+                <td>Alloy Automation</td>
+                <td>$18,000</td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <a
+            href="https://meetings.hubspot.com/james-bohrman"
+            class="btn bg-magenta-100 dark-border-gray-50 dark-bg-gray-600 btn-lg m-t-6 black dark-gray-200"
+            role="button"
+            aria-label="Schedule a call now"
+            id="track"
+          >
+            Schedule a call now
+          </a>
+        </div>
+      </div>
+      
     </section>
     <!--How it works-->
     <section class="xs-p-y-16 md-p-y-40 bg-magenta-50 dark-bg-gray-900">
