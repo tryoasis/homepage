@@ -9,7 +9,7 @@ import {formatDate} from '../utils/helpers'
     <div class="post-preview__content">
       <div class="post-preview__img-wrapper">
         <picture>
-          <source srcset={`${post.frontmatter.image}.webp`} type="image/webp">
+          <source srcset={`${post.frontmatter.image}`}>
           <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
         </picture>
       </div>
