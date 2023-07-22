@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](image.png)
+![](../image.png)
 
 
 ### Introduction
