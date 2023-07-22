@@ -26,17 +26,21 @@ Today, we are thrilled to announce an exciting partnership that will elevate Upp
 
 At Uppercut, we believe that strong partnerships are the backbone of success in the ever-evolving business landscape. We have long been searching for a like-minded company that aligns with our vision and values while bringing unique expertise to the table. After an exhaustive search, we found the perfect match in Copilot.
 
-[Copilot](), a trailblazing technology startup known for its best-in-class client portal solution, stood out as an industry leader in client engagement and streamlined communication. Their reputation for developing cutting-edge products that cater to the diverse needs of clients from various sectors made them the ideal partner for Uppercut.
+[Copilot](https://www.copilot.com/), a trailblazing technology startup known for its best-in-class client portal solution, stood out as an industry leader in client engagement and streamlined communication. Their reputation for developing cutting-edge products that cater to the diverse needs of clients from various sectors made them the ideal partner for Uppercut.
 
 ### The Vision: A Client-Centric Approach
 
 The driving force behind this partnership is our mutual commitment to putting our clients at the heart of everything we do. Uppercut has always strived to provide exceptional services, personalized attention, and seamless experiences to our esteemed clientele. With Copilot's expertise, we aim to bolster our client portal's capabilities and take client interaction to the next level.
+
+![Alt text](../portal.png)
 
 This strategic partnership heralds an era of unparalleled client empowerment. By combining our industry knowledge, innovative approach, and Copilot's state-of-the-art portal technology, we seek to redefine how clients interact with our services and stay informed about their projects, investments, and more.
 
 ### Enhancing the Client Portal Experience
 
 The client portal is the gateway to our services, a window into the world of Uppercut for our clients. Recognizing its significance, we've invested time and resources in creating a seamless, user-friendly experience. Now, with Copilot on board, we will be able to deliver a client portal experience like never before.
+
+![](https://www.copilot.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fl41zuz9np7js%2F3GuBtmOODdjT7AJZKq9hrE%2Fc4a4f6ec741f6e16b7ab6f192a7af0fb%2FMessages.jpg&w=1920&q=75)
 
 Here are some key enhancements you can expect from the upgraded client portal:
 

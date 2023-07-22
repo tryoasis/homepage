@@ -6,8 +6,6 @@ import "../styles/dist/ravenbright.min.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const { frontmatter } = Astro.props;
-
 /* Load site metadata */
 import siteMetadata from "../data/siteMetadata.js";
 
@@ -24,19 +22,34 @@ const { title } = Astro.props;
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <title>{title}</title>
+    <meta name="description" content={siteMetadata.description} />
     <meta name="keywords" content={siteMetadata.keywords} />
     <meta name="author" content={siteMetadata.author} />
     <meta name="language" content={siteMetadata.language} />
 
     <!-- Open Graph Tags -->
-    <meta name="description" content={frontmatter.excerpt} />
-    <meta property="og:title" content={frontmatter.title} />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content={frontmatter.slug} />
     <meta property="og:site_name" content={siteMetadata.author} />
+    <meta property="og:url" content={siteMetadata.siteUrl} />
+    <meta property="og:title" content={title} />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content={frontmatter.image} />
-    <meta property="og:image:alt" content={frontmatter.alt} />
+    <meta property="og:description" content={siteMetadata.description} />
+    <meta property="og:image" content="" />
+    <meta
+      property="og:image:alt"
+      content="A description of what is in the image (not a caption)"
+    />
+
+    <!-- Twiter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={siteMetadata.description} />
+    <meta name="twitter:url" content={siteMetadata.name} />
+    <meta name="twitter:creator" content={siteMetadata.author} />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters."
+    />
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
