@@ -2,7 +2,7 @@
 title: "Announcing our Strategic Partnership with Copilot to power our groundbreaking client portal"
 excerpt: "Today, we are thrilled to announce an exciting partnership that will elevate Uppercut's client experience to new heights. Our company has always been committed to providing top-notch services and innovative solutions to our clients, and this partnership with Copilot is another step in that direction. Through this collaboration, we aim to enhance our client experience, ensuring a seamless and efficient interaction for our valued customers."
 publishedAt: "07/21/2023"
-image: "/src/pages/blog/image.png"
+image: "image.png"
 alt: "copilot logo"
 category: "Partnership Announcement"
 author: "James Bohrman"
@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](/src/pages/blog/image.png)
+![](image.png)
 
 
 ### Introduction
