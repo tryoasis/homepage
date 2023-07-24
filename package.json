@@ -34,6 +34,7 @@
   ],
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "accessible-astro-components": "^2.1.0",
     "cssnano": "^5.1.14",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
