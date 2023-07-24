@@ -54,6 +54,7 @@
     "astro-navbar": "^2.0.0",
     "astro-seo": "^0.7.4",
     "autoprefixer": "^10.4.13",
+    "badger-accordion": "^1.2.4",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
     "remark-frontmatter": "^4.0.1",

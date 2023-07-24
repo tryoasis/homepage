@@ -1108,28 +1108,115 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           <h2 class="m-b-6 p-b-6 md-w-75">
             Frequently Asked Questions
           </h2>
-          <Accordion>
-            <AccordionItem header="What exactly does your agency do?">
-              <p>In a nutshell, we offer the same thing that <a href="https://www.merge.dev">Merge</a> and <a href="https://www.tryfinch.com">Finch</a> provide, only in a service-based model using open source tools. If you need help spinning up third-party integrations, we're the most affordable solution. </p>
-            </AccordionItem>
-            <AccordionItem header="What are the OSS tools you use?">
-            <p>We are open to any OSS project our clients would like to try, but we mainly use a couple of awesome new projects such as <a href="https://www.nango.dev">Nango</a> and <a href="https://www.poozle.dev">Poozle</a></p>
-            </AccordionItem>
-            <AccordionItem header="How long does it take to add an integration?">
-              <p>Each engagement is different, but we try to have the base foundation of infrastrucature done within two weeks for each client. This doesn't include the front-end work to integrate.</p>
-            </AccordionItem>
-            <AccordionItem header="How much can I save compared to using a platform like Merge or Finch?">
-              <p>It all depends on how many integrations you're taking advantage of, but it can be in the tens of thousands per year. </p>
-            </AccordionItem>
-            <AccordionItem header="What kinds of integrations do you support?">
-              <p>Any of the 100+ connection points that <a href="https://docs.nango.dev/integrations/overview">Nango</a> or <a href="https://www.poozle.dev">Poozle</a> support, we can build an integration for. That being said, both of our plans also support a couple slots of custom integration work.</p>
-            </AccordionItem>
-            <AccordionItem header="What is an 'integration' in this scenario?">
-              <p>There are a lot of different definitions of what make an "integration", but for us, our main service is connecting third-party services to your application via open-source Unified API tools. Essentially, if you've always wanted your users to be able to connect and work with a lot of third-party APIs, we should chat</p>
-            </AccordionItem>
-          </Accordion>
+          <div class="accordion">
+            <details>
+              <summary>What exactly does your agency do?</summary>
+              <p>
+                <p>In a nutshell, we offer the same thing that <a class="text-color-magenta-400 text-decoration-underline" href="https://www.merge.dev">Merge</a> and <a href="https://www.tryfinch.com">Finch</a> provide, only in a service-based model using open source tools. If you need help spinning up third-party integrations, we're the most affordable solution. </p>
+              </p>
+            </details>
+            <details>
+              <summary>What are the OSS tools you use?</summary>
+              <p>
+                <p>We are open to any OSS project our clients would like to try, but we mainly use a couple of awesome new projects such as <a href="https://www.nango.dev">Nango</a> and <a href="https://www.poozle.dev">Poozle</a></p>
+              </p>
+            </details>
+            <details>
+              <summary>How long does it take to add an integration?</summary>
+              <p>
+                Each engagement is different, but we try to have the base foundation of infrastrucature done within two weeks for each client. This doesn't include the front-end work to integrate.
+              </p>
+            </details>
+            <details>
+              <summary>How much can I save compared to using a platform like Merge or Finch?</summary>
+              <p>  It all depends on how many integrations you're taking advantage of, but it can be in the tens of thousands per year. 
+              </p>
+            </details>
+            <details>
+              <summary>What kinds of integrations do you support?</summary>
+              <p>
+                Any of the 100+ connection points that <a class="text-magenta-400 text-decoration-underline" href="https://docs.nango.dev/integrations/overview">Nango</a> or <a class="text-magenta-400 text-decoration-underline" href="https://www.poozle.dev">Poozle</a> support, we can build an integration for. That being said, both of our plans also support a couple slots of custom integration work.
+              </p>
+            </details>
+            <details>
+              <summary>What is an 'integration' in this scenario?</summary>
+              <p>
+              There are a lot of different definitions of what make an "integration", but for us, our main service is connecting third-party services to your application via open-source Unified API tools. Essentially, if you've always wanted your users to be able to connect and work with a lot of third-party APIs, we should chat.
+              </p>
+            </details>
+          </div>
         </div>
       </div>
+      <style>
+        /* Reset default styles */
+        body, ul, li {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+      
+        /* Custom styles for the accordion */
+        .accordion {
+          max-width: 800px;
+          margin: 0 auto;
+          width: 100%; /* Set the width to match the expanded content */
+        }
+      
+        .accordion summary {
+          background-color: #fff;
+          padding: 15px;
+          cursor: pointer;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          border-radius: 4px;
+          justify-content: space-between; /* Center the content when expanded */
+        }
+      
+        .accordion summary::before {
+          content: "\25BA";
+          margin-right: 10px;
+        }
+      
+        .accordion [open] summary::before {
+          content: "\25BC";
+        }
+      
+        .accordion details {
+          width: 100%; /* Set a fixed width for the accordion */
+          overflow: hidden;
+          border: 1px solid #ccc;
+          border-radius: 0px;
+          padding: 4px;
+        }
+      
+        .accordion-content {
+          max-width: 100%; /* Set a max-width for the expanded content */
+          padding-right: 15px;
+          padding-left: 15px; 
+        }
+      
+        .accordion p {
+          font-size: 16px;
+          line-height: 1.6;
+          padding-right: 15px;
+          padding-left: 15px;
+          padding-bottom: 15px;
+        }
+      
+        /* Underline links in the summary */
+        .accordion a {
+          text-decoration: underline;
+          color: #FC4C69;
+        }
+      
+        /* Media Query for smaller screens */
+        @media screen and (max-width: 480px) {
+          .accordion p {
+            font-size: 14px;
+          }
+        }
+      </style>      
     </section>
     <!--CTA-->
     <section class="xs-p-y-16 md-p-y-32 cta-section">
