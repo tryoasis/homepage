@@ -6,18 +6,16 @@ import {formatDate} from '../utils/helpers'
 
 <a class="post-preview__link fade-in" href={post.url}>
   <article class="post-preview__article">
-    <div class="post-preview__content">
-      <div class="post-preview__img-wrapper">
-        <picture>
-          <source srcset={`${post.frontmatter.image}`}>
-          <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
-        </picture>
-      </div>
-      <div class="post-preview__text">
-        {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
-        <h3 class="post-preview__title">{post.frontmatter.title}</h3>
-        <p class="post-preview__date">{formatDate(post.frontmatter.publishedAt)}</p>
-      </div>
+    <div class="post-preview__img-wrapper">
+      <picture>
+        <source srcset={`${post.frontmatter.image}`}>
+        <img class="post-preview__img" src={`${post.frontmatter.image}.png`} alt={`Featured image for ${post.frontmatter.title}`} >
+      </picture>
+    </div>
+    <div class="post-preview__text">
+      {post.frontmatter?.category && <p class="post-preview__category">{post.frontmatter.category}</p>}
+      <h3 class="post-preview__title">{post.frontmatter.title}</h3>
+      <p class="post-preview__date">{formatDate(post.frontmatter.publishedAt)}</p>
     </div>
   </article>
 </a>
@@ -30,27 +28,18 @@ import {formatDate} from '../utils/helpers'
   }
   
   .post-preview__article {
-    display: block;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex; /* Use flexbox to arrange content side by side */
     align-items: center;
     gap: 1rem;
   }
   
-  .post-preview__text {
-    transition: transform 0.2s ease-in-out;
-    text-align: center;
-  }
-  
   .post-preview__img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 0 0 200px; /* Set a fixed width for the thumbnail */
     max-width: 100%;
   }
   
   .post-preview__img {
     width: 100%;
-    max-width: 600px; /* Increase the image size */
     height: auto;
     border-radius: 0.5rem;
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -60,17 +49,19 @@ import {formatDate} from '../utils/helpers'
     box-shadow: 0 0 0 0.25rem var(--theme-surface-1);
     transform: scale(1.05);
   }
-
-  @media screen and (max-width: 768px) {
-    .post-preview__img {
-      max-width: 75%;
-    }
+  
+  .post-preview__text {
+    flex: 1; /* Let the text take the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text to the left */
   }
   
   .post-preview__category {
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    font-size: 0.9rem; /* Increase the font size */
+    font-size: 0.9rem;
     font-weight: bold;
     background-color: var(--theme-surface-1);
     border-radius: 2rem;
@@ -79,14 +70,14 @@ import {formatDate} from '../utils/helpers'
   }
   
   .post-preview__title {
-    font-size: 1.2rem; /* Increase the font size */
+    font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
     padding: 0.3rem;
   }
   
   .post-preview__date {
-    font-size: 1rem; /* Increase the font size */
+    font-size: 1rem;
     color: var(--color-gray);
     margin-bottom: 0.5rem;
   }
@@ -94,8 +85,26 @@ import {formatDate} from '../utils/helpers'
   /* Center content on smaller screens */
   @media (max-width: 768px) {
     .post-preview__article {
-      grid-template-columns: 1fr;
-      justify-items: center;
+      flex-direction: column;
+    }
+
+    .post-preview__img-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 12px;
+    }
+
+    .post-preview__title {
+      padding-left: 12px;
+    }
+
+    .post-preview__category {
+      margin-bottom: 0.5rem;
+      padding-left: 12px;
+    }
+
+    .post-preview__date {
+      padding-left: 12px;
     }
     
     .post-preview__content {
