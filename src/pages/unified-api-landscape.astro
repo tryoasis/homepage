@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="About"
+>
+  <main>
+    <section>
+      <div class="container container-xl">
+        <div class="split-screen items-center">
+          <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
+            <h3 class="m-b-6 p-t-10 font-semibold">
+              Get access to the Unified API Landscape for free!
+            </h3>
+            <p class="m-b-6">
+              We have created an exclusive resource to help you get a feel for the current state of the Unified API space. To get access, please fill out the form below. We will send you an email with a link to download.
+            </p>
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script class="padding-25%">
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "40093919",
+                formId: "038b24ae-f393-4544-baef-9d4622e14011"
+              });
+              {`
+                document.addEventListener("hbspt.forms.postSubmit", function(event) {
+                  const form = event.target;
+                  const firstNameInput = form.querySelector('input[firstname="firstname"]');
+                  const lastNameInput = form.querySelector('input[lastname="lastname"]');
+                  const emailInput = form.querySelector('input[name="email"]');
+                  const companyInput = form.querySelector('input[name="company"]');
+                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
+                    if (err) {
+                      console.log(err);
+                      return;
+                    }
+                    console.log(res);
+                    ko.track('form-submission', {
+                      formId: form.id,
+                      email: emailInput.value,
+                      firstname: firstNameInput.value,
+                      lastname: lastNameInput.value,
+                      company: companyInput.value
+                    });
+                  });
+                `}
+            </script>
+          </div>
+          <!-- Add the image here -->
+          <div class="md-w-50">
+            <img src="https://placesjournal.org/wp-content/uploads/2013/07/cartographic-grounds-projecting-the-landscape-imaginary.jpg" alt="landscape map" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
