@@ -23,7 +23,6 @@ import Layout from "../layouts/Layout.astro";
                 portalId: "40093919",
                 formId: "6999de39-d043-4a84-9154-897bfb0d1a52"
               });
-              const name = `${firstNameInput.value} ${lastNameInput.value}`;
               {`
                 document.addEventListener("hbspt.forms.postSubmit", function(event) {
                   const form = event.target;
@@ -31,34 +30,13 @@ import Layout from "../layouts/Layout.astro";
                   const lastNameInput = form.querySelector('input[lastname="lastname"]');
                   const emailInput = form.querySelector('input[name="email"]');
                   const companyInput = form.querySelector('input[name="company"]');
-                  ko.identify('emailInput.value' { 
-                    name: name,
-                    company: companyInput.value 
-                  }, function(err, res) {
+                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
                     if (err) {
                       console.log(err);
                       return;
                     }
                     console.log(res);
-                    ko.track('Unified API Landscape Form Submission', {
-                      formId: form.id,
-                      email: emailInput.value,
-                      firstname: firstNameInput.value,
-                      lastname: lastNameInput.value,
-                      company: companyInput.value
-                    });
-                  });
-                    analytics.identify('emailInput.value' { 
-                      name: name,
-                      company: companyInput.value 
-                    }, function(err, res) {
-                      if (err) {
-                        console.log(err);
-                        return;
-                      }
-                    console.log(res);
-                    
-                    analytics.track('Unified API Landscape Form Submission', {
+                    ko.track('form-submission', {
                       formId: form.id,
                       email: emailInput.value,
                       firstname: firstNameInput.value,
