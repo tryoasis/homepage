@@ -30,19 +30,19 @@ import Layout from "../layouts/Layout.astro";
                   const lastNameInput = form.querySelector('input[lastname="lastname"]');
                   const emailInput = form.querySelector('input[name="email"]');
                   const companyInput = form.querySelector('input[name="company"]');
-                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
-                    if (err) {
-                      console.log(err);
-                      return;
-                    }
-                    console.log(res);
-                    ko.track('form-submission', {
-                      formId: form.id,
-                      email: emailInput.value,
-                      firstname: firstNameInput.value,
-                      lastname: lastNameInput.value,
-                      company: companyInput.value
-                    });
+                  
+                  analytics.identify(emailInput.value, {
+                    firstName: firstNameInput.value,
+                    lastName: lastNameInput.value,
+                    company: companyInput.value
+                  });
+
+                  analytics.track('form-submission', {
+                    formId: form.id,
+                    email: emailInput.value,
+                    firstName: firstNameInput.value,
+                    lastName: lastNameInput.value,
+                    company: companyInput.value
                   });
                 `}
             </script>
