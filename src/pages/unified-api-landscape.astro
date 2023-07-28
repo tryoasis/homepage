@@ -23,7 +23,6 @@ import Layout from "../layouts/Layout.astro";
                 portalId: "40093919",
                 formId: "6999de39-d043-4a84-9154-897bfb0d1a52"
               });
-              {`
               document.addEventListener("hbspt.forms.postSubmit", function(event) {
                 const form = event.target;
                 const firstNameInput = form.querySelector('input[firstname="firstname"]');
@@ -44,7 +43,6 @@ import Layout from "../layouts/Layout.astro";
                   company: companyInput.value
                 });
               });
-            `}
             </script>            
           </div>
           <!-- Add the image here -->
