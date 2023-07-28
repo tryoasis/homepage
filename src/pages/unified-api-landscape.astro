@@ -30,18 +30,17 @@ import Layout from "../layouts/Layout.astro";
                 const lastNameInput = form.querySelector('input[lastname="lastname"]');
                 const emailInput = form.querySelector('input[name="email"]');
                 const companyInput = form.querySelector('input[name="company"]');
+                const name = `${firstNameInput.value} ${lastNameInput.value}`;
                 
                 analytics.identify(emailInput.value, {
-                  firstName: firstNameInput.value,
-                  lastName: lastNameInput.value,
+                  name: name,
                   company: companyInput.value
                 });
                 
                 analytics.track('form-submission', {
                   formId: form.id,
                   email: emailInput.value,
-                  firstName: firstNameInput.value,
-                  lastName: lastNameInput.value,
+                  name: name,
                   company: companyInput.value
                 });
               });
