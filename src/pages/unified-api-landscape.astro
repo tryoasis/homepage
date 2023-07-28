@@ -2,50 +2,48 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-  title="About"
->
+<Layout title="About">
   <main>
     <section>
       <div class="container container-xl">
-        <div class="split-screen items-center">
-          <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
+        <div class="split-screen">
+          <div class="flex p-r-10 flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
             <h3 class="m-b-6 p-t-10 font-semibold">
               Get access to the Unified API Landscape for free!
             </h3>
             <p class="m-b-6">
               We have created an exclusive resource to help you get a feel for the current state of the Unified API space. To get access, please fill out the form below. We will send you an email with a link to download.
             </p>
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-            <script class="padding-25%">
-              hbspt.forms.create({
-                region: "na1",
-                portalId: "40093919",
-                formId: "6999de39-d043-4a84-9154-897bfb0d1a52"
-              });
-              {`
-                document.addEventListener("hbspt.forms.postSubmit", function(event) {
-                  const form = event.target;
-                  const firstNameInput = form.querySelector('input[firstname="firstname"]');
-                  const lastNameInput = form.querySelector('input[lastname="lastname"]');
-                  const emailInput = form.querySelector('input[name="email"]');
-                  const companyInput = form.querySelector('input[name="company"]');
-                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
-                    if (err) {
-                      console.log(err);
-                      return;
-                    }
-                    console.log(res);
-                    ko.track('form-submission', {
-                      formId: form.id,
-                      email: emailInput.value,
-                      firstname: firstNameInput.value,
-                      lastname: lastNameInput.value,
-                      company: companyInput.value
-                    });
-                  });
-                `}
-            </script>
+            <form id="unifiedAPIForm" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+              </div>
+              <div class="form-group">
+                <label for="firstNameInput">First Name:</label>
+                <input type="text" id="firstNameInput" name="firstname" required placeholder="Erlich">
+              </div>
+              <div class="form-group">
+                <label for="lastNameInput">Last Name:</label>
+                <input type="text" id="lastNameInput" name="lastname" required placeholder="Bachman">
+              </div>
+              <div class="form-group">
+                <label for="companyInput">Company:</label>
+                <input type="text" id="companyInput" name="company" required placeholder="Aviato">
+              </div>
+              <div class="form-group">
+                <label for="websiteInput">Website:</label>
+                <input type="url" id="websiteInput" name="website" required placeholder="https://www.aviato.com">
+              </div>
+              <div class="form-group">
+                <label for="mobilePhoneInput">Mobile Phone:</label>
+                <input type="tel" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
+              </div>
+              <div class="form-group">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <div id="successMessage" class="hidden">Form submitted successfully!</div>
           </div>
           <!-- Add the image here -->
           <div class="md-w-50">
@@ -55,4 +53,175 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
   </main>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    /* Add global styles for the form */
+    .container {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      height: 100%;
+      background-color: #fff;
+    }
+
+    .form-container {
+      padding: 30px;
+      max-width: 400px;
+      background-color: #fff;
+      padding-right: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="tel"]:focus {
+      border-color: #FC4C69;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #FC4C69;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #2ecc71;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Add specific styles for the section */
+    section {
+      background-color: #f2f2f2;
+      padding: 50px 0;
+    }
+
+    .container-xl {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .split-screen {
+      display: flex;
+    }
+
+    .md-w-50 {
+      width: 50%;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .xs-m-b-8 {
+      margin-bottom: 8px;
+    }
+
+    .md-m-b-0 {
+      margin-bottom: 0;
+    }
+
+    .md-m-r-8 {
+      margin-right: 8px;
+    }
+
+    .md-w-50 {
+      width: 50%;
+    }
+
+    .p-t-10 {
+      padding-top: 10px;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .m-b-6 {
+      margin-bottom: 6px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .split-screen {
+        flex-direction: column-reverse;
+      }
+
+      .md-w-50 {
+        width: 100%;
+      }
+
+      .form-container {
+        padding-right: 0;
+      }
+    }
+  </style>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      // You can send the formData to your server using fetch or any other AJAX method here.
+
+      // Show success message and hide the form
+      const successMessage = document.getElementById('successMessage');
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+
+      // Reset the form after a delay (optional)
+      setTimeout(() => {
+        form.reset();
+        form.style.display = 'block';
+        successMessage.style.display = 'none';
+      }, 3000); // Reset the form after 3 seconds (adjust as needed)
+    }
+  </script>
 </Layout>
