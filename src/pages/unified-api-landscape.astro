@@ -31,16 +31,15 @@ import Layout from "../layouts/Layout.astro";
                 const companyInput = form.querySelector('input[name="company"]');
                 const name = `${firstNameInput.value} ${lastNameInput.value}`;
                 
-                analytics.identify(emailInput.value, {
+                analytics.identify({
+                  email: emailInput.value,
                   name: name,
                   company: companyInput.value
                 });
                 
-                analytics.track('form-submission', {
-                  formId: form.id,
-                  email: emailInput.value,
-                  name: name,
-                  company: companyInput.value
+                analytics.track('Unified API Landscape Form Submitted', {
+                  value: 65.00,
+                  currency: 'USD',
                 });
               });
             </script>            
