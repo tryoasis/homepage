@@ -23,26 +23,51 @@ import Layout from "../layouts/Layout.astro";
                 portalId: "40093919",
                 formId: "6999de39-d043-4a84-9154-897bfb0d1a52"
               });
-              document.addEventListener("hbspt.forms.postSubmit", function(event) {
-                const form = event.target;
-                const firstNameInput = form.querySelector('input[firstname="firstname"]');
-                const lastNameInput = form.querySelector('input[lastname="lastname"]');
-                const emailInput = form.querySelector('input[name="email"]');
-                const companyInput = form.querySelector('input[name="company"]');
-                const name = `${firstNameInput.value} ${lastNameInput.value}`;
-                
-                analytics.identify({
-                  email: emailInput.value,
-                  name: name,
-                  company: companyInput.value
-                });
-                
-                analytics.track('Unified API Landscape Form Submitted', {
-                  value: 65.00,
-                  currency: 'USD',
-                });
-              });
-            </script>            
+              const name = `${firstNameInput.value} ${lastNameInput.value}`;
+              {`
+                document.addEventListener("hbspt.forms.postSubmit", function(event) {
+                  const form = event.target;
+                  const firstNameInput = form.querySelector('input[firstname="firstname"]');
+                  const lastNameInput = form.querySelector('input[lastname="lastname"]');
+                  const emailInput = form.querySelector('input[name="email"]');
+                  const companyInput = form.querySelector('input[name="company"]');
+                  ko.identify('emailInput.value' { 
+                    name: name,
+                    company: companyInput.value 
+                  }, function(err, res) {
+                    if (err) {
+                      console.log(err);
+                      return;
+                    }
+                    console.log(res);
+                    ko.track('Unified API Landscape Form Submission', {
+                      formId: form.id,
+                      email: emailInput.value,
+                      firstname: firstNameInput.value,
+                      lastname: lastNameInput.value,
+                      company: companyInput.value
+                    });
+                  });
+                    analytics.identify('emailInput.value' { 
+                      name: name,
+                      company: companyInput.value 
+                    }, function(err, res) {
+                      if (err) {
+                        console.log(err);
+                        return;
+                      }
+                    console.log(res);
+                    
+                    analytics.track('Unified API Landscape Form Submission', {
+                      formId: form.id,
+                      email: emailInput.value,
+                      firstname: firstNameInput.value,
+                      lastname: lastNameInput.value,
+                      company: companyInput.value
+                    });
+                  });
+                `}
+            </script>
           </div>
           <!-- Add the image here -->
           <div class="md-w-50">
