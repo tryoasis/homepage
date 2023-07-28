@@ -223,5 +223,18 @@ import Layout from "../layouts/Layout.astro";
         successMessage.style.display = 'none';
       }, 3000); // Reset the form after 3 seconds (adjust as needed)
     }
+
+    (function() {
+        var t = document.createElement('script'),
+            s = document.getElementsByTagName('script')[0];
+        t.async = true;
+        t.id    = 'cio-forms-handler';
+        t.setAttribute('data-site-id', '0210718529544e3eb175');
+        t.setAttribute('data-base-url', 'https://customerioforms.com');
+
+        t.src = 'https://customerioforms.com/assets/forms.js';
+
+        s.parentNode.insertBefore(t, s);
+    })();
   </script>
 </Layout>
