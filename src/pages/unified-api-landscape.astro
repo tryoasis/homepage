@@ -23,6 +23,7 @@ import Layout from "../layouts/Layout.astro";
                 portalId: "40093919",
                 formId: "6999de39-d043-4a84-9154-897bfb0d1a52"
               });
+              {`
               document.addEventListener("hbspt.forms.postSubmit", function(event) {
                 const form = event.target;
                 const firstNameInput = form.querySelector('input[firstname="firstname"]');
@@ -30,12 +31,12 @@ import Layout from "../layouts/Layout.astro";
                 const emailInput = form.querySelector('input[name="email"]');
                 const companyInput = form.querySelector('input[name="company"]');
                 
-                // Use Segment Identify call to send user information
                 analytics.identify(emailInput.value, {
                   firstName: firstNameInput.value,
                   lastName: lastNameInput.value,
                   company: companyInput.value
                 });
+                
                 analytics.track('form-submission', {
                   formId: form.id,
                   email: emailInput.value,
@@ -44,6 +45,7 @@ import Layout from "../layouts/Layout.astro";
                   company: companyInput.value
                 });
               });
+            `}
             </script>            
           </div>
           <!-- Add the image here -->
