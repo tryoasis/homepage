@@ -67,39 +67,128 @@ const seo = {
         <!--advantages-->
         <div class="flex flex-column m-b-8">
           <p class="m-b-4">
-            We're here to help and answer any questions you might have. <br> We look forward to hearing more about what you're trying to solve!
+            We're here to help and answer any questions you might have. We look forward to hearing more about what you're trying to solve!
           </p>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-              region: "na1",
-              portalId: "40093919",
-              formId: "038b24ae-f393-4544-baef-9d4622e14011"
-            });
-            {`
-            document.addEventListener("hbspt.forms.postSubmit", function(event) {
-                const form = event.target;
-                const firstNameInput = form.querySelector('input[firstname="firstname"]');
-                const lastNameInput = form.querySelector('input[lastname="lastname"]');
-                const emailInput = form.querySelector('input[name="email"]');
-                const companyInput = form.querySelector('input[name="company"]');
-            });
-            ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
-                if (err) {
-                    console.log(err);
-                    return;
-                }
-                console.log(res);
-                ko.track('form-submission', {
-                    formId: form.id,
-                    email: emailInput.value,
-                    firstname: firstNameInput.value,
-                    lastname: lastNameInput.value,
-                    company: companyInput.value
-            });
-          });
-          `}
-          </script>
+          <form id="blogSubscribeForm" onsubmit="submitForm(event)">
+            <div class="form-group">
+              <label for="emailInput">Email:</label>
+              <input type="email" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+            </div>
+            <div class="form-group">
+              <label for="firstNameInput">First Name:</label>
+              <input type="text" id="firstNameInput" name="firstname" required placeholder="Erlich">
+            </div>
+            <div class="form-group">
+              <label for="lastNameInput">Last Name:</label>
+              <input type="text" id="lastNameInput" name="lastname" required placeholder="Bachman">
+            </div>
+            <div class="form-group">
+              <label for="companyInput">Company:</label>
+              <input type="text" id="companyInput" name="company" required placeholder="Aviato">
+            </div>
+            <div class="form-group">
+              <label for="websiteInput">Website:</label>
+              <input type="url" id="websiteInput" name="website" required placeholder="https://www.aviato.com">
+            </div>
+            <div class="form-group">
+              <label for="mobilePhoneInput">Mobile Phone:</label>
+              <input type="tel" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
+            </div>
+            <div class="form-group">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <div id="successMessage" class="hidden">Form submitted successfully!</div>
+        </div>
+        <style>
+          .hidden {
+              display: none;
+          }
+
+          .form-container {
+          padding: 10px;
+          max-width: 400px;
+          background-color: #fff;
+          padding-right: 50px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="tel"] {
+          width: 110%;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="tel"]:focus {
+          border-color: #FC4C69;
+        }
+
+        button[type="submit"] {
+          width: 300px  ;
+          padding: 10px;
+          font-size: 16px;
+          background-color: #FC4C69;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+          background-color: #2980b9;
+        }
+
+        .success-message {
+          display: none;
+          background-color: #2ecc71;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="tel"] {
+          width: 90%;
+      }
+        label {
+          padding-left: 20px;
+        }
+        button {
+          width: 90%;
+          margin-left: 50px;
+        }
+        .post-content__title {
+          font-size: 1.5rem;
+        }
+    }
+
+        
+        </style>
         <hr class="m-y-8" />
         <a
           href="https://localhost:3000/blog"
