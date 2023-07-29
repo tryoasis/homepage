@@ -14,6 +14,7 @@ import Layout from "../layouts/Layout.astro";
             <p class="m-b-6">
               We have created an exclusive resource to help you get a feel for the current state of the Unified API space. To get access, please fill out the form below. We will send you an email with a link to download.
             </p>
+            <div class="form-container">
             <form id="unifiedAPIForm" onsubmit="submitForm(event)">
               <div class="form-group">
                 <label for="emailInput">Email:</label>
@@ -40,7 +41,14 @@ import Layout from "../layouts/Layout.astro";
                 <input type="tel" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
               </div>
               <div class="form-group">
-                <button type="submit">Submit</button>
+                <input type="checkbox" id="communicationConsent" name="communication_consent" required>
+                <span>I agree to receiving communication from Uppercut.</span>
+              </div>
+            </div>
+              <div class="form-group">
+                <button data-sitekey="6Lf3GGUnAAAAANBVfg0Tn0QzMDkLp3f6EKvUqvDN" 
+                data-callback='onSubmit' 
+                data-action='submit' class="g-recaptcha" type="submit">Submit</button>
               </div>
             </form>
             <div id="successMessage" class="hidden">Form submitted successfully!</div>
@@ -70,9 +78,10 @@ import Layout from "../layouts/Layout.astro";
 
     .form-container {
       padding: 30px;
-      max-width: 400px;
-      background-color: #fff;
-      padding-right: 50px;
+      max-width: 600px;
+      background-color: #f9f9f9;
+      margin-top: 20px;
+      margin-left: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -137,6 +146,10 @@ import Layout from "../layouts/Layout.astro";
       padding: 50px 0;
     }
 
+    button {
+        margin-top: 20px;
+    }
+
     .container-xl {
       max-width: 1200px;
       margin: 0 auto;
@@ -187,6 +200,19 @@ import Layout from "../layouts/Layout.astro";
       margin-bottom: 6px;
     }
 
+    h3 {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    img {
+        width: 85%;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
     /* Responsive Styles */
     @media (max-width: 768px) {
       .split-screen {
@@ -223,6 +249,11 @@ import Layout from "../layouts/Layout.astro";
         successMessage.style.display = 'none';
       }, 3000); // Reset the form after 3 seconds (adjust as needed)
     }
+
+   function onSubmit(token) {
+     document.getElementById("unifiedAPIForm").submit();
+   }
+
 
     (function() {
         var t = document.createElement('script'),

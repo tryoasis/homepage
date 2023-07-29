@@ -69,6 +69,7 @@ const seo = {
           <p class="m-b-4">
             We're here to help and answer any questions you might have. We look forward to hearing more about what you're trying to solve!
           </p>
+          <div class="form-container">
           <form id="blogSubscribeForm" onsubmit="submitForm(event)">
             <div class="form-group">
               <label for="emailInput">Email:</label>
@@ -91,9 +92,12 @@ const seo = {
               <input type="url" id="websiteInput" name="website" required placeholder="https://www.aviato.com">
             </div>
             <div class="form-group">
-              <label for="mobilePhoneInput">Mobile Phone:</label>
-              <input type="tel" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
+              <label for="communicationConsent">Uppercut is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</label>
+              <input type="checkbox" id="communicationConsent" name="communication_consent" required>
+              <span>I agree to receive communication from Uppercut.</span>
             </div>
+            <div class="g-recaptcha" data-sitekey="6Lf3GGUnAAAAANBVfg0Tn0QzMDkLp3f6EKvUqvDN"></div>
+          </div>
             <div class="form-group">
               <button type="submit">Submit</button>
             </div>
@@ -102,92 +106,98 @@ const seo = {
         </div>
         <style>
           .hidden {
-              display: none;
+            display: none;
           }
 
           .form-container {
-          padding: 10px;
-          max-width: 400px;
-          background-color: #fff;
-          padding-right: 50px;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 100%; /* Make the form container take full width */
+            max-width: 600px; /* Set a maximum width for the form container */
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
 
-        .form-group {
-          margin-bottom: 20px;
-        }
+          .form-group {
+            margin-bottom: 15px;
+          }
 
-        label {
-          display: block;
-          font-weight: bold;
-          margin-bottom: 5px;
-        }
+          label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="url"],
-        input[type="tel"] {
-          width: 110%;
-          padding: 10px;
-          font-size: 16px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          transition: border-color 0.3s;
-        }
+          input[type="text"],
+          input[type="email"],
+          input[type="url"],
+          input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+          }
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="url"]:focus,
-        input[type="tel"]:focus {
-          border-color: #FC4C69;
-        }
+          input[type="text"]:focus,
+          input[type="email"]:focus,
+          input[type="url"]:focus,
+          input[type="tel"]:focus {
+            border-color: #FC4C69;
+          }
 
-        button[type="submit"] {
-          width: 300px  ;
-          padding: 10px;
-          font-size: 16px;
-          background-color: #FC4C69;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
+          button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #FC4C69;
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
 
-        button[type="submit"]:hover {
-          background-color: #2980b9;
-        }
+          button[type="submit"]:hover {
+            background-color: #2980b9;
+          }
 
-        .success-message {
-          display: none;
-          background-color: #2ecc71;
-          color: #fff;
-          text-align: center;
-          padding: 10px;
-          border-radius: 5px;
-        }
+          .success-message {
+            display: none;
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+          }
 
-        @media (max-width: 768px) {
-        input[type="text"],
-        input[type="email"],
-        input[type="url"],
-        input[type="tel"] {
-          width: 90%;
-      }
-        label {
-          padding-left: 20px;
-        }
-        button {
-          width: 90%;
-          margin-left: 50px;
-        }
-        .post-content__title {
-          font-size: 1.5rem;
-        }
-    }
-
-        
+          /* Media query for smaller screens */
+          @media (max-width: 768px) {
+            input[type="text"],
+            input[type="email"],
+            input[type="url"],
+            input[type="tel"] {
+              width: 90%;
+            }
+            label {
+              padding-left: 20px;
+            }
+            button {
+              width: 90%;
+              margin-left: 5px;
+            }
+            .post-content__title {
+              font-size: 1.5rem;
+            }
+              .form-container {
+              max-width: 90%;
+              }
+          }
         </style>
         <hr class="m-y-8" />
         <a
