@@ -69,11 +69,12 @@ const seo = {
           <p class="m-b-4">
             We're here to help and answer any questions you might have. We look forward to hearing more about what you're trying to solve!
           </p>
-          <div class="form-container">
+          <div id="form-container" class="form-container">
           <form id="blogSubscribeForm" onsubmit="submitForm(event)">
             <div class="form-group">
               <label for="emailInput">Email:</label>
-              <input type="email" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+              <input type="email" pattern="^(?!.*@(gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)).+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+              <span class="error-message" id="emailError">Please enter a valid corporate email address.</span>
             </div>
             <div class="form-group">
               <label for="firstNameInput">First Name:</label>
@@ -96,7 +97,6 @@ const seo = {
               <input type="checkbox" id="communicationConsent" name="communication_consent" required>
               <span>I agree to receive communication from Uppercut.</span>
             </div>
-            <div class="g-recaptcha" data-sitekey="6Lf3GGUnAAAAANBVfg0Tn0QzMDkLp3f6EKvUqvDN"></div>
           </div>
             <div class="form-group">
               <button type="submit">Submit</button>
@@ -105,7 +105,18 @@ const seo = {
           <div id="successMessage" class="hidden">Form submitted successfully!</div>
         </div>
         <script type="text/javascript">
-          (function() {
+            function submitForm(event) {
+              event.preventDefault();
+                // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
+              setTimeout(function() {
+                document.getElementById("blogSubscribeForm").reset(); // Reset the form
+                document.getElementById("blogSubscribeForm").style.display = "none"; // Hide the form
+                document.getElementById("successMessage").classList.remove("hidden");
+                document.getElementById("form-container").classList.add("hidden");
+              }, 2000);
+            }
+            
+            (function() {
             var t = document.createElement('script'),
                 s = document.getElementsByTagName('script')[0];
             t.async = true;
@@ -117,6 +128,26 @@ const seo = {
 
             s.parentNode.insertBefore(t, s);
           })();
+
+          const submitButton = document.querySelector('button[type="submit"]');
+              submitButton.addEventListener('click', function(event) {
+                // Check if email input is valid
+                const emailInput = document.getElementById("emailInput");
+                if (!emailInput.checkValidity()) {
+                  // Prevent form submission if the input is invalid
+                  event.preventDefault();
+                  // Display the error message
+                  document.getElementById("emailError").style.display = "block";
+                } else {
+                  // If the input is valid, hide the error message
+                  document.getElementById("emailError").style.display = "none";
+                }
+
+                // If there are no errors, proceed with the form submission
+                if (emailInput.checkValidity()) {
+                  submitForm(event);
+                }
+              });
         </script>
         <style>
           .hidden {
@@ -133,6 +164,13 @@ const seo = {
             background-color: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          .error-message {
+            display: none; /* Hide the error message by default */
+            color: #FF0000;
+            font-size: 14px;
+            margin-top: 5px;
           }
 
           .form-group {

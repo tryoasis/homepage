@@ -18,7 +18,8 @@ import Layout from "../layouts/Layout.astro";
             <form id="unifiedAPIForm" onsubmit="submitForm(event)">
               <div class="form-group">
                 <label for="emailInput">Email:</label>
-                <input type="email" pattern="^[\w.+-]+@(?!gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+                <input type="email" pattern="^(?!.*@(gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)).+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+                <span class="error-message" id="emailError">Please enter a valid corporate email address.</span>
               </div>
               <div class="form-group">
                 <label for="firstNameInput">First Name:</label>
@@ -39,14 +40,16 @@ import Layout from "../layouts/Layout.astro";
               <div class="form-group">
                 <label for="mobilePhoneInput">Mobile Phone:</label>
                 <input type="tel" pattern="^\+\d+$" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
+                <span class="error-message" id="mobilePhoneError">Please enter a valid mobile phone number (e.g., +1 1234567890).</span>
               </div>
+                <!-- Error message for invalid input -->
               <div class="form-group">
                 <input type="checkbox" id="communicationConsent" name="communication_consent" required>
                 <span>I agree to receiving communication from Uppercut.</span>
               </div>
             </div>
               <div class="form-group">
-                <button data-callback='submitForm' class="g-recaptcha" data-action='submit' type="submit">Submit</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
             <div id="successMessage" class="hidden">Form submitted successfully!</div>
@@ -82,6 +85,13 @@ import Layout from "../layouts/Layout.astro";
       margin-left: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-message {
+      display: none; /* Hide the error message by default */
+      color: #FF0000;
+      font-size: 14px;
+      margin-top: 5px;
     }
 
     .form-group {
@@ -227,24 +237,60 @@ import Layout from "../layouts/Layout.astro";
     }
   </style>
 
-  <script>
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+      // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
+    setTimeout(function() {
+      document.getElementById("unifiedAPIForm").reset(); // Reset the form
+      document.getElementById("unifiedAPIForm").style.display = "none"; // Hide the form
+      document.getElementById("successMessage").classList.remove("hidden"); // Show the success message
+    }, 2000);
+  }
+  
+  (function() {
+  var t = document.createElement('script'),
+      s = document.getElementsByTagName('script')[0];
+  t.async = true;
+  t.id    = 'cio-forms-handler';
+  t.setAttribute('data-site-id', '0210718529544e3eb175');
+  t.setAttribute('data-base-url', 'https://customerioforms.com');
 
-    function submitForm(e) {
-            e.preventDefault();
-            grecaptcha.ready(function() {
-              grecaptcha.execute('6Lf3GGUnAAAAANBVfg0Tn0QzMDkLp3f6EKvUqvDN', {action: 'submit'}).then(function(token) {
-                document.getElementById("unifiedAPIForm").submit();
-                document.getElementById("successMessage").classList.remove("hidden");
-                var t = document.createElement('script'),
-                    s = document.getElementsByTagName('script')[0];
-                t.async = true;
-                t.id    = 'cio-forms-handler';
-                t.setAttribute('data-site-id', '0210718529544e3eb175');
-                t.setAttribute('data-base-url', 'https://customerioforms.com');
-                t.src = 'https://customerioforms.com/assets/forms.js';
-                s.parentNode.insertBefore(t, s);
-              });
-            });
-          }
-  </script>
+  t.src = 'https://customerioforms.com/assets/forms.js';
+
+  s.parentNode.insertBefore(t, s);
+})();
+
+const submitButton = document.querySelector('button[type="submit"]');
+    submitButton.addEventListener('click', function(event) {
+      // Check if mobile phone input is valid
+      const mobilePhoneInput = document.getElementById("mobilePhoneInput");
+      if (!mobilePhoneInput.checkValidity()) {
+        // Prevent form submission if the input is invalid
+        event.preventDefault();
+        // Display the error message
+        document.getElementById("mobilePhoneError").style.display = "block";
+      } else {
+        // If the input is valid, hide the error message
+        document.getElementById("mobilePhoneError").style.display = "none";
+      }
+
+      // Check if email input is valid
+      const emailInput = document.getElementById("emailInput");
+      if (!emailInput.checkValidity()) {
+        // Prevent form submission if the input is invalid
+        event.preventDefault();
+        // Display the error message
+        document.getElementById("emailError").style.display = "block";
+      } else {
+        // If the input is valid, hide the error message
+        document.getElementById("emailError").style.display = "none";
+      }
+
+      // If there are no errors, proceed with the form submission
+      if (mobilePhoneInput.checkValidity() && emailInput.checkValidity()) {
+        submitForm(event);
+      }
+    });
+</script>
 </Layout>
