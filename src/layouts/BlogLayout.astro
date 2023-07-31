@@ -29,21 +29,6 @@ const seo = {
     <meta name="twitter:description" content={frontmatter.excerpt} />
     <meta name="twitter:image" content={frontmatter.image} />
     <meta name="twitter:image:alt" content={frontmatter.alt} />
-
-    <script type="text/javascript">
-      (function() {
-        var t = document.createElement('script'),
-            s = document.getElementsByTagName('script')[0];
-        t.async = true;
-        t.id    = 'cio-forms-handler';
-        t.setAttribute('data-site-id', '0210718529544e3eb175');
-        t.setAttribute('data-base-url', 'https://customerioforms.com');
-
-        t.src = 'https://customerioforms.com/assets/forms.js';
-
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
   </head>
 
 <Layout seo={seo}>
@@ -123,38 +108,6 @@ const seo = {
           </form>
           <div id="successMessage" class="hidden">Form submitted successfully!</div>
         </div>
-        <script type="text/javascript">
-            function submitForm(event) {
-              event.preventDefault();
-                // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
-              setTimeout(function() {
-                document.getElementById("blogSubscribeForm").reset(); // Reset the form
-                document.getElementById("blogSubscribeForm").style.display = "none"; // Hide the form
-                document.getElementById("successMessage").classList.remove("hidden");
-                document.getElementById("form-container").classList.add("hidden");
-              }, 2000);
-            }
-
-          const submitButton = document.querySelector('button[type="submit"]');
-              submitButton.addEventListener('click', function(event) {
-                // Check if email input is valid
-                const emailInput = document.getElementById("emailInput");
-                if (!emailInput.checkValidity()) {
-                  // Prevent form submission if the input is invalid
-                  event.preventDefault();
-                  // Display the error message
-                  document.getElementById("emailError").style.display = "block";
-                } else {
-                  // If the input is valid, hide the error message
-                  document.getElementById("emailError").style.display = "none";
-                }
-
-                // If there are no errors, proceed with the form submission
-                if (emailInput.checkValidity()) {
-                  submitForm(event);
-                }
-              });
-        </script>
         <style>
           .hidden {
             display: none;
@@ -266,70 +219,114 @@ const seo = {
       </div>  
     </article>
   </Container>
+  <style>
+    .post-content__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .post-content__category {
+      padding: 0.5rem 1rem;
+      font-size: var(--step--1);
+      background-color: var(--theme-surface-1);
+      border-radius: 2rem;
+    }
+    .post-content__category a {
+      text-decoration: none;
+    }
+    .post-content__category a:hover {
+      opacity: 0.8;
+    }
+    .post-content__article {
+      padding: 5vh 0;
+    }
+    .post-content__title {
+      margin: 1rem auto;
+      font-size: 2rem;
+      padding: 0 4rem;
+    }
+    .post-content__date {
+      margin: 0 auto;
+      font-size: var(--step--1);
+      color: var(--color-gray);
+      font-style: italic;
+    }
+    .post-content__img {
+      margin: 3rem 0 2rem 0;
+      max-width: 50%;
+      height: auto;
+      border-radius: 2rem;
+      object-fit: contain; /* Use 'contain' to prevent image repetition */
+    }
+    .post-content__content :global(img) {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+    }
+  
+    .post-content__content {
+      margin: 0 auto;
+      max-width: 800px; /* Adjust the maximum width as needed */
+      padding: 0 1rem; /* Adjust the horizontal padding as needed */
+      text-align: left; /* Add this line to align the text to the left */
+    }
+  
+    .post-content__content :global(h2) {
+      padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+    }
+  
+    .post-content__content :global(h3) {
+      padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+    }
+  
+    .post-content__content :global(p) {
+      padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
+    }
+  </style>
+  <script type="text/javascript">
+    function submitForm(event) {
+      event.preventDefault();
+        // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
+      setTimeout(function() {
+        document.getElementById("blogSubscribeForm").reset(); // Reset the form
+        document.getElementById("blogSubscribeForm").style.display = "none"; // Hide the form
+        document.getElementById("successMessage").classList.remove("hidden");
+        document.getElementById("form-container").classList.add("hidden");
+      }, 2000);
+    }
+
+    (function() {
+      var t = document.createElement('script'),
+          s = document.getElementsByTagName('script')[0];
+      t.async = true;
+      t.id    = 'cio-forms-handler';
+      t.setAttribute('data-site-id', '0210718529544e3eb175');
+      t.setAttribute('data-base-url', 'https://customerioforms.com');
+
+      t.src = 'https://customerioforms.com/assets/forms.js';
+
+      s.parentNode.insertBefore(t, s);
+    })();
+
+  const submitButton = document.querySelector('button[type="submit"]');
+      submitButton.addEventListener('click', function(event) {
+        // Check if email input is valid
+        const emailInput = document.getElementById("emailInput");
+        if (!emailInput.checkValidity()) {
+          // Prevent form submission if the input is invalid
+          event.preventDefault();
+          // Display the error message
+          document.getElementById("emailError").style.display = "block";
+        } else {
+          // If the input is valid, hide the error message
+          document.getElementById("emailError").style.display = "none";
+        }
+
+        // If there are no errors, proceed with the form submission
+        if (emailInput.checkValidity()) {
+          submitForm(event);
+        }
+      });
+  </script>
 </Layout>
-
-<style>
-  .post-content__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .post-content__category {
-    padding: 0.5rem 1rem;
-    font-size: var(--step--1);
-    background-color: var(--theme-surface-1);
-    border-radius: 2rem;
-  }
-  .post-content__category a {
-    text-decoration: none;
-  }
-  .post-content__category a:hover {
-    opacity: 0.8;
-  }
-  .post-content__article {
-    padding: 5vh 0;
-  }
-  .post-content__title {
-    margin: 1rem auto;
-    font-size: 2rem;
-    padding: 0 4rem;
-  }
-  .post-content__date {
-    margin: 0 auto;
-    font-size: var(--step--1);
-    color: var(--color-gray);
-    font-style: italic;
-  }
-  .post-content__img {
-    margin: 3rem 0 2rem 0;
-    max-width: 50%;
-    height: auto;
-    border-radius: 2rem;
-    object-fit: contain; /* Use 'contain' to prevent image repetition */
-  }
-  .post-content__content :global(img) {
-    display: block;
-    margin: 2rem auto;
-    max-width: 100%;
-  }
-
-  .post-content__content {
-    margin: 0 auto;
-    max-width: 800px; /* Adjust the maximum width as needed */
-    padding: 0 1rem; /* Adjust the horizontal padding as needed */
-    text-align: left; /* Add this line to align the text to the left */
-  }
-
-  .post-content__content :global(h2) {
-    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
-  }
-
-  .post-content__content :global(h3) {
-    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
-  }
-
-  .post-content__content :global(p) {
-    padding-bottom: 1rem; /* Add this line to add vertical padding between paragraphs */
-  }
-</style>
