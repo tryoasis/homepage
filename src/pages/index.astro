@@ -33,7 +33,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             aria-label="Sign Up"
             id="track"
           >
-            Get started for free
+            Schedule a discovery call
           </a>
         </div>
       </div>
@@ -428,7 +428,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               aria-label="Download Astro template"
               id="track"
             >
-              Create a client profile
+              Schedule a discovery call
             </a>
           </div>
           <img
@@ -814,7 +814,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               aria-label="Get started now"
               id="track"
             >
-              Get started for free
+              Chat with us
             </a>
           </article>
           <!--Pro-->
@@ -888,7 +888,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               role="button"
               aria-label="Let's work together"
             >
-              Create a free profile
+              Schedule a call
             </a>
           </article>
           <!--Exclusive-->
@@ -963,7 +963,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             aria-label="Get started now"
             id="track"
           >
-            Get started for free
+            Chat with us
           </a>
         </article>
         </div>
@@ -1105,99 +1105,6 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
         </div>
       </div>
     </section>
-    <section class="xs-p-y-16 md-p-y-32">
-      <div class="container container-lg">
-        <div class="section-title all-center m-b-4">
-          <h2 class="m-b-6 p-b-6 md-w-75">
-            Frequently Asked Questions
-          </h2>
-          <div class="accordion">
-            <details>
-              <summary>What exactly does your agency do?</summary>
-              <p>
-                <p>In a nutshell, we are a partnerships agency. We originally began with a focus on integrations, but quickly realized that while there's a need for integration support, there's a much higher demand for effective partnership-led support</p>
-              </p>
-            </details>
-            <details>
-              <summary>What do you do to achieve this</summary>
-              <p>
-                <p>We tap into a lot of really cool trends, but the main thing we do is help you build a partner program that is focused on your goals. We do this by helping you identify the right partners, and then helping you build a program that is focused on your goals.</p>
-              </p>
-            </details>
-          </div>
-        </div>
-      </div>
-      <style>
-        /* Reset default styles */
-        body, ul, li {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-      
-        /* Custom styles for the accordion */
-        .accordion {
-          max-width: 800px;
-          margin: 0 auto;
-          width: 100%; /* Set the width to match the expanded content */
-        }
-      
-        .accordion summary {
-          background-color: #fff;
-          padding: 15px;
-          cursor: pointer;
-          font-weight: bold;
-          display: flex;
-          align-items: center;
-          border-radius: 4px;
-          justify-content: space-between; /* Center the content when expanded */
-        }
-      
-        .accordion summary::before {
-          content: "\25BA";
-          margin-right: 10px;
-        }
-      
-        .accordion [open] summary::before {
-          content: "\25BC";
-        }
-      
-        .accordion details {
-          width: 100%; /* Set a fixed width for the accordion */
-          overflow: hidden;
-          border: 1px solid #ccc;
-          border-radius: 0px;
-          padding: 4px;
-        }
-      
-        .accordion-content {
-          max-width: 100%; /* Set a max-width for the expanded content */
-          padding-right: 15px;
-          padding-left: 15px; 
-        }
-      
-        .accordion p {
-          font-size: 16px;
-          line-height: 1.6;
-          padding-right: 15px;
-          padding-left: 15px;
-          padding-bottom: 15px;
-        }
-      
-        /* Underline links in the summary */
-        .accordion a {
-          text-decoration: underline;
-          color: #FC4C69;
-        }
-      
-        /* Media Query for smaller screens */
-        @media screen and (max-width: 480px) {
-          .accordion p {
-            font-size: 14px;
-          }
-        }
-      </style>      
-    </section>
     <!--CTA-->
     <section class="xs-p-y-16 md-p-y-32 cta-section">
       <div class="container container-lg">
@@ -1213,17 +1120,10 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           <p class="m-b-6 lg-w-50">
             Put your growth on autopilot with an on-demand partnership team
           </p>
-          <a
-            href=".tryuppercut.com/login?step=signUp"
-            class="btn black dark-bg-magenta-400 btn-lg shadow-lg"
-            role="button"
-            aria-label="Download Astro template"
-            id="track"
-          >
-           Join us in the client portal
-          </a>
         </div>
       </div>
+      <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/james-bohrman?embed=true"></div>
+      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
     </section>
   </main>
 </Layout>
