@@ -17,8 +17,8 @@ import Layout from "../layouts/Layout.astro";
             <div class="form-container">
             <form method="POST" action="https://customerioforms.com/forms/submit_action?site_id=0210718529544e3eb175&form_id=01h6nd22zmezry6phvnrrrez5m&success_url=https://www.tryuppercut.com/unified-api-success-page" id="unifiedAPIForm" onsubmit="submitForm(event)">
               <div class="form-group">
-                <label for="emailInput">Email:</label>
-                <input type="email" pattern="^(?!.*@(gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)).+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" id="emailInput" name="email" required placeholder="erlich@aviato.com">
+                <label for="email_input">Email:</label>
+                <input type="email" pattern="^(?!.*@(gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)).+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" id="email_input" name="email" required placeholder="erlich@aviato.com">
                 <span class="error-message" id="emailError">Please enter a valid corporate email address.</span>
               </div>
               <div class="form-group">
@@ -243,7 +243,7 @@ import Layout from "../layouts/Layout.astro";
       setTimeout(function() {
         document.getElementById("unifiedAPIForm").reset(); // Reset the form
         document.getElementById("unifiedAPIForm").style.display = "none"; // Hide the form
-        document.getElementById("successMessage").classList.remove("hidden"); // Show the success message
+        window.location.href = "/unified-api-success-page.astro";
       }, 2000);
     }
 
