@@ -8,51 +8,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="container container-xl">
         <div class="split-screen">
           <div class="flex p-r-10 flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
-            <h3 class="m-b-6 p-t-10 font-semibold">
-              Get access to the Unified API Landscape for free!
-            </h3>
-            <p class="m-b-6">
-              We have created an exclusive resource to help you get a feel for the current state of the Unified API space. To get access, please fill out the form below. We will send you an email with a link to download.
-            </p>
-            <div class="form-container">
-            <form method="POST" action="https://customerioforms.com/forms/submit_action?site_id=0210718529544e3eb175&form_id=01h6nd22zmezry6phvnrrrez5m&success_url=https://www.tryuppercut.com/unified-api-success-page" id="unifiedAPIForm" onsubmit="submitForm(event)">
-              <div class="form-group">
-                <label for="email_input">Email:</label>
-                <input type="email" pattern="^(?!.*@(gmail\.com|hotmail\.com|yahoo\.com|tds\.net|xfinity\.com|comcast\.net|outlook\.com|protonmail\.com)).+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$" id="email_input" name="email" required placeholder="erlich@aviato.com">
-                <span class="error-message" id="emailError">Please enter a valid corporate email address.</span>
-              </div>
-              <div class="form-group">
-                <label for="firstNameInput">First Name:</label>
-                <input type="text" id="firstNameInput" name="firstname" required placeholder="Erlich">
-              </div>
-              <div class="form-group">
-                <label for="lastNameInput">Last Name:</label>
-                <input type="text" id="lastNameInput" name="lastname" required placeholder="Bachman">
-              </div>
-              <div class="form-group">
-                <label for="companyInput">Company:</label>
-                <input type="text" id="companyInput" name="company" required placeholder="Aviato">
-              </div>
-              <div class="form-group">
-                <label for="websiteInput">Website:</label>
-                <input type="url" id="websiteInput" name="website" required placeholder="https://www.aviato.com">
-              </div>
-              <div class="form-group">
-                <label for="mobilePhoneInput">Mobile Phone:</label>
-                <input type="tel" pattern="^\+\d+$" id="mobilePhoneInput" name="mobilephone" required placeholder="+1 (888) 8888">
-                <span class="error-message" id="mobilePhoneError">Please enter a valid mobile phone number (e.g., +1 1234567890).</span>
-              </div>
-                <!-- Error message for invalid input -->
-              <div class="form-group">
-                <input type="checkbox" id="communicationConsent" name="communication_consent" required>
-                <span>I agree to receiving communication from Uppercut.</span>
-              </div>
-            </div>
-              <div class="form-group">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-            <div id="successMessage" class="hidden">Form submitted successfully!</div>
+            <script type="text/javascript" src="https://form.jotform.com/jsform/232112308880045"></script>
           </div>
           <!-- Add the image here -->
           <div class="md-w-50">
@@ -236,47 +192,4 @@ import Layout from "../layouts/Layout.astro";
       }
     }
   </style>
-  <script>
-    function submitForm(event) {
-      event.preventDefault();
-        // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
-      setTimeout(function() {
-        document.getElementById("unifiedAPIForm").reset(); // Reset the form
-        document.getElementById("unifiedAPIForm").style.display = "none"; // Hide the form
-        window.location.href = "/unified-api-success-page.astro";
-      }, 2000);
-    }
-
-  const submitButton = document.querySelector('button[type="submit"]');
-      submitButton.addEventListener('click', function(event) {
-        // Check if mobile phone input is valid
-        const mobilePhoneInput = document.getElementById("mobilePhoneInput");
-        if (!mobilePhoneInput.checkValidity()) {
-          // Prevent form submission if the input is invalid
-          event.preventDefault();
-          // Display the error message
-          document.getElementById("mobilePhoneError").style.display = "block";
-        } else {
-          // If the input is valid, hide the error message
-          document.getElementById("mobilePhoneError").style.display = "none";
-        }
-
-        // Check if email input is valid
-        const emailInput = document.getElementById("emailInput");
-        if (!emailInput.checkValidity()) {
-          // Prevent form submission if the input is invalid
-          event.preventDefault();
-          // Display the error message
-          document.getElementById("emailError").style.display = "block";
-        } else {
-          // If the input is valid, hide the error message
-          document.getElementById("emailError").style.display = "none";
-        }
-
-        // If there are no errors, proceed with the form submission
-        if (mobilePhoneInput.checkValidity() && emailInput.checkValidity()) {
-          submitForm(event);
-        }
-      });
-  </script>
 </Layout>
