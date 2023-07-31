@@ -237,20 +237,6 @@ import Layout from "../layouts/Layout.astro";
     }
   </style>
 
-<script type="text/javascript">
-  (function() {
-    var t = document.createElement('script'),
-        s = document.getElementsByTagName('script')[0];
-    t.async = true;
-    t.id    = 'cio-forms-handler';
-    t.setAttribute('data-site-id', '0210718529544e3eb175');
-    t.setAttribute('data-base-url', 'https://customerioforms.com');
-
-    t.src = 'https://customerioforms.com/assets/forms.js';
-
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
 <script>
   function submitForm(event) {
     event.preventDefault();
@@ -258,7 +244,17 @@ import Layout from "../layouts/Layout.astro";
     setTimeout(function() {
       document.getElementById("unifiedAPIForm").reset(); // Reset the form
       document.getElementById("unifiedAPIForm").style.display = "none"; // Hide the form
-      document.getElementById("successMessage").classList.remove("hidden"); // Show the success message
+      document.getElementById("successMessage").classList.remove("hidden");
+      var t = document.createElement('script'),
+        s = document.getElementsByTagName('script')[0];
+          t.async = true;
+          t.id    = 'cio-forms-handler';
+          t.setAttribute('data-site-id', '0210718529544e3eb175');
+          t.setAttribute('data-base-url', 'https://customerioforms.com');
+
+          t.src = 'https://customerioforms.com/assets/forms.js';
+
+          s.parentNode.insertBefore(t, s);
     }, 2000);
   }
 
