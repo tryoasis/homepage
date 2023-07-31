@@ -236,58 +236,69 @@ import Layout from "../layouts/Layout.astro";
       }
     }
   </style>
-
-<script>
+  <script>
   function submitForm(event) {
     event.preventDefault();
-      // Simulate form submission with a delay of 2 seconds (you can replace this with your actual form submission code)
-    setTimeout(function() {
-      document.getElementById("unifiedAPIForm").reset(); // Reset the form
-      document.getElementById("unifiedAPIForm").style.display = "none"; // Hide the form
-      document.getElementById("successMessage").classList.remove("hidden");
-      var t = document.createElement('script'),
-        s = document.getElementsByTagName('script')[0];
-          t.async = true;
-          t.id    = 'cio-forms-handler';
-          t.setAttribute('data-site-id', '0210718529544e3eb175');
-          t.setAttribute('data-base-url', 'https://customerioforms.com');
 
-          t.src = 'https://customerioforms.com/assets/forms.js';
+    // Get the form data
+    const form = document.getElementById("unifiedAPIForm");
+    const formData = new FormData(form);
 
-          s.parentNode.insertBefore(t, s);
-    }, 2000);
+    // Send the form data via AJAX to the specified endpoint
+    fetch("https://track.customer.io/api/v1/forms/01h6nd22zmezry6phvnrrrez5m/submit", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        // Check if the response is successful (status 200-299)
+        if (response.ok) {
+          // Reset the form
+          form.reset();
+          // Hide the form
+          form.style.display = "none";
+          // Show the success message
+          document.getElementById("successMessage").classList.remove("hidden");
+        } else {
+          // Display an error message if the form submission was not successful
+          console.error("Form submission failed:", response.statusText);
+        }
+      })
+      .catch((error) => {
+        // Display an error message if there was an error during form submission
+        console.error("Form submission error:", error);
+      });
   }
 
-const submitButton = document.querySelector('button[type="submit"]');
-    submitButton.addEventListener('click', function(event) {
-      // Check if mobile phone input is valid
-      const mobilePhoneInput = document.getElementById("mobilePhoneInput");
-      if (!mobilePhoneInput.checkValidity()) {
-        // Prevent form submission if the input is invalid
-        event.preventDefault();
-        // Display the error message
-        document.getElementById("mobilePhoneError").style.display = "block";
-      } else {
-        // If the input is valid, hide the error message
-        document.getElementById("mobilePhoneError").style.display = "none";
-      }
+  const submitButton = document.querySelector('button[type="submit"]');
+  submitButton.addEventListener('click', function(event) {
+    // Check if mobile phone input is valid
+    const mobilePhoneInput = document.getElementById("mobilePhoneInput");
+    if (!mobilePhoneInput.checkValidity()) {
+      // Prevent form submission if the input is invalid
+      event.preventDefault();
+      // Display the error message
+      document.getElementById("mobilePhoneError").style.display = "block";
+    } else {
+      // If the input is valid, hide the error message
+      document.getElementById("mobilePhoneError").style.display = "none";
+    }
 
-      // Check if email input is valid
-      const emailInput = document.getElementById("emailInput");
-      if (!emailInput.checkValidity()) {
-        // Prevent form submission if the input is invalid
-        event.preventDefault();
-        // Display the error message
-        document.getElementById("emailError").style.display = "block";
-      } else {
-        // If the input is valid, hide the error message
-        document.getElementById("emailError").style.display = "none";
-      }
+    // Check if email input is valid
+    const emailInput = document.getElementById("emailInput");
+    if (!emailInput.checkValidity()) {
+      // Prevent form submission if the input is invalid
+      event.preventDefault();
+      // Display the error message
+      document.getElementById("emailError").style.display = "block";
+    } else {
+      // If the input is valid, hide the error message
+      document.getElementById("emailError").style.display = "none";
+    }
 
-      // If there are no errors, proceed with the form submission
-      if (mobilePhoneInput.checkValidity() && emailInput.checkValidity()) {
-        submitForm(event);
-      }
-    });
-</script>
+    // If there are no errors, proceed with the form submission
+    if (mobilePhoneInput.checkValidity() && emailInput.checkValidity()) {
+      submitForm(event);
+    }
+  });
+  </script>
 </Layout>
