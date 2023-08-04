@@ -6,14 +6,19 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <section>
       <div class="container container-xl">
-        <div class="split-screen">
-          <div class="flex p-r-10 flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
-            <script type="text/javascript" src="https://form.jotform.com/jsform/232146854314151"></script>
-          </div>
-          <!-- Add the image here -->
-          <div class="md-w-50">
-            <h3>Get a free 15-min nearbound consultation</h3>
-            <p class="p-t-3">Let's talk about your organizations current understanding of nearbound and how Uppercut can help you achieve full cohesion.</p>
+        <div class="flex flex-column">
+          <!-- Content -->
+          <div class="content-wrapper md-flex md-justify-center md-items-center">
+            <div class="md-w-50">
+              <h3>Get a free 15-min nearbound consultation</h3>
+              <p class="p-t-3">Let's talk about your organizations current understanding of nearbound and how Uppercut can help you achieve full cohesion.</p>
+            </div>
+            <hr class="divider">
+            <div class="md-w-50 md-flex md-justify-center md-items-center">
+              <!-- HubSpot Embed -->
+              <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/james-bohrman?embed=true"></div>
+              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+            </div>
           </div>
         </div>
       </div>
@@ -121,12 +126,39 @@ import Layout from "../layouts/Layout.astro";
       padding: 0 15px;
     }
 
-    .split-screen {
-      display: flex;
+    .meetings-iframe-container {
+      width: 100%; /* Set the width to 100% to take up full width */
+      height: 100%; /* Set the height to 100% to take up full height */
+      padding-top: 20px; /* This is the padding for the iframe */
     }
 
     .md-w-50 {
       width: 50%;
+    }
+
+    .md-flex {
+      display: flex;
+    }
+
+    .md-justify-center {
+      justify-content: center;
+    }
+
+    .content-wrapper {
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+
+    .divider {
+      width: 75%;
+      height: 1px;
+      background-color: #fff;
+      margin: 20px 0;
+    }
+
+    .md-items-center {
+      align-items: center;
     }
 
     .flex {
@@ -134,6 +166,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .flex-column {
+      display: flex;
       flex-direction: column;
     }
 
@@ -180,8 +213,20 @@ import Layout from "../layouts/Layout.astro";
 
     /* Responsive Styles */
     @media (max-width: 768px) {
-      .split-screen {
-        flex-direction: column-reverse;
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .meetings-iframe-container, .md-w-50 {
+        width: 100%;
+      }
+
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .divider {
+        margin: 10px 0;
       }
 
       .md-w-50 {
