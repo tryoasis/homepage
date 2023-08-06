@@ -2,7 +2,7 @@
 title: "The Growing Embedded IPaaS Ecosystem and the Looming Struggle for Closed Source Platforms"
 excerpt: "The market for embedded integration platform as a service (IPaaS) solutions is exploding lately. Exciting new entrants like Merge, Hotglue, Finch, and Allow Automation are gaining traction across industries. However, much of this new wave of embedded IPaaS tools are closed source platforms."
 publishedAt: "07/18/2023"
-image: "https://images.pexels.com/photos/3844790/pexels-photo-3844790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+image: "openvsclosed.png"
 alt: "saturated paint splash"
 category: "Thought leadership"
 author: "James Bohrman"
@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](https://images.pexels.com/photos/3844790/pexels-photo-3844790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+![](../openvsclosed.png)
 
 The market for embedded integration platform as a service (IPaaS) solutions is exploding lately. Exciting new entrants like Merge, Hotglue, Finch, and Allow Automation are gaining traction across industries. However, much of this new wave of embedded IPaaS tools are closed source platforms.
 

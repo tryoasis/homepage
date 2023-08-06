@@ -2,7 +2,7 @@
 title: "Blink twice if you're in danger: The pitfalls of vender lock-in"
 excerpt: "In today's fast-paced business world, it can be tempting for companies to commit fully to a single vendor or proprietary technology platform. The perceived benefits of standardization and integration can make vendor lock-in seem like an attractive option."
 publishedAt: "07/26/2023"
-image: "https://images.pexels.com/photos/164425/pexels-photo-164425.jpeg?auto=compress&cs=tinysrgb&w=1200"
+image: "lockin.png"
 alt: "pad-locked door"
 category: "Thought Leadership"
 author: "James Bohrman"
@@ -16,7 +16,7 @@ ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
 
-![](https://images.pexels.com/photos/164425/pexels-photo-164425.jpeg?auto=compress&cs=tinysrgb&w=1200)
+![](../lockin.png)
 
 In today's fast-paced business world, it can be tempting for companies to commit fully to a single vendor or proprietary technology platform. The perceived benefits of standardization and integration can make vendor lock-in seem like an attractive option. However, this approach carries significant risks that are often overlooked. In this post, we'll explore the hidden costs of vendor lock-in and provide actionable strategies to maintain flexibility in an ever-changing technology landscape.
 

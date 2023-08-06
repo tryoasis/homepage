@@ -2,7 +2,7 @@
 title: "Partnerships and Unified APIs: The Dynamic Duo of Product Growth"
 excerpt: "For many SaaS applications, the ability to support bi-directional data syncing with various third-party APIs is a crucial element for competing in a fast-paced ecosystem. From a CRM that needs to sync analytics from a mailing service, to a community platform that needs to check the status of Github PRs, the demand for integration is there."
 publishedAt: "06/23/2023"
-image: "https://images.pexels.com/photos/6456264/pexels-photo-6456264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+image: "dynamicduo.png"
 alt: "boxing gloves bumping fists"
 category: "Announcements"
 author: "James Bohrman"
@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](https://images.pexels.com/photos/6456264/pexels-photo-6456264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+![](../dynamicduo.png)
 
 For many SaaS applications, the ability to support bi-directional data syncing with various third-party APIs is a crucial element for competing in a fast-paced ecosystem. From a CRM that needs to sync analytics from a mailing service, to a community platform that needs to check the status of Github PRs, the demand for integration is there.
 

@@ -2,7 +2,7 @@
 title: "Investing in the Resin of Commerce: Our Commitment to Partnerships in H2 2023"
 excerpt: "At Uppercut, we believe that partnerships are the resin that bonds business relationships together and drives success. As we look ahead to the second half of 2023, we are reaffirming and evolving our commitment to partnership-focused consulting. While integrations remain crucial, we aim to position integration management as an enabler of partnerships versus the sole focus."
 publishedAt: "07/30/2023"
-image: "https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg?auto=compress&cs=tinysrgb&w=1200"
+image: "resin.png"
 alt: "city through a lens"
 category: "Announcement"
 author: "James Bohrman"
@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg?auto=compress&cs=tinysrgb&w=1200)
+![](../resin.png)
 
 At Uppercut, we believe that partnerships are the resin that bonds business relationships together and drives success. As we look ahead to the second half of 2023, we are reaffirming and evolving our commitment to partnership-focused consulting. While integrations remain crucial, we aim to position integration management as an enabler of partnerships versus the sole focus.
 
