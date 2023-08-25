@@ -2,7 +2,7 @@
 title: "Blink twice if you're in danger: The pitfalls of vender lock-in"
 excerpt: "In today's fast-paced business world, it can be tempting for companies to commit fully to a single vendor or proprietary technology platform. The perceived benefits of standardization and integration can make vendor lock-in seem like an attractive option."
 publishedAt: "07/26/2023"
-image: "lockin.png"
+image: "https://www.tryuppercut.com/lockin.png"
 alt: "pad-locked door"
 category: "Thought Leadership"
 author: "James Bohrman"

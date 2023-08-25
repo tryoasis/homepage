@@ -2,7 +2,7 @@
 title: "The power of context awareness when persuing nearbound sales"
 excerpt: ""
 publishedAt: "08/07/2023"
-image: "context.png"
+image: "https://www.tryuppercut.com/context.png"
 alt: "blog banner"
 category: "Thought Leadership"
 author: "James Bohrman"
