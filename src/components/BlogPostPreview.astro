@@ -34,7 +34,7 @@ import {formatDate} from '../utils/helpers'
   }
   
   .post-preview__img-wrapper {
-    flex: 0 0 200px; /* Set a fixed width for the thumbnail */
+    flex: 0 0 300px; /* Set a fixed width for the thumbnail */
     max-width: 100%;
   }
   
@@ -60,9 +60,9 @@ import {formatDate} from '../utils/helpers'
   
   .post-preview__category {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     max-width: 75%;
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
     font-weight: bold;
     background-color: var(--theme-surface-1);
     border-radius: 2rem;
@@ -71,9 +71,9 @@ import {formatDate} from '../utils/helpers'
   }
   
   .post-preview__title {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     max-width: 75%;
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
@@ -82,6 +82,7 @@ import {formatDate} from '../utils/helpers'
     font-size: 1rem;
     color: var(--color-gray);
     margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
   }
   
   /* Center content on smaller screens */
@@ -96,6 +97,14 @@ import {formatDate} from '../utils/helpers'
     }
 
     .post-preview__date {
+      margin-left: 2.5rem;
+    }
+
+    .post-preview__category {
+      margin-left: 2.5rem;
+    }
+
+    .post-preview__title {
       margin-left: 2.5rem;
     }
     
