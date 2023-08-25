@@ -60,8 +60,9 @@ import {formatDate} from '../utils/helpers'
   
   .post-preview__category {
     display: inline-block;
-    padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
+    max-width: 75%;
+    margin-left: 2.5rem;
     font-weight: bold;
     background-color: var(--theme-surface-1);
     border-radius: 2rem;
@@ -70,10 +71,11 @@ import {formatDate} from '../utils/helpers'
   }
   
   .post-preview__title {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    max-width: 75%;
+    margin-left: 2.5rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
-    padding: 0.3rem;
   }
   
   .post-preview__date {
@@ -90,21 +92,11 @@ import {formatDate} from '../utils/helpers'
 
     .post-preview__img-wrapper {
       flex: 0 0 100%;
-      max-width: 100%;
-      padding: 12px;
-    }
-
-    .post-preview__title {
-      padding-left: 12px;
-    }
-
-    .post-preview__category {
-      margin-bottom: 0.5rem;
-      padding-left: 12px;
+      max-width: 80%;
     }
 
     .post-preview__date {
-      padding-left: 12px;
+      margin-left: 2.5rem;
     }
     
     .post-preview__content {
