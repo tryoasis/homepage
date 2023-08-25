@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](../walledgardens.png)
+![](https://www.tryuppercut.com/walledgardens.png)
 
 Integration has become a strategic imperative for modern software companies. The ability to connect and exchange data with third-party apps and services is now a baseline expectation for any platform. Users demand seamless interoperability.
 

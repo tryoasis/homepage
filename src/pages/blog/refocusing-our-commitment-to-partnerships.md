@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](../resin.png)
+![](https://www.tryuppercut.com/resin.png)
 
 At Uppercut, we believe that partnerships are the resin that bonds business relationships together and drives success. As we look ahead to the second half of 2023, we are reaffirming and evolving our commitment to partnership-focused consulting. While integrations remain crucial, we aim to position integration management as an enabler of partnerships versus the sole focus.
 

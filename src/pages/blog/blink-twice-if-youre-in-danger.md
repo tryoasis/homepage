@@ -16,7 +16,7 @@ ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
 
-![](../lockin.png)
+![](https://www.tryuppercut.com/lockin.png)
 
 In today's fast-paced business world, it can be tempting for companies to commit fully to a single vendor or proprietary technology platform. The perceived benefits of standardization and integration can make vendor lock-in seem like an attractive option. However, this approach carries significant risks that are often overlooked. In this post, we'll explore the hidden costs of vendor lock-in and provide actionable strategies to maintain flexibility in an ever-changing technology landscape.
 

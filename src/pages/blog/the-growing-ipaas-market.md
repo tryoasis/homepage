@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](../openvsclosed.png)
+![](https://www.tryuppercut.com/openvsclosed.png)
 
 The market for embedded integration platform as a service (IPaaS) solutions is exploding lately. Exciting new entrants like Merge, Hotglue, Finch, and Allow Automation are gaining traction across industries. However, much of this new wave of embedded IPaaS tools are closed source platforms.
 

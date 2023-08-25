@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](../dynamicduo.png)
+![](https://www.tryuppercut.com/dynamicduo.png)
 
 For many SaaS applications, the ability to support bi-directional data syncing with various third-party APIs is a crucial element for competing in a fast-paced ecosystem. From a CRM that needs to sync analytics from a mailing service, to a community platform that needs to check the status of Github PRs, the demand for integration is there.
 

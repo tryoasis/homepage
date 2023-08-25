@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](../context.png)
+![](https://www.tryuppercut.com/context.png)
 
 In today’s complex and dynamic business environment, companies must utilize creative go-to-market (GTM) strategies to drive revenue growth. One approach that has gained popularity in recent years is the concept of “nearbound” sales. Nearbound sales refers to leveraging partnership ecosystems to uncover revenue-generating opportunities. By building strong relationships with partners that serve similar customers and markets, companies can tap into valuable context and insights to fuel their sales engines.
 
