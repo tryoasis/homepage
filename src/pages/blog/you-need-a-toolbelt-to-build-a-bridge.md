@@ -37,9 +37,7 @@ When I’m building a partner program, I often build it in the image of what I m
 
 Arguably one of my most important requirements when exploring tooling is how will this tool affect a potential partner's first experience during our collaboration. The onboarding process is one of the most overlooked items of partner programs, and it is so important to get it right. As a partner, I want to be able to find any links, resources, and documents centralized in one location without having to move mountains. 
 
-How we handle this at Uppercut:
-
-#### Dock
+How we handle this at Uppercut: Dock
 
 Although our clients can always bring their own PRM, and Dock isn't even technical a PRM, Dock has become a great tool for enabling cohesive relationships that we spun up our own use case for. 
 
@@ -64,11 +62,15 @@ The main goal is to be able to talk with your partners as a group, for transpare
 
 How we handle this at Uppercut: Slack Connect
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eeBYYCVO2jM?si=IHsRaLR_LmN1eKLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Nearbound Growth
 
 My next guest needs no introduction, but truly there’s really only one tool I feel confident suggesting for this. And it’s my favorite people over at Reveal. 
 
 How we handle this at Uppercut: [Reveal](https://reveal.co/) 🔮
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nD9YmT_L8xw?si=EJJ0f2Fx8oGyL321" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Conclusion
 
