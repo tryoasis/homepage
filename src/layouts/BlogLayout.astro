@@ -14,12 +14,14 @@ const seo = {
 ---
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://www.tryuppercut.com/blog/" />
+
     <meta name="title" content={frontmatter.title} />    
     <meta property="og:title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.excerpt} />
     <meta property="og:description" content={frontmatter.excerpt} />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.tryuppercut.com/" />
+    <meta property="og:url" content="https://www.tryuppercut.com/blog/" />
     <meta property="og:image" content={frontmatter.image} />
     <meta property="og:image:alt" content={frontmatter.alt} />
     <meta property="twitter:image" content={frontmatter.image} />
@@ -204,6 +206,12 @@ const seo = {
 </Layout>
 
 <style>
+  .post-content__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .post-content__top {
     display: flex;
     flex-direction: column;

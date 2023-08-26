@@ -51,7 +51,7 @@ It supports some awesome features such as:
 
 And these features weren't even made with partners in mind 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-PWwbXoDJMs?si=jwPmf5farGPPXwnO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="350" height="230" src="https://www.youtube.com/embed/-PWwbXoDJMs?si=jwPmf5farGPPXwnO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Partner Hubs
 This is a angle that a lot of partnership programs haven’t even begun to touch, but the partner hub is wildly important to me as a partner, and it’s been so powerful to use in my experiments with other groups that I think it has the potential to completely change a mediocre no-name bridge partner relationship dynamic, to a Golden Gate Bridge level relationship. 
@@ -62,7 +62,7 @@ The main goal is to be able to talk with your partners as a group, for transpare
 
 How we handle this at Uppercut: Slack Connect
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eeBYYCVO2jM?si=IHsRaLR_LmN1eKLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="350" height="230" src="https://www.youtube.com/embed/eeBYYCVO2jM?si=IHsRaLR_LmN1eKLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Nearbound Growth
 
@@ -70,7 +70,7 @@ My next guest needs no introduction, but truly there’s really only one tool I 
 
 How we handle this at Uppercut: [Reveal](https://reveal.co/) 🔮
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nD9YmT_L8xw?si=EJJ0f2Fx8oGyL321" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="350" height="230" src="https://www.youtube.com/embed/nD9YmT_L8xw?si=EJJ0f2Fx8oGyL321" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Conclusion
 
