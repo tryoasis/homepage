@@ -2,7 +2,7 @@
 title: "Partner Program Development: You need a toolbox to build a bridge 🛠🌉"
 excerpt: "How does one solve the problem of chaotic and inefficient partnership programs? That’s something I’m going to be diving heavily into over the next month or so, and believe very strongly about, because at the end of the day, we all want that sweet effervescent nectar of partner-sourced leads that we all strive for when running programs."
 publishedAt: "08/26/2023"
-image: "https://www.tryuppercut.com/toolbox.jpeg"
+image: "https://www.tryuppercut.com/toolbox.png"
 alt: "tool box"
 category: "Thought leadership"
 author: "James Bohrman"
@@ -15,7 +15,7 @@ ctaLinkCopy: "Schedule a call"
 ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 ---
 
-![](https://www.tryuppercut.com/toolbox.jpeg)
+![](https://www.tryuppercut.com/toolbox.png)
 
 How does one solve the problem of chaotic and inefficient partnership programs? That’s something I’m going to be diving heavily into over the next month or so, and believe very strongly about, because at the end of the day, we all want that sweet effervescent nectar of partner-sourced leads that we all strive for when running programs.
 
