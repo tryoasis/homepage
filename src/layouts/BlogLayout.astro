@@ -10,11 +10,13 @@ const seo = {
   title: frontmatter.title,
   description: frontmatter.description,
   image: frontmatter.image,
+  author: frontmatter.author,
+  datePublished: frontmatter.publishedAt,
+  canonical: `https://www.tryuppercut.com/blog/${frontmatter.slug}`,
 };
 ---
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://www.tryuppercut.com/blog/" />
 
     <meta name="title" content={frontmatter.title} />    
     <meta property="og:title" content={frontmatter.title} />
