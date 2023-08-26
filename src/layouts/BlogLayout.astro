@@ -8,31 +8,36 @@ const { frontmatter } = Astro.props;
 
 const seo = {
   title: frontmatter.title,
-  description: frontmatter.description,
+  description: frontmatter.excerpt,
   image: frontmatter.image,
   author: frontmatter.author,
   datePublished: frontmatter.publishedAt,
-  canonical: `https://www.tryuppercut.com/blog/${frontmatter.slug}`,
+  alt: frontmatter.alt,
 };
 ---
+<!DOCTYPE html>
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow" />
 
-    <meta name="title" content={frontmatter.title} />    
-    <meta property="og:title" content={frontmatter.title} />
-    <meta name="description" content={frontmatter.excerpt} />
-    <meta property="og:description" content={frontmatter.excerpt} />
+    <meta name="title" content={seo.title} />    
+    <meta name="description" content={seo.description} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:site_name" content="Uppercut" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.tryuppercut.com/blog/" />
-    <meta property="og:image" content={frontmatter.image} />
-    <meta property="og:image:alt" content={frontmatter.alt} />
-    <meta property="twitter:image" content={frontmatter.image} />
-    <meta name="twitter:card" content={frontmatter.image} />
+    <meta property="og:image" content={seo.image} />
+    <meta property="og:image:alt" content={seo.alt} />
+    <meta property="twitter:image" content={seo.image} />
+    <meta name="twitter:card" content={seo.image} />
     <meta name="twitter:site" content="@tryuppercut" />
-    <meta name="twitter:title" content={frontmatter.title} />
-    <meta name="twitter:description" content={frontmatter.excerpt} />
-    <meta name="twitter:image" content={frontmatter.image} />
-    <meta name="twitter:image:alt" content={frontmatter.alt} />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={seo.image} />
+    <meta name="twitter:image:alt" content={seo.alt} />
     <script type="text/javascript">
       (function() {
         var t = document.createElement('script'),
