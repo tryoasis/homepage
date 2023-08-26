@@ -16,8 +16,10 @@ import Layout from "../layouts/Layout.astro";
             <hr class="divider">
             <div class="md-w-50 md-flex md-justify-center md-items-center">
               <!-- HubSpot Embed -->
-              <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/james-bohrman?embed=true"></div>
-              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+              <!-- Calendly inline widget begin -->
+              <div class="calendly-inline-widget" data-url="https://calendly.com/jbohrman/30min" style="min-width:320px;height:700px;"></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+              <!-- Calendly inline widget end -->
             </div>
           </div>
         </div>
@@ -126,7 +128,7 @@ import Layout from "../layouts/Layout.astro";
       padding: 0 15px;
     }
 
-    .meetings-iframe-container {
+    .calendly-inline-widget {
       width: 100%; /* Set the width to 100% to take up full width */
       height: 100%; /* Set the height to 100% to take up full height */
       padding-top: 20px; /* This is the padding for the iframe */
