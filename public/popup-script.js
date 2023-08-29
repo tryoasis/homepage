@@ -25,11 +25,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 2 * 7 * 24 * 60 * 60 * 1000); // Two weeks in milliseconds
     }
 
-    // Close the pop-up and overlay when clicking outside the pop-up
+    // Close the pop-up and overlay when clicking outside the pop-up or the close button
     const overlay = document.querySelector(".overlay");
     overlay.addEventListener("click", closePopup);
 
-    // Close the pop-up and overlay when clicking the close button
     const closeButton = document.querySelector(".close-button");
     closeButton.addEventListener("click", closePopup);
 
