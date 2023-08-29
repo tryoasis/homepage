@@ -917,6 +917,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
       </div>
     </section>
     <div class="popup">
+      <span class="close-button">X</span>
       <iframe src="https://heyflow.id/intakes#start"></iframe>
     </div>
     <style>
@@ -929,7 +930,18 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           height: 100%;
           background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
           z-index: 999; /* Below the pop-up */
-      }
+          cursor: pointer; /* Add this line to show pointer cursor on overlay */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
         .popup {
             display: none;
             position: fixed;

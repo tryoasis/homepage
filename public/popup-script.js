@@ -24,5 +24,19 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.removeItem("popupDisplayed");
         }, 2 * 7 * 24 * 60 * 60 * 1000); // Two weeks in milliseconds
     }
-});
 
+    // Close the pop-up and overlay when clicking outside the pop-up
+    const overlay = document.querySelector(".overlay");
+    overlay.addEventListener("click", closePopup);
+
+    // Close the pop-up and overlay when clicking the close button
+    const closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", closePopup);
+
+    function closePopup() {
+        const popup = document.querySelector(".popup");
+        popup.style.display = "none";
+
+        overlay.style.display = "none";
+    }
+});
