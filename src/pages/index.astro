@@ -8,6 +8,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
 >
   <main>
     <!--Hero-->
+    <div class="overlay"></div>
     <section class="p-t-14 p-b-14 dark-bg-black">
       <div class="container container-xl m-b-16">
         <!--headline & text-->
@@ -918,5 +919,42 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
     <div class="popup">
       <iframe src="https://heyflow.id/intakes#start"></iframe>
     </div>
+    <style>
+      .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+          z-index: 999; /* Below the pop-up */
+      }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 70%; /* Set the width of the pop-up div */
+            max-width: 600px; /* Limit the maximum width for larger screens */
+            margin-top: 20px;
+            z-index: 1000;
+            animation: fadeIn 0.5s;
+        }
+      
+        .popup iframe {
+          width: 100%; /* Make the iframe take up the full width of the pop-up */
+          height: 80vh; /* Set the height of the iframe to 80% of viewport height */
+          border: none; /* Remove iframe border */
+        }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
   </main>
 </Layout>

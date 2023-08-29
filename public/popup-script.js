@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showPopup() {
-        // Show the pop-up
+        // Show the pop-up and overlay
         const popup = document.querySelector(".popup");
         popup.style.display = "block";
+
+        const overlay = document.querySelector(".overlay");
+        overlay.style.display = "block";
 
         // Remove the scroll event listener after displaying the pop-up
         window.removeEventListener("scroll", showPopup);
@@ -22,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 2 * 7 * 24 * 60 * 60 * 1000); // Two weeks in milliseconds
     }
 });
+
