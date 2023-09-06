@@ -1,0 +1,9 @@
+.sticky-bar {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 100;
+}
