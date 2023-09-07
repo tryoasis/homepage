@@ -256,7 +256,7 @@ html[data-theme="light"] {
   --rbrh-text-700: var(--rbrh-gray-700);
   --rbrh-text-600: var(--rbrh-gray-600);
   --rbrh-text-link-hover: inherit;
-  --rbrh-text-link: var(--rbrh-white);
+  --rbrh-text-link: var(--rbrh-magenta-400);
 
   --rbrh-shadow-focus: none
 }
@@ -298,7 +298,7 @@ html[data-theme="dark"] {
   --rbrh-text-700: var(--rbrh-gray-300);
   --rbrh-text-600: var(--rbrh-gray-400);
   --rbrh-text-link-hover: var(--rbrh-white);
-  --rbrh-text-link: var(--rbrh-white);
+  --rbrh-text-link: var(--rbrh-magenta-400);
 
   --rbrh-shadow-focus: none;
 }

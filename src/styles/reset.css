@@ -52,7 +52,7 @@ Button & link
 */
 a:focus,
 a:focus-visible {
-  box-shadow: var(--rbrh-shadow-focus);
+  box-shadow: var(--rbrh-);
 }
 button,
 [role="button"],
