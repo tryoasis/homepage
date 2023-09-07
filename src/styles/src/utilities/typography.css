@@ -43,13 +43,6 @@ strong,
 .font-default {
   font-weight: var(--rbrh-font-weight-default);
 }
-a {
-  text-decoration: underline;
-  color: var(--rbrh-magenta-400);
-}
-a:hover {
-  color: var(--rbrh-magenta-600);
-}
 .font-light {
   font-weight: var(--rbrh-font-weight-light);
 }
