@@ -2,7 +2,7 @@
 title: "Quantifying the Partner Experience: How to identify relevant PX metrics"
 excerpt: "Today, the partner experience (or PX) is treated largely as an afterthought. Even with experts urging heavily against this, it’s become all too common for organizations to implement partnership programs that exist merely as a place for partners to submit referrals and not a collaborative experience to engage partner stakeholders in at multiple levels. "
 publishedAt: "09/07/2023"
-image: "https://www.tryuppercut.com/balloon.jpeg"
+image: "https://www.tryuppercut.com/balloon.png"
 alt: "hot-air baloon"
 category: "Operations"
 author: "James Bohrman"
