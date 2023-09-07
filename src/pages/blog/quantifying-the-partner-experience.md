@@ -43,15 +43,15 @@ The key to quantifying any partner experience is always going to be asking the r
 - **Engagement Score:** Rating (1-10)
     - Example Question: *How engaged do you feel as a partner of our company?*
 - **Technology Trust:** Yes/No
-    Example Question: *Do you feel like our company’s solution does what it claims to do?*
+    - Example Question: *Do you feel like our company’s solution does what it claims to do?*
 - **Cohesion:** Yes/No
-    Example Question: *Do you feel like there is decent cohesion between partners of Uppercut and their goals?*
+    - Example Question: *Do you feel like there is decent cohesion between partners of Uppercut and their goals?*
 - **Education Score:** Rating (1-10)
-    Example Question: *How educated does your team feel when talking about Uppercut's product?*
+    - Example Question: *How educated does your team feel when talking about Uppercut's product?*
 - **Churn Score:**: Rating (1-10)
-    Example Question: *How likely are you to remain a partner for the next two years?*
+    - Example Question: *How likely are you to remain a partner for the next two years?*
 - **General Happiness:** Rating (1-10)
-    Example Question: *In a general sense, how happy have you been as a partner of Uppercut?*
+    - Example Question: *In a general sense, how happy have you been as a partner of Uppercut?*
 
 This isn’t an all encompassing list of questions, and you are free to edit it however you choose, but in a general sense this is a starting point for measuring your partner experience. 
 
