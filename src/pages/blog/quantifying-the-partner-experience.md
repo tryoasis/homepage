@@ -69,6 +69,6 @@ The future of partner experiences is looking bright, with more and more people s
 
 As far as where this is going, I’m working on a newsletter diving into Uppercut’s Top 10 predictions for the Partner Experience industry that will be sent out next week. If you’d like to get sign up for this exclusive resource, [head over to this page](https://website-55786.convertflowpages.com/newsletter) to get notified when it drops. 
 
-But I'll wet your whistle a bit by stating my biggest prediction for practice of partner experience is that I think we will see a ChurnZero analogue for partnerships very soon. Partner programs need a way to not only operate, but measure their vendors experience and overall happiness to reduce churn and keep retention steady. 
+But I'll wet your whistle a bit by stating my biggest prediction for practice of partner experience is that I think we will see a ChurnZero analogue for partnerships very soon. Partner programs need a way to not only operate, but measure their vendors experience and overall happiness to reduce churn and keep retention steady. And it won't be long until a platform like ChurnZero pops up and tries to solve for that problem. 
 
 Lastly, I promised you an exclusive Partner Experience survey template that you can use to gauge your own partner experience levels, and I’ll close off this post by providing you with the link to the Airtable base [here](https://airtable.com/appelZKAiDemRDSyl/shrYcD6xVxvBA1VO0)!
