@@ -31,11 +31,28 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             href="https://calendly.com/jbohrman/30min"
             class="btn black dark-bg-magenta-400 btn-lg shadow-lg radius-sm"
             role="button"
-            aria-label="Sign Up"
+            aria-label="Consultation Button Number 1"
             id="track"
           >
             Get a free partner experience audit
           </a>
+          <script>
+            // Wait for the DOM to be fully loaded
+            document.addEventListener("DOMContentLoaded", function () {
+              // Find the "Sign Up" button by its ID
+              var signUpButton = document.getElementById("track");
+          
+              // Add a click event listener to the button
+              signUpButton.addEventListener("click", function () {
+                // Track the event using Segment
+                analytics.track("Consultation Button Clicked", {
+                  // You can include additional properties here
+                  button_text: "Get a free partner experience audit",
+                  // Add any other relevant properties
+                });
+              });
+            });
+          </script>          
         </div>
       <div id="tolstoy-container" class="m-t-10" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
         <iframe id="tolstoy" src="https://player.gotolstoy.com/polcxf6xc0xc8?host"
