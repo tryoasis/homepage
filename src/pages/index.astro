@@ -45,7 +45,7 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               // Add a click event listener to the button
               signUpButton.addEventListener("click", function () {
                 // Track the event using Segment
-                analytics.track("Consultation Button Clicked", {
+                ko.track("Consultation Button Clicked", {
                   // You can include additional properties here
                   button_text: "Get a free partner experience audit",
                   // Add any other relevant properties
