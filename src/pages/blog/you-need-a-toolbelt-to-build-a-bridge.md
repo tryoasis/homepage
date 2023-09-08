@@ -76,4 +76,4 @@ How we handle this at Uppercut: [Reveal](https://reveal.co/) 🔮
 
 Just as the tools and architectural decisions influence the strength and efficacy of a physical bridge, the tools chosen for a partner program significantly impact the partner experience and overall success. Creating a cohesive partnership experience hinges on selecting the right tools and frameworks that empower partners to collaborate, access resources, and communicate value effectively. 
 
-If you’re struggling with building an effective partnership program, we can help! [Schedule a call](https://calendly.com/jbohrman/15-min-consultation) with us today to receive a free 15-min partnership program consultation!
+If you’re struggling with building an effective partnership program, we can help! [Schedule a call](https://calendly.com/jbohrman/30min) with us today to receive a free 30-min partnership program consultation!
