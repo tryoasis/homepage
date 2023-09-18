@@ -26,7 +26,7 @@ When we leave impressions on our partners, we create experiences, and reduce tha
 
 ## Why experiences matter
 
-When you partners think about the multiple organizations they might collaborate with they could have similar functionality, the experience you provide to them is going to be a big deciding factor on if your solution is brought to the to, or if it's a different solution that gets mentioned in your partners sales meetings. 
+When your partners think about the multiple organizations they might collaborate with they could have similar functionality, the experience you provide to them is going to be a big deciding factor on if your solution is brought to the to, or if it's a different solution that gets mentioned in your partners sales meetings. 
 
 The experience you provide to a partner is the impression they have about your organization, and overall how you make their team feel when working with you as an organization. So it's important to provide opportunities to connect outside of one-off onboarding emails. 
 
