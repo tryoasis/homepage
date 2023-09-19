@@ -54,7 +54,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
   analytics.page();
 
-  fetchClearbitData(userEmail)
+  analytics.on('identify', function(userId, traits) {
+    console.log('Segment User ID:', userId);
+    console.log('Segment User Traits:', traits);
+    });
+
+  fetchClearbitData(userId)
   .then((clearbitData) => {
     // Extract relevant data from the Clearbit response
     const companyName = clearbitData.company.name;
@@ -63,8 +68,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const companyTech = clearbitData.company.tech;
     const companyTechCategories = clearbitData.company.category.industry;
     const companyEmployeeCount = clearbitData.company.metrics.employeesRange;
-
-    const uniqueUserId = Math.random().toString(36).substring(2);
 
     // Create an object with dynamic traits
     const dynamicTraits = {
@@ -84,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var userLastName = event.detail.lastName;
   });
 
-  analytics.identify(uniqueUserId, {
+  analytics.identify(, {
     email: userEmail,
     firstName: userFirstName,
     lastName: userLastName,
