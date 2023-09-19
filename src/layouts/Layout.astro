@@ -48,9 +48,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <!-- End Google Tag Manager -->
 
+<!-- Partnero Universal -->
 <script>
-  !function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_de6536be1ab1050411ebe8603a8149eec493/sdk.js"),(document.body || document.head).appendChild(n)}();
-  </script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="pcQuLh3ezq1236wAdgQASYFo7eGWqExH";;analytics.SNIPPET_VERSION="4.16.1";
+  analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
+  analytics.page();
+
+  fetchClearbitData(userEmail)
+  .then((clearbitData) => {
+    // Extract relevant data from the Clearbit response
+    const companyName = clearbitData.company.name;
+    const companyDomain = clearbitData.company.domain;
+    const companyLogo = clearbitData.company.logo;
+    const companyTech = clearbitData.company.tech;
+    const companyTechCategories = clearbitData.company.category.industry;
+    const companyEmployeeCount = clearbitData.company.metrics.employeesRange;
+
+    const uniqueUserId = Math.random().toString(36).substring(2);
+
+    // Create an object with dynamic traits
+    const dynamicTraits = {
+      clearbit_company_name: companyName,
+      clearbit_company_domain: companyDomain,
+      clearbit_company_logo: companyLogo,
+      clearbit_company_tech: companyTech,
+      clearbit_company_tech_categories: companyTechCategories,
+      clearbit_company_employee_count: companyEmployeeCount,
+      clearbit_company_tech: companyTech,
+    };
+
+  document.addEventListener('convertflowFormSubmitted', function(event) {
+  // Access the user's email from the event object
+    var userEmail = event.detail.email;
+    var userFirstName = event.detail.firstName;
+    var userLastName = event.detail.lastName;
+  });
+
+  analytics.identify(uniqueUserId, {
+    email: userEmail,
+    firstName: userFirstName,
+    lastName: userLastName,
+    ...dynamicTraits,
+      });
+    });
+  }}();
+</script>
 
 <script async src="https://js.convertflow.co/production/websites/55786.js"></script>
 
