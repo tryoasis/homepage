@@ -85,50 +85,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       clearbit_company_tech: companyTech,
     };
 
-  fetchClearbitData(groupId)
-  .then((clearbitData) => {
-    // Extract relevant data from the Clearbit response
-    const companyName = clearbitData.company.name;
-    const companyDomain = clearbitData.company.domain;
-    const companyLogo = clearbitData.company.logo;
-    const companyTech = clearbitData.company.tech;
-    const companyTechCategories = clearbitData.company.category.industry;
-    const companyEmployeeCount = clearbitData.company.metrics.employeesRange;
-
-    // Create an object with dynamic traits
-    const dynamicTraits = {
-      clearbit_company_name: companyName,
-      clearbit_company_domain: companyDomain,
-      clearbit_company_logo: companyLogo,
-      clearbit_company_tech: companyTech,
-      clearbit_company_tech_categories: companyTechCategories,
-      clearbit_company_employee_count: companyEmployeeCount,
-      clearbit_company_tech: companyTech,
-    };
-  });
-
   document.addEventListener('convertflowFormSubmitted', function(event) {
   // Access the user's email from the event object
     var userEmail = event.detail.email;
     var userFirstName = event.detail.firstName;
     var userLastName = event.detail.lastName;
-    var CompanyName = event.detail.companyName;
   });
 
-  analytics.group(groupId, {
-    name: companyName,
-    domain: companyDomain,
-    logo: companyLogo,
-    tech: companyTech,
-    tech_categories: companyTechCategories,
-    employee_count: companyEmployeeCount,
-  });
-
-  analytics.identify(userId, {
+  analytics.identify(, {
     email: userEmail,
     firstName: userFirstName,
     lastName: userLastName,
     ...dynamicTraits,
+      });
+  analytics.group(groupId, {
+        name: companyName,
+        domain: companyDomain,
+        logo: companyLogo,
+        tech: companyTech,
+        tech_categories: companyTechCategories,
+        employee_count: companyEmployeeCount,
       });
     });
   }}();
