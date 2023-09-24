@@ -59,28 +59,32 @@
 									</li>
 								</ul>
 								<style>
-									/* Style for the dropdown menu */
-									ul.absolute {
-									min-width: 150px; /* Adjust the width as needed */
-									top: 110%; /* Position it below the parent */
-									left: -80px;
-									z-index: 1000;
-									position: absolute;
-									background-color: white;
-									border: 1px solid #ccc;
-									box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-									display: none; /* Hide by default */
-									}
-		
-									/* Position the dropdown relative to its parent */
 									li.relative {
-									position: relative;
+										margin-right: 20px; /* Adjust as needed */
+										position: relative;
 									}
-		
-									/* Show the dropdown on hover or focus */
+
+									/* Show the dropdown with a smooth transition */
+									ul.absolute {
+										min-width: 150px;
+										top: 100%;
+										left: -100px;
+										z-index: 1000;
+										position: absolute;
+										background-color: white;
+										border: 1px solid #ccc;
+										box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+										opacity: 0;
+										visibility: hidden;
+										transform: translateY(-10px);
+										transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+									}
+
 									li.relative:hover ul.absolute,
 									li.relative:focus-within ul.absolute {
-									display: block;
+										opacity: 1;
+										visibility: visible;
+										transform: translateY(0);
 									}
 		
 									/* Style for the dropdown items */
