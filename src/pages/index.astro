@@ -854,7 +854,19 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
       </div>
     </section>
     <section class="xs-p-y-16 md-p-y-32 m-t-5">
-      <div class="klaviyo-form-SN73UR"></div>     
+      <div id="cta-form" class="klaviyo-form-SN73UR"></div>  
+      <style>
+        #cta-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            #cta-form {
+            max-width: 100%;
+            }
+        }
+      </style>
     </section>
   </main>
 </Layout>

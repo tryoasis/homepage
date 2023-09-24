@@ -82,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
                 </div>
               </div>
             </div>
-            <div class="klaviyo-form-R79aM4"></div>
+            <div id="consultation-form" class="klaviyo-form-R79aM4"></div>
         </div>
       </section> 
             <section class="xs-p-y-16 md-p-y-40 bg-magenta-50 dark-bg-gray-800">
@@ -168,18 +168,16 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </section> 
       <style>
-      .wordmarks-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .wordmark {
-        width: 150px; /* Set the desired width */
-        height: 150px; /* Set the desired height */
-        filter: grayscale(100%);
-        margin: 0 15px;
-      }
+              #consultation-form {
+                  width: 100%;
+                  max-width: 600px;
+                  margin: 0 auto;
+              }
+              @media (max-width: 768px) {
+                  #consultation-form {
+                  max-width: 100%;
+                  }
+              }
       </style>
     </div>
   </div>
