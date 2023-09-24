@@ -110,6 +110,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }}();
 </script>
 
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("track");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("ATF Consult Button Clicked", {
+        // You can include additional properties here
+        button_text: "Get a free partner experience audit",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script> 
+
+
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("swiss-army");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Swiss Army Button Clicked", {
+        // You can include additional properties here
+        button_text: "Learn More",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script> 
+
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("strategy-and-ipp");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Strategy and IPP Button Clicked", {
+        // You can include additional properties here 
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script> 
+
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("learn-more");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Learn More Button Clicked", {
+        // You can include additional properties here
+        button_text: "Get a free partner experience audit",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("header-button");
+  
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Header Button Clicked", {
+      // You can include additional properties here
+      button_text: "Chat with us",
+      value: 12.75,
+      currency: "USD",
+      // Add any other relevant properties
+      });
+    });
+  });
+  </script>
+
 <script
   type="text/javascript"
   src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RzquL2"

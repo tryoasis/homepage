@@ -112,24 +112,6 @@
 							 id="header-button">
 							Chat with us
 						</a>
-						<script>
-						document.addEventListener("DOMContentLoaded", function () {
-							// Find the button by its ID
-							var button = document.getElementById("header-button");
-						
-							// Add a click event listener to the button
-							button.addEventListener("click", function () {
-								// Track the event using Segment
-								analytics.track("Header Button Clicked", {
-								// You can include additional properties here
-								button_text: "Chat with us",
-								value: 12.75,
-								currency: "USD",
-								// Add any other relevant properties
-								});
-							});
-						});
-						</script>
 					</li>
 				</ul>
 			</nav>
