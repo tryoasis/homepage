@@ -8,60 +8,21 @@ import Layout from "../layouts/Layout.astro";
   image="https://www.tryuppercut.com/og-image.png"
 >
   <main>
-    <section class="xs-p-y-16 md-p-y-28 bg-gray-50 dark-bg-gray-900">
-        <div class="container container-xl">
-          <div class="split-screen items-center">
-            <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
-              <h2 class="m-b-6 font-semibold">
-                Contact Us
-              </h2>
-              <!--advantages-->
-              <div class="flex flex-column m-b-8">
-                <p class="m-b-4">
-                  We're here to help and answer any question you might have. <br> We look forward to hearing more about what you're trying to solve!
-                </p>
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                <script class="padding-25%">
-                  hbspt.forms.create({
-                    region: "na1",
-                    portalId: "40093919",
-                    formId: "038b24ae-f393-4544-baef-9d4622e14011"
-                  });
-                  {`
-                  document.addEventListener("hbspt.forms.postSubmit", function(event) {
-                      const form = event.target;
-                      const firstNameInput = form.querySelector('input[firstname="firstname"]');
-                      const lastNameInput = form.querySelector('input[lastname="lastname"]');
-                      const emailInput = form.querySelector('input[name="email"]');
-                      const companyInput = form.querySelector('input[name="company"]');
-                  });
-                  ko.identify({ email: emailInput.value, firstname: firstNameInput.value, lastname: lastNameInput.value, company: companyInput.value }, function(err, res) {
-                      if (err) {
-                          console.log(err);
-                          return;
-                      }
-                      console.log(res);
-                      ko.track('form-submission', {
-                          formId: form.id,
-                          email: emailInput.value,
-                          firstname: firstNameInput.value,
-                          lastname: lastNameInput.value,
-                          company: companyInput.value
-                  });
-                });
-                `}
-                </script>
-              </div>
-            </div>
-            <img
-            class="radius-md m-b-6 md-w-50"
-            src="https://images.pexels.com/photos/3912366/pexels-photo-3912366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            loading="lazy"
-            width="560" height="320"
-            alt="Business & work - Unsplash image by @brookecagle - https://unsplash.com/photos/-uHVRvDr7pg"
-          />
-          </div>
-        </div>
-        </section>
+    <section class="p-t-14 p-b-14 dark-bg-black">
+      <div class="container container-xl m-b-16">
+            <div class="container container-xl">
+              <div class="split-screen items-center">
+                <div class="flex flex-column xs-m-b-8 md-m-b-0 md-m-r-8 md-w-50">
+                  <h2 class="m-b-6 font-semibold">
+                  Need to connect with us about something?
+                  </h2>
+              <div class="md-w-75 m-b-7">
+              <h3 class="h6 font-medium line-h-lg">
+                  Submit a inquiry via this form and we'll get back to you as soon as possible.
+               </h3>
+               </div>
+             </div>
+             <div class="klaviyo-form-SAewYF"></div>
+           </div>
     </main>
 </Layout>
