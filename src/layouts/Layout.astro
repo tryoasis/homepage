@@ -85,11 +85,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       clearbit_company_tech: companyTech,
     };
 
-  document.addEventListener('convertflowFormSubmitted', function(event) {
+  document.addEventListener('klaviyoForms', function(event) {
   // Access the user's email from the event object
     var userEmail = event.detail.email;
     var userFirstName = event.detail.firstName;
     var userLastName = event.detail.lastName;
+    var companyName = event.detail.companyName;
   });
 
   analytics.identify(userId, {
@@ -114,8 +115,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   type="text/javascript"
   src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RzquL2"
 ></script>
-
-<script async src="https://js.convertflow.co/production/websites/55786.js"></script>
 
 <script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 

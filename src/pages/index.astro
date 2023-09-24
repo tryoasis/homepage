@@ -19,14 +19,14 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           <span
             class="badge border-yellow-200 badge-sm bg-yellow-100 font-semibold dark-bg-magenta-200 dark-border-none p-x-5 p-y-3 m-b-4 flex-wrap dark-black xs-font-size-xxs sm-font-size-xs"
           >
-            We will improve your partners experience or our services are free 😲 
+            We are the attribution pros 📈 
           </span>
           <h2 class="h1 m-b-6 md-w-75">
             How much is your partner experience costing you?
           </h2>
           <div class="md-w-75 m-b-7">
             <h3 class="h6 font-medium line-h-lg">
-              Uppercut is the #1 partner operations agency that helps tame chaotic partner experiences and drive nearbound revenue. 
+              Uppercut is the #1 partner operations agency that helps tame chaotic partner experiences and optimize your attribution layers. 
             </h3>
           </div>
           <!--buttons-->
@@ -37,25 +37,27 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             aria-label="Consultation Button Number 1"
             id="track"
           >
-            Get a free partner experience audit
+            Get a free consultation (And exclusive deals 💸)
           </a>
           <script>
             // Wait for the DOM to be fully loaded
             document.addEventListener("DOMContentLoaded", function () {
-              // Find the "Sign Up" button by its ID
-              var signUpButton = document.getElementById("track");
+              // Find the button by its ID
+              var button = document.getElementById("track");
           
               // Add a click event listener to the button
-              signUpButton.addEventListener("click", function () {
+              button.addEventListener("click", function () {
                 // Track the event using Segment
-                ko.track("Consultation Button Clicked", {
+                analytics.track("ATF Consult Button Clicked", {
                   // You can include additional properties here
                   button_text: "Get a free partner experience audit",
+                  value: 12.75,
+                  currency: "USD",
                   // Add any other relevant properties
                 });
               });
             });
-          </script>          
+          </script>                    
         </div>
       </div>
 <!--      <div class="container container-xl all-center">

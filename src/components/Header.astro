@@ -37,14 +37,93 @@
 						<li>
 							<a href="/">Home</a>
 						</li>
-						<li>
-							<a href="/blog">Blog</a>
+						<li class="relative">
+							<a href="">Resources</a>
+							<ul class="absolute hidden md:block md:mt-2 bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg">
+								<li>
+									<a href="/blog">Blog</a>
+								</li>
+								<li>
+									<a href="/ebooks">Ebooks</a>
+								</li>
+								<li>
+									<a href="/webinars">Webinars</a>
+								</li>
+							</ul>
 						</li>
-						<li>
-							<a href="/our-process">Our Process</a>
+						<li class="relative">
+							<a href="">Solutions</a>
+							<ul class="absolute hidden md:block md:mt-2 bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg">
+								<li>
+									<a href="/fractional-partner-ops">Fractional PartnerOps</a>
+								</li>
+								<li>
+									<a href="/attribution-optimization">Attribution Optimization</a>
+								</li>
+								<li>
+									<a href="/experienial-partnerships ">Experiential Partnerships</a>
+								</li>
+								<li>
+									<a href="/our-process">Our Process</a>
+								</li>
+							</ul>
 						</li>
-						<li>
-							<a href="/partners">Partner with us</a>
+						<li class="relative">
+							<a href="/partners">Partners</a>
+								<ul class="absolute hidden md:block md:mt-2 bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg">
+									<li>
+										<a href="/service-provider-partnerships">Service Providers</a>
+									</li>
+									<li>
+										<a href="/prm-provider-partnerships">PRM Providers</a>
+									</li>
+									<li>
+										<a href="/unified-api-partnerships">Unified API Companies</a>
+									</li>
+								</ul>
+								<style>
+									/* Style for the dropdown menu */
+									ul.absolute {
+									min-width: 150px; /* Adjust the width as needed */
+									top: 110%; /* Position it below the parent */
+									left: -70px;
+									z-index: 1000;
+									position: absolute;
+									background-color: white;
+									border: 1px solid #ccc;
+									box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+									display: none; /* Hide by default */
+									}
+		
+									/* Position the dropdown relative to its parent */
+									li.relative {
+									position: relative;
+									}
+		
+									/* Show the dropdown on hover or focus */
+									li.relative:hover ul.absolute,
+									li.relative:focus-within ul.absolute {
+									display: block;
+									}
+		
+									/* Style for the dropdown items */
+									ul.absolute li {
+									padding: 8px 16px;
+									border-bottom: 1px solid #ccc;
+									}
+		
+									/* Style for the dropdown item links */
+									ul.absolute li a {
+									color: #333;
+									text-decoration: none;
+									display: block;
+									}
+		
+									/* Style for hover effect on dropdown items */
+									ul.absolute li:hover {
+									background-color: #f0f0f0;
+									}
+								</style>
 						</li>
 					</ul>
 					<li class="xs-d-none md-flex m-r-8">
@@ -52,9 +131,28 @@
 							 class="btn black
 							 dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm"
 							 aria-label="schedule a call"
-							 role="button">
+							 role="button"
+							 id="header-button">
 							Chat with us
 						</a>
+						<script>
+						document.addEventListener("DOMContentLoaded", function () {
+							// Find the button by its ID
+							var button = document.getElementById("header-button");
+						
+							// Add a click event listener to the button
+							button.addEventListener("click", function () {
+								// Track the event using Segment
+								analytics.track("Header Button Clicked", {
+								// You can include additional properties here
+								button_text: "Chat with us",
+								value: 12.75,
+								currency: "USD",
+								// Add any other relevant properties
+								});
+							});
+						});
+						</script>
 					</li>
 				</ul>
 			</nav>
