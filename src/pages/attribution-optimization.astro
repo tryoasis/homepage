@@ -31,9 +31,8 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
                 document.addEventListener("DOMContentLoaded", function () {
                   // Find the button by its ID
                   var button = document.getElementById("attribution-form");
-              
                   // Add a click event listener to the button
-                  button.addEventListener("submit", function () {
+                  form.addEventListener("submit", function () {
                     // Track the event using Segment
                     analytics.track("Attribution Form Submitted", {
                       // You can include additional properties here
