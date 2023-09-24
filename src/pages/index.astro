@@ -449,10 +449,30 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               class="btn black dark-bg-magenta-400 btn-lg shadow-lg"
               role="button"
               aria-label="Download Astro template"
-              id="track"
+              id="swiss-army"
             >
               Learn more
             </a>
+
+            <script>
+              // Wait for the DOM to be fully loaded
+              document.addEventListener("DOMContentLoaded", function () {
+                // Find the button by its ID
+                var button = document.getElementById("swiss-army");
+            
+                // Add a click event listener to the button
+                button.addEventListener("click", function () {
+                  // Track the event using Segment
+                  analytics.track("Swiss Army Button Clicked", {
+                    // You can include additional properties here
+                    button_text: "Learn More",
+                    value: 12.75,
+                    currency: "USD",
+                    // Add any other relevant properties
+                  });
+                });
+              });
+            </script>  
           </div>
           <img
             class="radius-md m-b-6 md-w-50"
@@ -625,9 +645,28 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
               class="btn magenta-400 bg-white black dark-white border-gray-700 dark-bg-gray-600 dark-border-white btn-lg shadow-lg w-100"
               role="button"
               aria-label="Let's work together"
+              id="strategy-and-ipp"
             >
               Schedule a call
             </a>
+            <script>
+              // Wait for the DOM to be fully loaded
+              document.addEventListener("DOMContentLoaded", function () {
+                // Find the button by its ID
+                var button = document.getElementById("strategy-and-ipp");
+            
+                // Add a click event listener to the button
+                button.addEventListener("click", function () {
+                  // Track the event using Segment
+                  analytics.track("Strategy and IPP Button Clicked", {
+                    // You can include additional properties here 
+                    value: 12.75,
+                    currency: "USD",
+                    // Add any other relevant properties
+                  });
+                });
+              });
+            </script>  
           </article>
           <!--Exclusive-->
           <article
@@ -699,10 +738,29 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             class="btn bg-magenta-100 dark-border-gray-50  dark-bg-gray-600 btn-lg w-100 black dark-gray-200"
             role="button"
             aria-label="Get started now"
-            id="track"
+            id="learn-more"
           >
             Learn more
           </a>
+          <script>
+            // Wait for the DOM to be fully loaded
+            document.addEventListener("DOMContentLoaded", function () {
+              // Find the button by its ID
+              var button = document.getElementById("learn-more");
+          
+              // Add a click event listener to the button
+              button.addEventListener("click", function () {
+                // Track the event using Segment
+                analytics.track("Learn More Button Clicked", {
+                  // You can include additional properties here
+                  button_text: "Get a free partner experience audit",
+                  value: 12.75,
+                  currency: "USD",
+                  // Add any other relevant properties
+                });
+              });
+            });
+          </script>  
         </article>
         </div>
       </div>

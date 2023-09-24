@@ -25,7 +25,25 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
                  </h3>
                  </div>
                </div>
-               <div class="klaviyo-form-Rb4b99"></div>
+               <div id="attribution-form" class="klaviyo-form-Rb4b99"></div>
+               <script>
+                // Wait for the DOM to be fully loaded
+                document.addEventListener("DOMContentLoaded", function () {
+                  // Find the button by its ID
+                  var button = document.getElementById("attribution-form");
+              
+                  // Add a click event listener to the button
+                  button.addEventListener("submit", function () {
+                    // Track the event using Segment
+                    analytics.track("Attribution Form Submitted", {
+                      // You can include additional properties here
+                      value: 12.75,
+                      currency: "USD",
+                      // Add any other relevant properties
+                    });
+                  });
+                });
+              </script>  
              </div>
           </div>
        </div>
