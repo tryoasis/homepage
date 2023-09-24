@@ -1,130 +1,191 @@
-<!--Nav for large screens-->
-		<header class="sticky flex items-center bg-white dark-bg-black h-20  lg-p-y-8">
-			<nav class="container container-xl flex justify-between items-center gap-8"
-					 aria-label="primary nav">
-				<!--Links-->
-				<ul class="flex items-center gap-8">
-					<!--Logo-->
-					<li class="m-r-8">
-						<a href="/" class="flex items-center">
-							<img alt="Uppercut Logo" src="/logo.png" class="w-10 h-10" width="100" height="100">
-							<div class="m-l-4 flex items-start flex-column xs-d-none sm-flex">
-								<h1 class="h5 font-bold line-h-lg">Uppercut</h1>
-							</div>
-						</a>
-					</li>
-					<li class="xs-d-none sm-flex">
-						<!--Toggle for dark mode
-						<fieldset>
-							<legend class="visually-hidden">Toggle for dark mode</legend>
-							<input class="toggle-input visually-hidden"
-										 id="switch"
-										 type="checkbox"
-										 role="switch">
-							<label for="switch"
-										 class="toggle-switch"
-										 aria-label="toggle switch">
-								<span class="visually-hidden">Label for the toggle</span>
-								<span class="toggle-round"></span>
-							</label>
-						</fieldset>-->
-					</li>
+<!-- Nav for large screens -->
+<header class="sticky flex items-center bg-white dark-bg-black h-20 lg-p-y-8">
+	<nav class="container container-xl flex justify-between items-center gap-8" aria-label="primary nav">
+	  <!-- Links -->
+	  <ul class="flex items-center gap-8">
+		<!-- Logo -->
+		<li class="m-r-8">
+		  <a href="/" class="flex items-center">
+			<img alt="Uppercut Logo" src="/logo.png" class="w-10 h-10" width="100" height="100">
+			<div class="m-l-4 flex items-start flex-column xs-d-none sm-flex">
+			  <h1 class="h5 font-bold line-h-lg">Uppercut</h1>
+			</div>
+		  </a>
+		</li>
+		<!-- Toggle for dark mode (optional) -->
+		<li class="xs-d-none sm-flex">
+		  <!-- Include your dark mode toggle here if needed -->
+		</li>
+	  </ul>
+  
+	  <!-- Mobile menu -->
+	  <ul id="mobile-menu" class="xs-flex md-flex items-center gap-5 md-bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
+		<ul class="flex flex-col items-center gap-5">
+		  <!-- Button -->
+		  <li>
+			<a href="/">Home</a>
+		  </li>		  
+<!-- Solutions Dropdown -->
+			<li class="relative">
+				<div class="list-item">
+				<a href="#">Solutions</a>
+				<div class="caret"></div> <!-- Caret added -->
+				</div>
+				<ul class="absolute bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg" style="width: 200px; left: auto; right: 0;">
+				<li style="padding: 12px 16px; /* Adjusted padding */">
+					<a href="/our-process" style="color: #333; text-decoration: none; display: block; font-size: 18px;">Our Process</a>
+				</li>
+				<li style="padding: 12px 16px;">
+					<a href="/attribution-optimization" style="color: #333; text-decoration: none; display: block; font-size: 18px;">Attribution Optimization</a>
+				</li>
 				</ul>
-				
-				<ul id="mobile-menu" class="xs-flex md-flex items-center gap-5 md-bg-gray-50 dark-bg-gray-800 dark-white md-p-r-4 md-p-l-6 md-p-y-3 radius-sm flex-wrap">
-					<ul class="flex flex-col items-center gap-5">
-						<!--Button-->
-						<li>
-							<a href="/">Home</a>
-						</li>
-						<li class="relative">
-							<a href="/blog">Blog</a>
-						</li>
-						<li class="relative">
-							<a href="">Solutions</a>
-							<ul class="absolute hidden md:block md:mt-2 bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg">
-								<li>
-									<a href="/our-process">Our Process</a>
-								</li>
-								<li>
-									<a href="/attribution-optimization">Attribution Optimization</a>
-								</li>
-							</ul>
-						</li>
-						<li class="relative">
-							<a href="">Partner Up</a>
-								<ul class="absolute hidden md:block md:mt-2 bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg">
-									<li>
-										<a href="/partners">Become a Partner</a>
-									</li>
-								</ul>
-								<style>
-									li.relative {
-										margin-right: 20px; /* Adjust as needed */
-										position: relative;
-									}
-
-									/* Show the dropdown with a smooth transition */
-									ul.absolute {
-										min-width: 150px;
-										top: 100%;
-										left: -90px;
-										z-index: 1000;
-										position: absolute;
-										background-color: white;
-										border: 1px solid #ccc;
-										box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-										opacity: 0;
-										visibility: hidden;
-										transform: translateY(-10px);
-										transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-									}
-
-									li.relative:hover ul.absolute,
-									li.relative:focus-within ul.absolute {
-										opacity: 1;
-										visibility: visible;
-										transform: translateY(0);
-									}
-		
-									/* Style for the dropdown items */
-									ul.absolute li {
-									padding: 8px 16px;
-									border-bottom: 1px solid #ccc;
-									}
-		
-									/* Style for the dropdown item links */
-									ul.absolute li a {
-									color: #333;
-									text-decoration: none;
-									display: block;
-									}
-		
-									/* Style for hover effect on dropdown items */
-									ul.absolute li:hover {
-									background-color: #f0f0f0;
-									}
-								</style>
-						</li>
-					</ul>
-					<li class="xs-d-none md-flex m-r-8">
-						<a href="https://calendly.com/jbohrman/30min"
-							 class="btn black
-							 dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm"
-							 aria-label="schedule a call"
-							 role="button"
-							 id="header-button">
-							Chat with us
-						</a>
-					</li>
+			</li>
+			<li class="relative">
+				<div class="list-item">
+				<a href="#">Resources</a>
+				<div class="caret"></div> <!-- Caret added -->
+				</div>
+				<ul class="absolute bg-white dark:bg-gray-800 dark:border dark:border-gray-600 dark:text-white border border-gray-200 shadow-lg rounded-lg" style="width: 200px; left: auto; right: 0;">
+				<li style="padding: 12px 16px; /* Adjusted padding */">
+					<a href="/blog" style="color: #333; text-decoration: none; display: block; font-size: 18px;">Blog</a>
+				</li>
+				<li style="padding: 12px 16px;">
+					<a href="#" style="color: #333; text-decoration: none; display: block; font-size: 18px;">Webinars (Coming Soon)</a>
+				</li>
+				<li style="padding: 12px 16px;">
+					<a href="/ebooks" style="color: #333; text-decoration: none; display: block; font-size: 18px;">Ebooks</a>
+				</li>
 				</ul>
-			</nav>
-		</header>
-
-<style>
+			</li>
+		  <!-- Partner Up Dropdown -->
+		</ul>
+		<!-- Chat Button -->
+		<li class="xs-d-none md-flex m-r-8">
+		  <a href="https://calendly.com/jbohrman/30min" class="btn black dark-white dark-bg-magenta-400 dark-border-magenta-400 btn-sm" aria-label="schedule a call" role="button" id="header-button">
+			Get a free consultation
+		  </a>
+		</li>
+	  </ul>
+	</nav>
+  </header>
+  
+  <!-- CSS styles for dropdowns and responsiveness -->
+  <style>
+	/* Dropdown styles */
+	li.relative {
+	  margin-right: 10px; /* Adjust as needed */
+	  position: relative;
+	}
+  
+	ul.absolute {
+	  min-width: 100%; /* Adjusted to 100% */
+	  z-index: 1000;
+	  position: absolute;
+	  background-color: white;
+	  border: 1px solid #ccc;
+	  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	  opacity: 0;
+	  visibility: hidden;
+	  transform: translateY(-10px);
+	  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s, top 0.2s ease; /* Faster transition */
+	  padding: 12px 16px; /* Adjusted padding */
+		}
+  
+	.list-item {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  padding: 6px 8px; /* Increased padding */
+	  cursor: pointer;
+	  font-size: 18px; /* Increased font size */
+	}
+  
+	.list-item a {
+	  color: #333;
+	  text-decoration: none;
+	  display: block;
+	  font-size: 16px; /* Increased font size */
+	}
+  
+	ul.absolute.active { /* Add the 'active' class for rendering the dropdown */
+	  opacity: 1;
+	  visibility: visible;
+	  transform: translateY(0);
+	  top: 110%; /* Show below the list item with a slight gap */
+	}
+  
+	ul.absolute li:hover {
+	  background-color: #f0f0f0;
+	  color: #333; /* Text color on hover */
+	}
+  
+	/* Caret styles */
+	.caret {
+	  width: 0;
+	  height: 0;
+	  border-left: 6px solid transparent; /* Adjust the size as needed */
+	  border-right: 6px solid transparent; /* Adjust the size as needed */
+	  border-bottom: 6px solid #333; /* Adjust the color as needed */
+	  transition: transform 0.3s ease; /* Transition added */
+	  margin-left: 7px;
+	}
+  
+	.list-item:hover {
+	  border-bottom: 1px solid #ccc;
+	}
+  
+	.list-item:hover .caret {
+	  transform: translateY(-5%) rotate(180deg); /* Rotate the caret on hover */
+	}
+  
+	/* Responsive font size adjustment */
 	@media screen and (max-width: 768px) {
-  #mobile-menu li a {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-  }
-}
-</style>
+	  #mobile-menu li a {
+		font-size: 12px; /* Adjust the font size for smaller screens */
+	  }
+	  
+	  ul.absolute {
+		width: auto; /* Set to auto for responsive width */
+		max-width: none; /* Remove max-width to allow full width */
+		font-size: 12px;
+	  }
+	}
+  </style>
+  
+  <!-- JavaScript to handle dropdown toggling -->
+  <script>
+	const dropdownToggles = document.querySelectorAll('.list-item');
+	const dropdowns = document.querySelectorAll('ul.absolute');
+  
+	dropdownToggles.forEach((toggle) => {
+	  toggle.addEventListener('mouseenter', () => { // Use mouseenter to open on hover
+		const dropdown = toggle.nextElementSibling;
+		dropdown.classList.add('active');
+	  });
+  
+	  toggle.addEventListener('mouseleave', () => { // Hide on mouseleave
+		const dropdown = toggle.nextElementSibling;
+		dropdown.classList.remove('active');
+	  });
+	});
+  
+	dropdowns.forEach((dropdown) => {
+	  dropdown.addEventListener('mouseenter', () => {
+		dropdown.classList.add('active');
+	  });
+  
+	  dropdown.addEventListener('mouseleave', () => {
+		dropdown.classList.remove('active');
+	  });
+	});
+  
+	// Close dropdowns when clicking outside
+	document.addEventListener('click', (e) => {
+	  const targetElement = e.target as HTMLElement; // Typecast e.target to HTMLElement
+	  if (!targetElement.closest('.list-item')) {
+		dropdownToggles.forEach((toggle) => {
+		  toggle.nextElementSibling.classList.remove('active');
+		});
+	  }
+	});
+  </script>
