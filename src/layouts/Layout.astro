@@ -73,12 +73,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       var userFirstName = event.detail.firstName;
       var userLastName = event.detail.lastName;
       var companyName = event.detail.companyName;
+      
           analytics.identify(userId, {
             email: userEmail,
             firstName: userFirstName,
             lastName: userLastName,
             companyName: companyName,
           });
+
           analytics.group(groupId, {
             name: companyName,
           });
