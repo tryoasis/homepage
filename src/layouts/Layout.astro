@@ -60,24 +60,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     title: document.title,
     name: document.title,
   });
-
-  var userId = uuid.v4(); // Generates a random UUID
-  var groupId = uuid.v4(); // Generates a random UUID
-
-  analytics.on('identify', function(userId, traits) {
-    console.log('Segment User ID:', userId);
-    console.log('Segment User Traits:', traits);
-  });
-
-  analytics.on('group', function(groupId, traits) {
-    console.log('Segment Group ID:', groupId);
-    console.log('Segment Group Traits:', traits);
-  });
 }}();
 </script>
 
 <script>
-    window.addEventListener('klaviyoForms', function(event) {
+ // Generates a random UUID
+  var groupId = uuid.v4(); // Generates a random UUID
+  var userId = uuid.v4();
+
+  window.addEventListener('klaviyoForms', function(event) {
     if (event.detail.type === 'submit') {
       var userEmail = event.detail.email;
       var userFirstName = event.detail.firstName;
@@ -93,11 +84,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           analytics.group(groupId, {
             name: companyName,
-            domain: companyDomain,
-            logo: companyLogo,
-            tech: companyTech,
-            tech_categories: companyTechCategories,
-            employee_count: companyEmployeeCount,
           });
         }});
 </script>
