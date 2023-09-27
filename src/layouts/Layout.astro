@@ -67,14 +67,14 @@ const { title, description, image, url,  } = Astro.props;
       var userLastName = event.detail.lastName;
       var companyName = event.detail.companyName;
       
-          analytics.identify(userId, {
+          ko.identify(userId, {
             email: userEmail,
             firstName: userFirstName,
             lastName: userLastName,
             companyName: companyName,
           });
 
-          analytics.group(groupId, {
+          ko.group(groupId, {
             name: companyName,
           });
         }});
