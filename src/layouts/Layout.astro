@@ -65,8 +65,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
  // Generates a random UUID
-  var groupId = uuid.v4(); // Generates a random UUID
-  var userId = uuid.v4();
+  var groupId = uuidv4; // Generates a random UUID
+  var userId = uuidv4;
 
   window.addEventListener('klaviyoForms', function(event) {
     if (event.detail.type === 'submit') {
