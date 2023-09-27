@@ -58,6 +58,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     title: document.title,
     name: document.title,
   });
+
+  var groupId = randomUUID(); // Generates a random UUID
+  var userId = randomUUID();
   analytics.on('identify', function(userId, traits) {
     console.log('Segment User ID:', userId);
     console.log('Segment User Traits:', traits);
@@ -239,7 +242,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   });
   </script>
-  
   <script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 
 <script>
