@@ -59,6 +59,7 @@
     "cross-env": "^7.0.3",
     "remark-frontmatter": "^4.0.1",
     "sanitize-html": "^2.11.0",
-    "utils": "^0.3.1"
+    "utils": "^0.3.1",
+    "uuid": "^9.0.1"
   }
 }
