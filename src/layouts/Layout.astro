@@ -49,17 +49,6 @@ const { title, description, image, url,  } = Astro.props;
     name: document.title,
   });
 
-  var userId = window.crypto.randomUUID;
-
-  analytics.on('identify', function(userId, traits) {
-    console.log('Segment User ID:', userId);
-    console.log('Segment User Traits:', traits);
-  });
-
-  analytics.on('group', function(groupId, traits) {
-    console.log('Segment Group ID:', groupId);
-    console.log('Segment Group Traits:', traits);
-  });
   }}();
 </script>
 
