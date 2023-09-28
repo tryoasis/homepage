@@ -52,6 +52,16 @@ const { title, description, image, url,  } = Astro.props;
   const CompanyDescription = company.description;
   const CompanyTech = company.tech;
   const CompanyTechCategory = company.tech.category;
+  const name = person.name.fullName;
+  const email = person.email;
+  const bio = person.bio;
+  const location = person.location;
+  const site = person.site;
+  const avatar = person.avatar;
+  const employment = person.employment;
+  const employmentDomain = person.employment.domain;
+  const employmentName = person.employment.name;
+  const employmentTitle = person.employment.title;
 
   analytics.page({
     path: window.location.pathname,
@@ -70,6 +80,16 @@ const { title, description, image, url,  } = Astro.props;
     CompanyDescription: CompanyDescription,
     CompanyTech: CompanyTech,
     CompanyTechCategory: CompanyTechCategory,
+    PersonName: name,
+    PersonEmail: email,
+    PersonBio: bio,
+    PersonLocation: location,
+    PersonSite: site,
+    PersonAvatar: avatar,
+    PersonEmployment: employment,
+    PersonEmploymentDomain: employmentDomain,
+    PersonEmploymentName: employmentName,
+    PersonEmploymentTitle: employmentTitle,
     // Add any additional properties here
   });
   }}();
