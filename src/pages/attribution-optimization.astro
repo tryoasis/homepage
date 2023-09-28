@@ -26,6 +26,31 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
                  </div>
                </div>
                <div id="attribution-form" class="klaviyo-form-Rb4b99"></div>
+               <script>
+          window.addEventListener('klaviyoForms', function(event) {
+          console.log('klaviyoForms event fired:', event);
+          if (event.detail.type === 'submit') {
+            var userEmail = event.detail.email;
+            var userFirstName = event.detail.firstName;
+            var userLastName = event.detail.lastName;
+            var companyName = event.detail.companyName;
+
+                ko.track('Attribution Landing Page Form Submitted', {
+                  email: userEmail,
+                  firstName: userFirstName,
+                  lastName: userLastName,
+                  companyName: companyName,
+                })
+            
+                ko.identify(userEmail, {
+                  name: userFirstName + ' ' + userLastName,
+                  email: userEmail,
+                  $account: {
+                    name: companyName,
+                  }
+                })
+              }});
+               </script>
                <style>
                     #attribution-form {
                         width: 100%;

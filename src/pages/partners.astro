@@ -83,6 +83,31 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             <div id="partnership-form" class="klaviyo-form-Xv2pM4"></div>
+            <script>
+          window.addEventListener('klaviyoForms', function(event) {
+          console.log('klaviyoForms event fired:', event);
+          if (event.detail.type === 'submit') {
+            var userEmail = event.detail.email;
+            var userFirstName = event.detail.firstName;
+            var userLastName = event.detail.lastName;
+            var companyName = event.detail.companyName;
+
+                ko.track('Form Submitted', {
+                  email: userEmail,
+                  firstName: userFirstName,
+                  lastName: userLastName,
+                  companyName: companyName,
+                })
+            
+                ko.identify(userEmail, {
+                  name: userFirstName + ' ' + userLastName,
+                  email: userEmail,
+                  $account: {
+                    name: companyName,
+                  }
+                })
+              }});
+            </script>
             <style>
                     #partnership-form {
                         width: 100%;
