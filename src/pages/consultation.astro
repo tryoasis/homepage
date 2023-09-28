@@ -92,14 +92,14 @@ import Layout from "../layouts/Layout.astro";
             var userLastName = event.detail.lastName;
             var companyName = event.detail.companyName;
 
-                ko.track('Consultation Form Submitted', {
+                analytics.track('Consultation Form Submitted', {
                   email: userEmail,
                   firstName: userFirstName,
                   lastName: userLastName,
                   companyName: companyName,
                 })
             
-                ko.identify(userEmail, {
+                analytics.identify(userEmail, {
                   name: userFirstName + ' ' + userLastName,
                   email: userEmail,
                   $account: {

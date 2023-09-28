@@ -35,14 +35,14 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
             var userLastName = event.detail.lastName;
             var companyName = event.detail.companyName;
 
-                ko.track('Ebook Form Submitted', {
+                analytics.track('Ebook Form Submitted', {
                   email: userEmail,
                   firstName: userFirstName,
                   lastName: userLastName,
                   companyName: companyName,
                 })
             
-                ko.identify(userEmail, {
+                analytics.identify(userEmail, {
                   name: userFirstName + ' ' + userLastName,
                   email: userEmail,
                   $account: {
