@@ -30,13 +30,13 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           window.addEventListener('klaviyoForms', function(event) {
           console.log('klaviyoForms event fired:', event);
           if (event.detail.type === 'submit') {
-                analytics.track('Attribution Landing Page Form Submitted', {
+                ko.track('Attribution Landing Page Form Submitted', {
                   email: event.detail.metaData.$email,
                   name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
                   companyName: event.detail.metaData.$organization,
                 });
             
-                analytics.identify(event.detail.metaData.$email, {
+                ko.identify(event.detail.metaData.$email, {
                     name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
                     email: event.detail.metaData.$email,
                     companyName: event.detail.metaData.$organization,

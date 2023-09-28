@@ -40,29 +40,6 @@ const { title, description, image, url,  } = Astro.props;
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="pcQuLh3ezq1236wAdgQASYFo7eGWqExH";;analytics.SNIPPET_VERSION="4.16.1";
   analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
-  const company = clearbit.Company.identify();
-  const person = clearbit.Person.identify();
-  const CompanyName = company.name;
-  const CompanyDomain = company.domain;
-  const CompanyIndustry = company.category.industry;
-  const CompanySubIndustry = company.category.subIndustry;
-  const CompanyEmployeeCount = company.category.employeesRange;
-  const CompanyURL = company.url;
-  const CompanyLogo = company.logo;
-  const CompanyDescription = company.description;
-  const CompanyTech = company.tech;
-  const CompanyTechCategory = company.tech.category;
-  const name = person.name.fullName;
-  const email = person.email;
-  const bio = person.bio;
-  const location = person.location;
-  const site = person.site;
-  const avatar = person.avatar;
-  const employment = person.employment;
-  const employmentDomain = person.employment.domain;
-  const employmentName = person.employment.name;
-  const employmentTitle = person.employment.title;
-
   analytics.page({
     path: window.location.pathname,
     url: window.location.href,
@@ -70,30 +47,13 @@ const { title, description, image, url,  } = Astro.props;
     search: window.location.search,
     title: document.title,
     name: document.title,
-    CompanyName: CompanyName,
-    CompanyDomain: CompanyDomain,
-    CompanyIndustry: CompanyIndustry,
-    CompanySubIndustry: CompanySubIndustry,
-    CompanyEmployeeCount: CompanyEmployeeCount,
-    CompanyURL: CompanyURL,
-    CompanyLogo: CompanyLogo,
-    CompanyDescription: CompanyDescription,
-    CompanyTech: CompanyTech,
-    CompanyTechCategory: CompanyTechCategory,
-    PersonName: name,
-    PersonEmail: email,
-    PersonBio: bio,
-    PersonLocation: location,
-    PersonSite: site,
-    PersonAvatar: avatar,
-    PersonEmployment: employment,
-    PersonEmploymentDomain: employmentDomain,
-    PersonEmploymentName: employmentName,
-    PersonEmploymentTitle: employmentTitle,
-    // Add any additional properties here
   });
   }}();
 </script>
+
+<script>
+  !function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_de6536be1ab1050411ebe8603a8149eec493/sdk.js"),(document.body || document.head).appendChild(n)}();
+  </script>
 
 <script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 
@@ -238,6 +198,9 @@ const { title, description, image, url,  } = Astro.props;
   type="text/javascript"
   src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RzquL2"
 ></script>
+
+<script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
+
     <!-- Font -->
     <link rel="preconnect" href="https://api.fontshare.com/v2/" crossorigin />
     <link
