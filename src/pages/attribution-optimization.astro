@@ -37,11 +37,9 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
                 });
             
                 analytics.identify(event.detail.metaData.$email, {
-                  traits: {
                     name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
                     email: event.detail.metaData.$email,
                     companyName: event.detail.metaData.$organization,
-                  },
                 });
               }});
                </script>
