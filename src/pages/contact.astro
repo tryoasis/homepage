@@ -27,54 +27,17 @@ import Layout from "../layouts/Layout.astro";
           window.addEventListener('klaviyoForms', function(event) {
           console.log('klaviyoForms event fired:', event);
           if (event.detail.type === 'submit') {
-            var userEmail = event.detail.email;
-            var userFirstName = event.detail.firstName;
-            var userLastName = event.detail.lastName;
-            var companyName = event.detail.companyName;
-
-                analytics.track('Contact Form Submitted', {
-                  email: userEmail,
-                  firstName: userFirstName,
-                  lastName: userLastName,
-                  companyName: companyName,
-                })
-                analytics.identify(userEmail, {
-                  first_name: userFirstName,
-                  last_name: userLastName,
-                  company: companyName,
-                  email: userEmail,
-                })
-                analytics.group(userEmail, {
-                  name: companyName,
-                  email: userEmail,
-                  industry: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).industry,
-                  employees: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).metrics.employees,
-                  annual_revenue: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).metrics.annual_revenue,
-                  raised: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).metrics.raised,
-                  tech: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).tech,
-                  logo: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).logo,
-                  description: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).description,
-                  site: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).site,
-                  tags: window.clearbit.identify(companyName, {
-                    email: userEmail,
-                  }).tags,
-                })
+            analytics.track('Contact Form Submitted', {
+                  email: event.detail.metaData.$email,
+                  name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
+                  companyName: event.detail.metaData.$organization,
+                });
+            
+                analytics.identify(event.detail.metaData.$email, {
+                    name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
+                    email: event.detail.metaData.$email,
+                    companyName: event.detail.metaData.$organization,
+                });
               }});
              </script>
            </div>

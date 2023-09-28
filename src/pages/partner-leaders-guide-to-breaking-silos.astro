@@ -30,25 +30,17 @@ import { Accordion, AccordionItem, } from 'accessible-astro-components'
           window.addEventListener('klaviyoForms', function(event) {
           console.log('klaviyoForms event fired:', event);
           if (event.detail.type === 'submit') {
-            var userEmail = event.detail.email;
-            var userFirstName = event.detail.firstName;
-            var userLastName = event.detail.lastName;
-            var companyName = event.detail.companyName;
-
-                analytics.track('Ebook Form Submitted', {
-                  email: userEmail,
-                  firstName: userFirstName,
-                  lastName: userLastName,
-                  companyName: companyName,
-                })
+            analytics.track('Attribution Landing Page Form Submitted', {
+                  email: event.detail.metaData.$email,
+                  name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
+                  companyName: event.detail.metaData.$organization,
+                });
             
-                analytics.identify(userEmail, {
-                  name: userFirstName + ' ' + userLastName,
-                  email: userEmail,
-                  $account: {
-                    name: companyName,
-                  }
-                })
+                analytics.identify(event.detail.metaData.$email, {
+                    name: event.detail.metaData.$first_name + ' ' + event.detail.metaData.$last_name,
+                    email: event.detail.metaData.$email,
+                    companyName: event.detail.metaData.$organization,
+                });
               }});
                </script>
               <style>
