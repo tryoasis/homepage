@@ -39,8 +39,8 @@ button,
   line-height: var(--rbrh-line-h-sm);
 }
 .btn-lg {
-  padding: var(--rbrh-spacing-5) var(--rbrh-spacing-7);
-  @mixin font-size-md;
+  padding: var(--rbrh-spacing-5) var(--rbrh-spacing-10);
+  @mixin font-size-lg;
 }
 /* Absolute button
    ============================================= */
