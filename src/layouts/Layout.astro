@@ -78,6 +78,47 @@ const { title, description, image, url,  } = Astro.props;
   });
 </script> 
 
+<script>
+  // Wait for the DOM to be fully loaded
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("text-us-1");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Text Now Button Clicked (Attribution)", {
+        // You can include additional properties here
+        button_text: "Text us now",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script>
+
+<script>
+  // Wait for the DOM to be fully loaded
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("text-us-2");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Text Now Button Clicked (Fractional PSM)", {
+        // You can include additional properties here
+        button_text: "Text us now",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+</script> 
 
 <script>
   // Wait for the DOM to be fully loaded
