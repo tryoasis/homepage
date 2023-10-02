@@ -48,11 +48,19 @@ const seo = {
       <div class="post-content__top fade-in">
         {
           frontmatter.category && (
-            <p class="post-content__category">
-              <a href={`/blog/category/${slugify(frontmatter.category)}`}>
+            <span class="badge border-magenta-100 badge-sm bg-magenta-100 font-semibold dark-bg-magenta-200 dark-border-none p-x-5 p-y-3 m-b-4 flex-wrap dark-black xs-font-size-xxs sm-font-size-xs post-content__category">
+              <a class="bg-magenta-100" href={`/blog/category/${slugify(frontmatter.category)}`}>
                 {frontmatter.category}
               </a>
-            </p>
+            </span>
+          )
+        }
+        <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
+        {
+          frontmatter.image && (
+            <picture>
+              <source srcset={`${frontmatter.image}.webp`} type="image/webp" />
+            </picture>
           )
         }
         <h2 class="post-content__title">{frontmatter.title}</h1>
@@ -63,14 +71,6 @@ const seo = {
           {' '}
           <time>{formatDate(frontmatter.publishedAt)}</time>
         </p>
-        <!-- Hopefully we'll be able to use Astro's image integration for this soon -->
-        {
-          frontmatter.image && (
-            <picture>
-              <source srcset={`${frontmatter.image}.webp`} type="image/webp" />
-            </picture>
-          )
-        }
       <div class="post-content__content flow fade-in">
         <slot />
       </div>
@@ -165,7 +165,7 @@ const seo = {
           #ebook-form {
                   width: 100%;
                   max-width: 500px;
-                  margin: 0 auto;
+                  margin: auto auto;
               }
           /* Media query for smaller screens */
           @media (max-width: 768px) {
@@ -184,11 +184,12 @@ const seo = {
             }
             .post-content__title {
               font-size: 1.5rem;
+              font-weight: bolder;
             }
 
             #ebook-form {
                   width: 80%;
-                  max-width: 500px;
+                  max-width: 400px;
                   }
               .form-container {
               max-width: 90%;
@@ -222,7 +223,6 @@ const seo = {
   .post-content__category {
     padding: 0.5rem 1rem;
     font-size: var(--step--1);
-    background-color: var(--theme-surface-1);
     border-radius: 2rem;
   }
   .post-content__category a {
@@ -238,6 +238,7 @@ const seo = {
     margin: 1rem auto;
     font-size: 2rem;
     padding: 0 4rem;
+    font-weight: bolder;
   }
   .post-content__date {
     margin: 0 auto;
