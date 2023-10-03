@@ -17,7 +17,7 @@ ctaLinkUrl: "https://meetings.hubspot.com/james-bohrman"
 
 ![](https://www.tryuppercut.com/partnerenrichment.png)
 
-With the moonlighting of third-party cookies and changes in privacy laws changing the marketing landscape, revenue leaders are having to think very hard about how to measure intent and identify relevent opportunities while keeping customers privacy top of mind. In a 2021 report titled ["Next in Personalization"](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying), Mckinsey & Company found that 71% of respondents "expect personalization" from the brands they interact with, while also becoming frustrated when this need is not met. 
+With the moonlighting of third-party cookies and changes in privacy laws changing the marketing landscape, revenue leaders are having to think very hard about how to measure intent and identify relavent opportunities while keeping customers privacy top of mind. In a 2021 report titled ["Next in Personalization"](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying), Mckinsey & Company found that 71% of respondents "expect personalization" from the brands they interact with, while also becoming frustrated when this need is not met. 
 
 But how do companies walk the line of personalization while also respecting the privacy of their customers? The days of harvesting every single piece of user data from obscure B2B data provider using a tracking script is over. We need a better, more ethical, and transparent method of identifying intent from potential customers. This is where second party, or partner data, comes into play. 
 
