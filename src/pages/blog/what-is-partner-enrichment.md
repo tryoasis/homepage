@@ -1,6 +1,6 @@
 ---
 title: "What is partner enrichment? A new paradigm for tracking partner influence"
-excerpt: "I can tell you the number one reason that partners churn out. But before I do think about what the phrase partner experience means to you...does it mean what PRM you're using? Does it mean your commission payout structure? Or is it more than that?"
+excerpt: "With the moonlighting of third-party cookies and changes in privacy laws changing the marketing landscape, revenue leaders are having to think very hard about how to measure intent and identify relavent opportunities while keeping customers privacy top of mind."
 publishedAt: "10/02/2023"
 image: "https://www.tryuppercut.com/partnerenrichment.png"
 alt: ""
