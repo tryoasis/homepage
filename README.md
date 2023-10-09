@@ -1,82 +1,275 @@
-# Zauberhaft - Astro template
+# 🚀 AstroWind
 
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/ariqnrnns/zauberhaft-astro)
-[![Build CI](https://github.com/ariqnrnns/zauberhaft-astro/actions/workflows/build.yml/badge.svg)](https://github.com/ariqnrnns/zauberhaft-astro/actions/workflows/build.yml)
-![GitHub last commit](https://img.shields.io/github/last-commit/ariqnrnns/zauberhaft-astro)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![zauberhaft.ravenbright.design](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://zauberhaft.ravenbright.design)
+<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
+     alt="AstroWind Lighthouse Score" width="100" height="358">
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/ariqnrnns/zauberhaft-astro/main/src/Zauberhaft-banner.jpg" alt="Zauberhaft Banner">
+🌟 _Most *starred* & *forked* Astro theme in 2022_. 🌟
 
-<img src="https://raw.githubusercontent.com/ariqnrnns/zauberhaft-astro/main/src/Zauberhaft-stats.jpg" alt="Zauberhaft Stats">
-</p>
+**AstroWind** is a free and open-source template to make your website using **[Astro 3.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
 
-## Free, customizable, modern & Lightning fast Astro agency website template
+- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
+- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
+- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
+- ✅ Generation of **project sitemap** based on your routes.
+- ✅ **Open Graph tags** for social media sharing.
+- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
-Build modern & unique portfolio website that convert with	Zauberhaft.
+<br>
 
-Easily customize the template with utility classes & CSS custom properties. Get started quickly & supercharge your online presence with Zauberhaft HTML template.
+<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/screenshot-astro3.png" alt="AstroWind Theme Screenshot">
 
-## 👉 Demo
+[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
+[![License](https://img.shields.io/github/license/onwidget/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/astrowind/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/astrowind#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/astrowind)
+[![Stars](https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
+[![Forks](https://img.shields.io/github/forks/onwidget/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
 
-[View demo](https://zauberhaft.ravenbright.design)
+<br>
 
-## ✅ Why Zauberhaft?
+<details open>
+<summary>Table of Contents</summary>
 
-- 👌 Totally free to use with Apache License 2.0
-- 😎 Stunning User Interface
-- 🎨 Everything is customizable. You can use [Ravenbright CSS](https://ravenbrightcss.com) utility classes or CSS variables to modify the styles
-- ⚡ High performing static sites. 98/100 scores both for mobile & desktop in Pagespeed Insights
-- ♿ Accessible - comply with WCAG 2.1. Measured by Pagespeed Insights, WAVE & Tota11y
-- 📰 Included with Open Graph tags
-- 📱 Fully Responsive & mobile-friendly landing page
-- 👌 Comes with & smooth animations
+- [Demo](#demo)
+- [Getting started](#getting-started)
+  - [Project structure](#project-structure)
+  - [Commands](#commands)
+  - [Configuration](#configuration)
+  - [Deploy](#deploy)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Related Projects](#related-projects)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
-## 🚀 Getting started
+</details>
 
-1. Download the source code from Github Releases
-2. `cd` into the folder & run `npm install`
-3. After that, run `npm run dev` to start the local development server
-4. Customize the website
-5. Deploy into your favorite hosting
-6. It's done!
+<br>
 
-## 🎨 Customization
+## Demo
 
-Zauberhaft is built with Ravenbright CSS library. You can customize the template with using either:
+📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
 
-- [Utility classes](https://ravenbrightcss.com/docs/utilities/background)
-- [CSS variables](https://ravenbrightcss.com/docs/customize/cssvariables)
+<br>
 
-## ⚙️ Development
+## Getting started
 
-1. Type `npm run dev` on CLI
-2. Open `localhost:3000` to view the website
+**AstroWind** tries to give you quick access to creating a website using [Astro 3.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
 
-## ✅ Build process
+Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals..
 
-1. Type `npm run build` on CLI
-2. Run `npm run preview` to see the build result. Finally, it's done 🎉. Your website is ready to deploy 🚀
+### Project structure
 
-## ☁️ Deploy
+Inside AstroWind template, you'll see the following folders and files:
 
-### Deploy to Netlify
+```
+/
+├── public/
+│   ├── _headers
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── favicons/
+│   │   ├── images/
+│   │   └── styles/
+│   │       └── tailwind.css
+│   ├── components/
+│   │   ├── blog/
+│   │   ├── common/
+│   │   ├── ui/
+│   │   ├── widgets/
+│   │   │   ├── Header.astro
+│   │   │   └── ...
+│   │   ├── CustomStyles.astro
+│   │   ├── Favicons.astro
+│   │   └── Logo.astro
+│   ├── content/
+│   │   ├── post/
+│   │   │   ├── post-slug-1.md
+│   │   │   ├── post-slug-2.mdx
+│   │   │   └── ...
+│   │   └-- config.ts
+│   ├── layouts/
+│   │   ├── Layout.astro
+│   │   ├── MarkdownLayout.astro
+│   │   └── PageLayout.astro
+│   ├── pages/
+│   │   ├── [...blog]/
+│   │   │   ├── [category]/
+│   │   │   ├── [tag]/
+│   │   │   ├── [...page].astro
+│   │   │   └── index.astro
+│   │   ├── index.astro
+│   │   ├── 404.astro
+│   │   ├-- rss.xml.ts
+│   │   └── ...
+│   ├── utils/
+│   ├── config.yaml
+│   └── navigation.js
+├── package.json
+├── astro.config.mjs
+└── ...
+```
 
-Clone this repository and deploy to Netlify:
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ariqnrnns/zauberhaft-astro)
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
 
-## 🤝 Credits & attributions
+[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/astrowind/tree/main)  [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/onwidget/astrowind)  [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/onwidget/astrowind)   
 
-- Post-processor tool: [PostCSS](https://postcss.org)
-- Web framework tool: [Astro](https://astro.build)
-- Photos are courtesy of [Unsplash](https://unsplash.com)
-- Typeface: `Satoshi` by [Indian Type Foundry](https://www.fontshare.com/fonts/satoshi)
-- Placeholder Logo are courtesy of [Logoipsum](https://logoipsum.com)
-- Icons are courtesy of [Tabler](https://tabler-icons.io/) and [Akar Icons](akaricons.com/)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
 
-## 📝 License
+<br>
 
-Zauberhaft HTML template is licensed under the [Apache License 2.0](https://github.com/ariqnrnns/zauberhaft-astro/blob/main/LICENSE.md)
+### Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command               | Action                                             |
+| :-------------------- | :------------------------------------------------- |
+| `npm install`         | Installs dependencies                              |
+| `npm run dev`         | Starts local dev server at `localhost:3000`        |
+| `npm run build`       | Build your production site to `./dist/`            |
+| `npm run preview`     | Preview your build locally, before deploying       |
+| `npm run format`      | Format codes with Prettier                         |
+| `npm run lint:eslint` | Run Eslint                                         |
+| `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
+
+<br>
+
+### Configuration
+
+Basic configuration file: `./src/config.yaml`
+
+```yaml
+site:
+  name: 'Example'
+  site: 'https://example.com'
+  base: '/' # Change this if you need to deploy to Github Pages, for example
+  trailingSlash: false # Generate permalinks with or without "/" at the end
+
+  googleSiteVerificationId: false # Or some value,
+
+# Default SEO metadata
+metadata:
+  title:
+    default: 'Example'
+    template: '%s — Example'
+  description: 'This is the default meta description of Example website'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: 'Example'
+    images:
+      - url: '~/assets/images/default.jpg'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@twitter_user'
+    site: '@twitter_user'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      robots:
+        index: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+```
+
+<br>
+
+### Deploy
+
+#### Deploy to production (manual)
+
+You can create an optimized production build with:
+
+```shell
+npm run build
+```
+
+Now, your website is ready to be deployed. All generated files are located at
+`dist` folder, which you can deploy the folder to any hosting service you
+prefer.
+
+#### Deploy to Netlify
+
+Clone this repository on own GitHub account and deploy to Netlify:
+
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/astrowind)
+
+#### Deploy to Vercel
+
+Clone this repository on own GitHub account and deploy to Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
+
+<br>
+
+## Frequently Asked Questions
+
+- Why?
+-
+-
+
+<br>
+
+## Related projects
+
+- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 13 and Tailwind CSS with the new App Router.
+- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+
+## Contributing
+
+If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
+That would be very useful for all of us and we would be happy to listen and take action.
+
+## Acknowledgements
+
+Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+
+## License
+
+**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.

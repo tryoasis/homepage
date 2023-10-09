@@ -1,295 +1,64 @@
 ---
-import "../styles/dist/ravenbright.min.css";
-/* Load components */
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import '~/assets/styles/tailwind.css';
 
-/* Load site metadata */
-import siteMetadata from "../data/siteMetadata.js";
+import { I18N } from "~/utils/config";
 
-const { title, description, image, url,  } = Astro.props;
+import CommonMeta from '~/components/common/CommonMeta.astro';
+import Favicons from '~/components/Favicons.astro';
+import CustomStyles from "~/components/CustomStyles.astro"
+import ApplyColorMode from "~/components/common/ApplyColorMode.astro"
+import Metadata from '~/components/common/Metadata.astro';
+import SiteVerification  from "~/components/common/SiteVerification.astro"
+import Analytics  from "~/components/common/Analytics.astro"
+import BasicScripts from '~/components/common/BasicScripts.astro';
+
+import type { MetaData as MetaDataType } from '~/types';
+
+export interface Props {
+  metadata?: MetaDataType;
+}
+
+const { metadata = {} } = Astro.props;
+const { language, textDirection } = I18N;
 ---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index,follow" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <title>{title}</title>
-    <meta name="description" content={siteMetadata.description} />
-    <meta name="keywords" content={siteMetadata.keywords} />
-    <meta name="author" content={siteMetadata.author} />
-    <meta name="language" content={siteMetadata.language} />
-
-    <!-- Open Graph Tags -->
-    <meta property="og:site_name" content={siteMetadata.author} />
-    <meta property="og:url" content={url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-
-    <!-- Twiter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
-
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="pcQuLh3ezq1236wAdgQASYFo7eGWqExH";;analytics.SNIPPET_VERSION="4.16.1";
-  analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
-  analytics.page({
-    path: window.location.pathname,
-    url: window.location.href,
-    referrer: document.referrer,
-    search: window.location.search,
-    title: document.title,
-    name: document.title,
-  });
-  }}();
-</script>
-
-<script>
-!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_de6536be1ab1050411ebe8603a8149eec493/sdk.js"),(document.body || document.head).appendChild(n)}();
-</script>
-
-<script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
-
-<script>
-  // Wait for the DOM to be fully loaded
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("track");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("ATF Consult Button Clicked", {
-        // You can include additional properties here
-        button_text: "Get a free partner experience audit",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
+    <CommonMeta />
+    <Favicons />
+    <CustomStyles />
+    <ApplyColorMode />
+    <Metadata {...metadata} />
+    <SiteVerification />
+    <Analytics />
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="pcQuLh3ezq1236wAdgQASYFo7eGWqExH";analytics.SNIPPET_VERSION="4.16.1";
+      analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
+      analytics.page({
+        path: window.location.pathname,
+        url: window.location.href,
+        referrer: document.referrer,
+        search: window.location.search,
+        title: document.title,
+        name: document.title,
       });
-    });
-  });
-</script> 
-
-<script>
-  // Wait for the DOM to be fully loaded
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("text-us-1");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Text Now Button Clicked (Attribution)", {
-        // You can include additional properties here
-        button_text: "Text us now",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-</script>
-
-<script>
-  // Wait for the DOM to be fully loaded
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("text-us-2");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Text Now Button Clicked (Fractional PSM)", {
-        // You can include additional properties here
-        button_text: "Text us now",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-</script> 
-
-<script>
-  // Wait for the DOM to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("swiss-army");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Swiss Army Button Clicked", {
-        // You can include additional properties here
-        button_text: "Learn More",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-</script> 
-
-<script>
-  // Wait for the DOM to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("strategy-and-ipp");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Strategy and IPP Button Clicked", {
-        // You can include additional properties here 
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-</script> 
-
-<script>
-  // Wait for the DOM to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("learn-more");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Learn More Button Clicked", {
-        // You can include additional properties here
-        button_text: "Get a free partner experience audit",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
-    var button = document.getElementById("header-button");
-  
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Header Button Clicked", {
-      // You can include additional properties here
-      button_text: "Chat with us",
-      value: 12.75,
-      currency: "USD",
-      // Add any other relevant properties
-      });
-    });
-  });
-  </script>
-
-<script>
-	const dropdownToggles = document.querySelectorAll('.list-item');
-	const dropdowns = document.querySelectorAll('ul.absolute');
-  
-	dropdownToggles.forEach((toggle) => {
-	  toggle.addEventListener('mouseenter', () => { // Use mouseenter to open on hover
-		const dropdown = toggle.nextElementSibling;
-		dropdown.classList.add('active');
-	  });
-  
-	  toggle.addEventListener('mouseleave', () => { // Hide on mouseleave
-		const dropdown = toggle.nextElementSibling;
-		dropdown.classList.remove('active');
-	  });
-	});
-  
-	dropdowns.forEach((dropdown) => {
-	  dropdown.addEventListener('mouseenter', () => {
-		dropdown.classList.add('active');
-	  });
-  
-	  dropdown.addEventListener('mouseleave', () => {
-		dropdown.classList.remove('active');
-	  });
-	});
-  
-	// Close dropdowns when clicking outside
-	document.addEventListener('click', (e) => {
-	  const targetElement = e.target as HTMLElement; // Typecast e.target to HTMLElement
-	  if (!targetElement.closest('.list-item')) {
-		dropdownToggles.forEach((toggle) => {
-		  toggle.nextElementSibling.classList.remove('active');
-		});
-	  }
-	});
-  </script>
-
-<script
-  type="text/javascript"
-  src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=RzquL2"
-></script>
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://api.fontshare.com/v2/" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://api.fontshare.com/v2/css?f=satoshi@900,700,500,400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://api.fontshare.com/v2/css?f=satoshi@900,700,500,400&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/favicon-180x180.png"
-    />
-    <link rel="icon" sizes="192x192" href="/favicon/favicon-180x180.png" />
-
-    <!-- Links -->
-    <link rel="canonical" href="https://www.tryuppercut.com" />
-    <link rel="canonical" href="https://www.tryuppercut.com/blog/" />
-
-    <!-- Script -->
-    <script src="/toggledarktheme.js" defer></script>
+      }}();
+    </script>
+    <script src="https://tag.clearbitscripts.com/v1/pk_a60ba1c571a9a08595b30061b37d5a9f/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RzquL2"></script>
   </head>
-  <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFPTPGS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <Header />
 
+  <body class="antialiased text-default bg-page tracking-tight">
     <slot />
 
-    <Footer />
+    <BasicScripts />
+
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
   </body>
 </html>
