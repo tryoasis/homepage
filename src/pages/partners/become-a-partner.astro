@@ -12,6 +12,7 @@ import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'SaaS Landing Page',
@@ -333,26 +334,27 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Contact us',
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      target: '_blank',
+      text: 'Chat with us instantly',
       href: 'https://wa.me/message/DUSWAIWLJG6DO1',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'contact@tryuppercut.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Follow us',
-        description: '@uppercut-io',
-        icon: 'tabler:brand-linkedin',
-      },
-    ]}
-  />
+      icon: 'tabler:brand-whatsapp',
+    }, {
+      variant: "secondary",
+      target: '_blank',
+      text: 'Download Benefits Sheet',
+      href: 'https://drive.google.com/uc?export=download&id=1owraS8ntnh6dqdrmaHoT314YZHcuk8X_',
+      icon: 'tabler:file-download',
+    }]}
+  >
+    <Fragment slot="title">Learn about our partner experience</Fragment>
+
+    <Fragment slot="subtitle">
+      Chat with a member of our team to learn more about our partner experience and how we can grow together.
+    </Fragment>
+  </CallToAction>
 
   <!-- BlogLatestPost Widget **************** -->
 
