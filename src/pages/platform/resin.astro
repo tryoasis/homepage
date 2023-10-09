@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Resin - Partner Intent Platform',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="Coming soon!"
+    title="Resin: Partner Intent Platform"
+    subtitle="Instantly reveal information about visitors from your partner ecosystem, and see which partners are driving the most revenue. "
+    actions={[
+      { variant: 'primary', text: 'Join the waiting list', href: 'https://uypfr5suyzz.typeform.com/to/H7De7dZh', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Learn more', href: 'https://resin.tryuppercut.com' },
+    ]}
+  />
+
+  <div class="flex flex-wrap md-w-40 justify-center">
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="650" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaiuSoEItQIalFv5hj8iQk1%2FResin%3Ftype%3Ddesign%26node-id%3D403-6818%26t%3DtQ59lUS9FA2gJzml-1%26scaling%3Dmin-zoom%26page-id%3D403%253A2%26mode%3Ddesign" allowfullscreen></iframe>
+</div>
+
+  <CallToAction
+    title="Coming soon"
+    subtitle="Resin has an expected launch date around Early 2024! Join the waiting list to be notified of updates"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Join the waiting list',
+        href: 'https://uypfr5suyzz.typeform.com/to/H7De7dZh',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>

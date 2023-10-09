@@ -1,288 +1,227 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Accordion, AccordionItem, } from 'accessible-astro-components'
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing',
+};
 ---
-<Layout
-  title="Pricing Page | Uppercut" 
-  description="Uppercut is passionate about optimizing partner programs, so all our prices are tailored to your needs and budget. We are happy to discuss your project and find the best solution for you."
-  image="https://www.tryuppercut.com/og-image.png"
-  url="https://www.tryuppercut.com"
->
-<main>
-    <!--Hero-->
-    <div class="overlay"></div>
-    <section class="p-t-14 dark-bg-black">
-      <div class="container container-xl">
-        <!--headline & text-->
-        <div class="section-title all-center">
-          <h2 class="h1 m-b-6 md-w-75">
-            Pricing
-          </h2>
-            <p class="md-w-75">
-                Uppercut is passionate about optimizing partner programs, so all our prices are tailored to your needs and budget. We are happy to discuss your project and find the best solution for you.
-            </p>
-        </div>
-        </div>
-    </section>
-    <!--Pricing-->
-    <section class="xs-p-y-16 md-p-y-40">
-        <div class="container container-lg">
-          <div class="grid xs-grid-cols-1 md-grid-cols-2 lg-grid-cols-3 gap-8">
-            <!--Starter-->
-            <!--Pro-->
-            <article
-              class="card md-p-y-10 xs-p-x-8 md-p-x-9 radius-lg bg-magenta-400 border-gray-300 dark-border-gray-700 dark-bg-magenta-400 shadow-lg md-w-fit xs-m-b-8 md-m-b-0"
-            >
-              <p class="subtitle m-b-4 uppercase white">Attribution Wrangling 🤠</p>
-              <h3 class="h1 m-b-4 font-size-6xl font-extrabold white">Contact Us</p></h3>
-              <span class="h5 white">Paid Once</span>
-              <p class="item-excerpt white">
-                One-time project to get your revenue attribution in order.
-              </p>
-              <div class="m-t-6 m-b-4">
-                <div class="flex items-start m-b-6 white dark-magenta-300 m-b-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="ai ai-Check m-r-4"
-                  >
-                    <path d="M4 12l6 6L20 6"></path>
-                    <title>Included benefits & services</title>
-                  </svg>
-                  <p class="white">Segment Implementation</p>
-                </div>
-                <div class="flex items-start m-b-6 white dark-magenta-300 m-b-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="ai ai-Check m-r-4"
-                  >
-                    <path d="M4 12l6 6L20 6"></path>
-                    <title>Included benefits & services</title>
-                  </svg>
-                  <p class="white">Automation planning</p>
-                </div>
-                <div class="flex items-start white dark-magenta-300 m-b-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="ai ai-Check m-r-4"
-                  >
-                    <path d="M4 12l6 6L20 6"></path>
-                    <title>Included benefits & services</title>
-                  </svg>
-                  <p class="white">Data mapping strategy</p>
-                </div>
-              </div>
-              <a
-                href="https://wa.me/message/DUSWAIWLJG6DO1"
-                class="btn magenta-400 bg-white black dark-white border-gray-700 dark-bg-gray-600 dark-border-white btn-lg shadow-lg w-100"
-                role="button"
-                aria-label="Let's work together"
-                id="text-us-1"
-              >
-                Text us! 📲
-              </a> 
-            </article>
-            <style>
-            @media screen and (max-width: 375px) {
-              .grid {
-                grid-template-columns: 1fr; /* Change the grid layout to a single column */
-                gap: 16px; /* Adjust the gap between items as needed */
-              }
-  
-              .card {
-                width: 100%; /* Make sure the card takes up the full width */
-                box-sizing: border-box; /* Include padding and border in the width */
-                padding: 16px; /* Add padding to the card as needed */
-                margin-bottom: 16px; /* Add margin between cards as needed */
-                font-size: 10px; /* Adjust the font size for smaller screens */
-              }
-  
-              .card h3 {
-                font-size: 2.5rem; /* Adjust the font size for smaller screens */
-              }
-  
-              .card p {
-                font-size: 1.10rem; /* Adjust the font size for smaller screens */
-              }        
-  
-              .card a {
-                font-size: 1.25rem; /* Adjust the font size for smaller screens */
-              }
-            }
-  
-            </style>
-            <!--Exclusive-->
-            <article
-            class="card xs-p-y-8 md-p-y-10 xs-p-x-8 md-p-x-9 radius-lg border-gray-300 dark-border-gray-700 dark-bg-gray-700 xs-w-100 md-w-fit xs-m-b-8 md-m-b-0"
-          >
-            <p class="subtitle m-b-4 uppercase">Fractional PSM 🤝</p>
-            <h3 class="h1 m-b-4 font-size-6xl font-extrabold">Contact Us</p></h3>
-            <span class="h5">Annual Commitment</span>
-            <p class="item-excerpt p-t-2">
-              Scalable contracts for organizations that need a dedicated (but fractional) partner operations team.
-            </p>
-            <div class="m-t-6 m-b-4">
-              <div class="flex items-start m-b-6 magenta-400 dark-blue-300 m-b-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ai ai-Check m-r-4"
-                >
-                  <path d="M4 12l6 6L20 6"></path>
-                  <title>Included benefits & services</title>
-                </svg>
-                <p>Partner relationship management</p>
-              </div>
-              <div class="flex items-start m-b-5 magenta-400 dark-blue-300 m-b-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ai ai-Check m-r-4"
-                >
-                  <path d="M4 12l6 6L20 6"></path>
-                  <title>Included benefits & services</title>
-                </svg>
-                <p>Bespoke attribution pipelines</p>
-              </div>
-              <div class="flex items-start m-b-5 magenta-400 dark-blue-300 m-b-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ai ai-Check m-r-4"
-                >
-                  <path d="M4 12l6 6L20 6"></path>
-                  <title>Included benefits & services</title>
-                </svg>
-                <p>Branded client portal</p>
-              </div>
-            </div>
-            <a
-              href="https://wa.me/message/DUSWAIWLJG6DO1"
-              class="btn bg-magenta-100 dark-border-gray-50  dark-bg-gray-600 btn-lg w-100 black dark-gray-200"
-              role="button"
-              aria-label="Get started now"
-              id="text-us-2"
-            >
-              Text us! 📲
-            </a>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="xs-p-y-16 md-p-y-40 bg-gray-50 dark-bg-gray-800">
-        <div class="container container-xl">
-          <h3 class="h2 align-center m-b-8">What our clients can expect</h3>
-          <!--Services-->
-          <div class="grid xs-grid-cols-1 sm-grid-cols-2 xl-grid-cols-3 gap-6">
-            <article
-              class="card border-black dark-bg-gray-700 dark-bg-gray-700 justify-center"
-            >
-              <span
-                class="badge-icon dark-blue-200"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="94" height="116" viewBox="-116.80905 -194.68125 1012.3451 1168.0875"><defs><linearGradient x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 584.04474 584.04474 0 642 241.839)" id="a"><stop offset="0" stop-color="#25cf43"/><stop offset="1" stop-color="#61fd7d"/></linearGradient></defs><path d="M482.751 825.596c-13.025-.463-29.812-1.482-37.442-3.022-11.647-2.352-22.646-5.918-31.793-10.58-10.747-5.477-20.379-12.465-28.696-20.769-8.336-8.32-15.352-17.961-20.851-28.724-4.649-9.098-8.213-20.03-10.575-31.611-1.571-7.707-2.61-24.619-3.081-37.728a525.205 525.205 0 01-.289-15.49l-.046-287.576c0-3.185.097-10.121.287-15.485.463-13.024 1.482-29.811 3.023-37.441 2.351-11.646 5.918-22.646 10.579-31.793 5.478-10.748 12.465-20.378 20.769-28.696 8.32-8.335 17.962-15.351 28.724-20.851 9.099-4.648 20.031-8.213 31.611-10.575 7.707-1.571 24.62-2.61 37.729-3.08 5.356-.192 12.291-.29 15.489-.29l287.576-.046c3.186 0 10.122.096 15.484.287 13.025.464 29.813 1.482 37.442 3.023 11.647 2.352 22.647 5.919 31.793 10.579 10.747 5.478 20.379 12.466 28.696 20.769 8.335 8.321 15.351 17.961 20.851 28.724 4.648 9.099 8.214 20.03 10.575 31.611 1.572 7.707 2.61 24.621 3.081 37.729.192 5.357.289 12.291.289 15.489l.047 287.576c0 3.186-.097 10.122-.288 15.485-.464 13.024-1.482 29.811-3.023 37.441-2.351 11.647-5.918 22.646-10.579 31.793-5.477 10.748-12.466 20.379-20.768 28.697-8.321 8.334-17.963 15.351-28.725 20.85-9.099 4.649-20.03 8.214-31.611 10.575-7.707 1.571-24.62 2.61-37.728 3.08-5.358.193-12.292.29-15.49.29l-287.576.046a524.82 524.82 0 01-15.484-.287" fill="url(#a)" transform="matrix(1.33333 0 0 -1.33333 -466.637 1101.177)"/><path d="M524.354 440.616c-6.936-3.47-41.036-20.245-47.395-22.558-6.357-2.314-10.98-3.471-15.604 3.47-4.624 6.942-17.916 22.559-21.963 27.187-4.045 4.627-8.09 5.207-15.026 1.735-6.936-3.47-29.284-10.792-55.776-34.415-20.62-18.384-34.54-41.092-38.586-48.033-4.045-6.942-.43-10.694 3.043-14.151 3.119-3.105 6.935-8.097 10.403-12.147 3.468-4.05 4.624-6.941 6.936-11.568 2.312-4.628 1.156-8.677-.58-12.148-1.732-3.47-15.603-37.598-21.383-51.481-5.63-13.52-11.348-11.69-15.605-11.903-4.042-.201-8.67-.244-13.294-.244-4.624 0-12.137 1.736-18.496 8.676-6.357 6.942-24.274 23.718-24.274 57.844 0 34.128 24.853 67.099 28.32 71.727 3.469 4.628 48.909 74.663 118.485 104.696 16.548 7.144 29.468 11.41 39.54 14.607 16.616 5.276 31.736 4.532 43.687 2.746 13.325-1.99 41.036-16.774 46.816-32.97 5.778-16.196 5.778-30.08 4.045-32.971-1.733-2.892-6.357-4.628-13.293-8.099M397.8 613.355h-.093c-41.4-.016-82.005-11.133-117.428-32.148l-8.425-5-87.322 22.9 23.308-85.11-5.486-8.726c-23.095-36.723-35.292-79.167-35.275-122.747.05-127.168 103.55-230.628 230.813-230.628 61.624.024 119.552 24.047 163.112 67.642 43.56 43.596 67.536 101.545 67.512 163.173-.052 127.177-103.55 230.644-230.716 230.644M594.158 186.41c-52.408-52.452-122.104-81.352-196.36-81.381-153 0-277.524 124.476-277.586 277.477-.02 48.908 12.762 96.65 37.052 138.73l-39.38 143.797 147.152-38.587c40.544 22.107 86.192 33.756 132.65 33.776h.116c152.985 0 277.52-124.492 277.582-277.495.028-74.146-28.817-143.866-81.226-196.317" fill="#fff" fill-rule="evenodd"/></svg>
-              </span>
-              <div class="flex flex-column">
-                <h4 class="h4 align-center m-b-4">Async Chatting 📲</h3>
-                <p class="align-center p-b-4 subtitle">
-                  Don't want to deal with the hassle of scheduling a meeting? Want to chat about the latest episode of One Piece? Message us on WhatsApp and we'll get back to you ASAP.
-                </p>
-              </div>
-            </article>
-            <article
-            class="card border-black dark-bg-gray-700 dark-bg-gray-700 justify-center"
-          >
-            <span
-              class="badge-icon dark-blue-200"
-            >
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-            <svg class="m-b-4" width="83" height="105" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-               <circle cx="512" cy="512" r="512" style="fill:#ff7a59"/>
-               <path d="M623.8 624.94c-38.23 0-69.24-30.67-69.24-68.51s31-68.52 69.24-68.52 69.26 30.67 69.26 68.52-31 68.51-69.26 68.51m20.74-200.42v-61a46.83 46.83 0 0 0 27.33-42.29v-1.41c0-25.78-21.32-46.86-47.35-46.86h-1.43c-26 0-47.35 21.09-47.35 46.86v1.41a46.85 46.85 0 0 0 27.33 42.29v61a135.08 135.08 0 0 0-63.86 27.79l-169.1-130.17A52.49 52.49 0 0 0 372 309c0-29.21-23.89-52.92-53.4-53s-53.45 23.59-53.48 52.81 23.85 52.88 53.36 52.93a53.29 53.29 0 0 0 26.33-7.09l166.38 128.1a132.14 132.14 0 0 0 2.07 150.3l-50.62 50.1A43.42 43.42 0 1 0 450.1 768c24.24 0 43.9-19.46 43.9-43.45a42.24 42.24 0 0 0-2-12.42l50-49.52a135.28 135.28 0 0 0 81.8 27.47c74.61 0 135.06-59.83 135.06-133.65 0-66.82-49.62-122-114.33-131.91" style="fill:#ffffff;fill-rule:evenodd"/>
-            </svg>
-            </span>
-            <div class="flex flex-column">
-              <h4 class="h4 align-center m-b-4">Hubspot Experts 👨‍💻</h3>
-              <p class="align-center p-b-4 subtitle">
-                Our team understands the Hubspot ecosystem inside and out. We can help you get the most our of your Hubspot implementation and start seeing better partner ROI in no time.
-              </p>
-            </div>
-          </article>
-          <article
-          class="card border-black dark-bg-gray-700 dark-bg-gray-700 justify-center"
-        >
-          <span
-            class="badge-icon dark-blue-200"
-          >
-          <svg enable-background="new 0 0 1024 1024" width="94" height="116" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><circle cx="512" cy="512" fill="#52bd94" r="512"/><path d="m346.8 654.5c-16 0-29 13-29 29s13 29 29 29 29-13 29-29-13-29-29-29zm319.9-350.5c-16 0-29.1 12.9-29.1 29 0 16 12.9 29.1 29 29.1 16 0 29.1-12.9 29.1-29 0 0 0 0 0-.1 0-16-13-29-29-29zm-210.1 117.2v35.6c0 5.3 4.3 9.7 9.7 9.7h287.4c5.3 0 9.7-4.3 9.7-9.7v-35.6c0-5.3-4.4-9.7-9.7-9.7h-287.4c-5.4.1-9.7 4.4-9.7 9.7zm110.6 164.1v-35.5c0-5.3-4.3-9.7-9.7-9.7h-287.4c-5.3 0-9.7 4.3-9.7 9.7v35.5c0 5.3 4.3 9.7 9.7 9.7h287.4c5.4 0 9.7-4.3 9.7-9.7zm194-47.8c-1.6-2-3.8-3.3-6.4-3.6l-35.3-3.6c-5.2-.6-9.9 3.1-10.6 8.3-14.8 110.2-116.3 187.6-226.5 172.7-15.3-2.1-30.3-5.9-44.7-11.3-4.9-1.9-10.4.4-12.3 5.3l-13.5 32.7c-1 2.4-1 5.1 0 7.5s3 4.4 5.5 5.3c131.9 50.9 280.2-14.8 331.1-146.7 7.4-19.1 12.4-39 15-59.3.3-2.7-.5-5.3-2.3-7.3zm-498.7-81.6c-1.4-2.2-1.8-4.9-1.1-7.4 29-113.3 131.1-192.5 248-192.4 28.6 0 57.1 4.7 84.1 14.2 5 1.6 7.8 7 6.2 12-.1.2-.2.5-.3.7l-12.7 33.2c-1.8 4.9-7.2 7.5-12.1 5.7-21-7.2-43.1-10.8-65.3-10.8-46-.2-90.6 15.5-126.3 44.5-33.5 27.1-57.4 64.2-68.4 105.8-1.1 4.2-4.9 7.2-9.3 7.2-.7.1-1.5.1-2.2 0l-34.6-7.9c-2.6-.8-4.7-2.5-6-4.8z" fill="#fff"/></svg>
-          </span>
-          <div class="flex flex-column">
-            <h4 class="h4 align-center m-b-4">Segment Savants 🧠</h3>
-            <p class="align-center p-b-4 subtitle">
-              As Segment Partners, we can help you get the most out of your Segment implementation. We can help you build out your data pipelines and get your data flowing in no time.
-            </p>
-          </div>
-        </article>
-          </div>
-        </div>
-      </section>
-      <section class="xs-p-y-16 md-p-y-32 cta-section">
-        <div class="container container-lg">
-          <div class="section-title all-center m-b-4">
-            <span
-              class="badge badge-sm border-yellow-400 bg-yellow-200 font-semibold dark-black dark-bg-magenta-200 dark-border-none p-x-3 p-y-2 m-b-4"
-            >
-              Get the support to collaborate better
-            </span>
-            <h2 class="m-b-6 md-w-75">
-              Extract the <span class="font-bold magenta-400 dark-magenta-100">full ROI</span> from your partner program
-            </h2>
-            <p class="m-b-6 lg-w-50">
-              Deliver a rock-solid partner experience with fractional partner success management
-          </div>
-        </div>
-      </section>
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Flexible Engagment Models"
+    subtitle="Choose from our stock packages, or customize your own during your consultation."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Our prices"
+    subtitle="Choose a pre-made plan or customize your own"
+    prices={[
+      {
+        title: 'Attribution Wrangling',
+        subtitle: 'Best choice for revenue attribution',
+        price: ["$9400"],
+        period: 'Per Project',
+        items: [
+          {
+            description: 'Custom Segment Implementation',
+          },
+          {
+            description: 'Bespoke Attribution Strategy',
+          },
+          {
+            description: 'Embedded Analytics Dashboards',
+          },
+          {
+            description: 'Bi-Weekly Reporting',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: 'https://calendly.com/jbohrman/30min',
+        },
+      },
+      {
+        title: 'Fractional PSM',
+        subtitle: 'Optimal choice for partnership needs',
+        price: ["$5400"],
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Partner Growth Strategy',
+          },
+          {
+            description: 'Event Planning & Execution',
+          },
+          {
+            description: 'Conversion Gameplan',
+          },
+          {
+            description: 'Onboarding Optimization',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: 'https://calendly.com/jbohrman/30min',
+        },
+        hasRibbon: false,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Custom',
+        subtitle: 'Optimal choice for flexible needs',
+        price: ["Let's talk"],
+        period: 'Schedule a call',
+        items: [
+          {
+            description: 'BYO Engagement',
+          },
+          {
+            description: 'Choose your toolstack',
+          },
+          {
+            description: 'Flexible billing and financing',
+          },
+          {
+            description: 'Partner introductions',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: 'https://calendly.com/jbohrman/30min',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget **************
+
+  <Features3
+    title="Price-related features"
+    subtitle="Discover the advantages of choosing our plans"
+    columns={2}
+    items={[
+      {
+        title: 'Tiered Pricing Plans',
+        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
+        icon: 'tabler:stairs',
+      },
+      {
+        title: 'Transparent Pricing',
+        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'Secure Payment Methods',
+        description: 'Secure payment gateways to protect your financial information during transactions.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Instant Access',
+        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Upgrade Value',
+        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: '24H support',
+        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />-->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="A guided journey from plans to creativity"
+    tagline="simplified process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Explore plans',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Select a plan',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Schedule a consultation',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Plan your engagement',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Attend Launch Session',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'See the results!',
+        icon: 'tabler:number-6',
+      },
+    ]}
+    image={{
+      src: 'https://images.pexels.com/photos/3876399/pexels-photo-3876399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    columns={1}
+    items={[
+      {
+        title: 'Do the plans come with customer support?',
+        description:
+          'Absolutely, all plans include access to our dedicated customer support via WhatsApp to assist you with any queries or concerns.',
+      },
+      {
+        title: 'Is there a trial period?',
+        description:
+          "In a sense, yes. We offer a strategy and planning week to all new clients, which is a great way to get to know us and our process.",
+      },
+      {
+        title: 'Can I bring my existing toolstack?',
+        description:
+          'Certainly! Were pretty flexible in terms of tooling so feel free to bring your existing stack if you just need support.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to boost your partner operations?"
+    subtitle="Get started today and see the results for yourself"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a consultation',
+        href: 'https://calendly.com/jbohrman/30min',
+      },
+    ]}
+  />
+</Layout>
