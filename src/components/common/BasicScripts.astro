@@ -252,6 +252,40 @@ import { UI } from '~/utils/config';
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("resin-hero");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Resin Hero Clicked", {
+        // You can include additional properties here
+        button_text: "Join the waiting list!",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("resin-cta");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Resin CTA clicked", {
+        // You can include additional properties here
+        button_text: "Join the waiting list!",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
   window.onpageshow = function () {
     document.documentElement.classList.add('motion-safe:scroll-smooth');
     const elem = document.querySelector('[data-aw-toggle-menu]');
