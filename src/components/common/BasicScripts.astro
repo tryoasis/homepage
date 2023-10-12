@@ -11,6 +11,18 @@ import { UI } from '~/utils/config';
     }
   }
 
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="pcQuLh3ezq1236wAdgQASYFo7eGWqExH";analytics.SNIPPET_VERSION="4.16.1";
+      analytics.load("pcQuLh3ezq1236wAdgQASYFo7eGWqExH");
+      analytics.page({
+        path: window.location.pathname,
+        url: window.location.href,
+        referrer: document.referrer,
+        search: window.location.search,
+        title: document.title,
+        name: document.title,
+      });
+      }}();
+
   if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
     applyTheme(defaultTheme.replace(':only', ''));
   } else if (
@@ -118,6 +130,161 @@ import { UI } from '~/utils/config';
       }
     });
   };
+
+  // Wait for the DOM to be fully loaded
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("nearbound-chat-button");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Chat Button Clicked (Nearbound)", {
+        // You can include additional properties here
+        button_text: "Chat with us",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("fractional-psm-chat");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Chat Button Clicked (Nearbound)", {
+        // You can include additional properties here
+        button_text: "Chat with us",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("mindmatrix-header");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Mindmatrix Header Clicked", {
+        // You can include additional properties here
+        button_text: "Schedule a consultation",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("partner-chat");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Partner Chat Started", {
+        // You can include additional properties here
+        button_text: "Chat with us instantly",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("experiential-chat");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Experiential Chat Button Clicked", {
+        // You can include additional properties here
+        button_text: "Contact us",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("attribution-hero");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Attribution Hero Clicked", {
+        // You can include additional properties here
+        button_text: "Schedule a consultation",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("pricing-cta");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Pricing CTA Clicked", {
+        // You can include additional properties here
+        button_text: "Schedule a Consultation",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("resin-hero");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Resin Hero Clicked", {
+        // You can include additional properties here
+        button_text: "Join the waiting list!",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
+    var button = document.getElementById("resin-cta");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Resin CTA clicked", {
+        // You can include additional properties here
+        button_text: "Join the waiting list!",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
 
   window.onpageshow = function () {
     document.documentElement.classList.add('motion-safe:scroll-smooth');
