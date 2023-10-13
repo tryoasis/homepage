@@ -203,6 +203,56 @@ import { UI } from '~/utils/config';
 
   document.addEventListener("DOMContentLoaded", function () {
     // Find the button by its ID
+    var button = document.getElementById("partner-benefits-download");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", function () {
+      // Track the event using Segment
+      analytics.track("Partner Benefits PDF Downloaded", {
+        // You can include additional properties here
+        button_text: "Download Benefits Sheet",
+        value: 12.75,
+        currency: "USD",
+        // Add any other relevant properties
+      });
+    });
+  });
+
+          /* Load remote Batch SDK JavaScript code */
+  (function(b,a,t,c,h,e,r){h='batchSDK';b[h]=b[h]||function() {
+      (b[h].q=b[h].q||[]).push(arguments)};e=a.createElement(t),r=a.getElementsByTagName(t)[0];
+      e.async=1;e.src=c;r.parentNode.insertBefore(e,r);})(window,document,'script','https://via.batch.com/v3/bootstrap.min.js');
+
+  /* Initiate Batch SDK opt-in UI configuration (native prompt) */
+  var batchSDKUIConfig = {
+      native: {}
+  };
+
+  /* Use a specific configuration for Firefox and Safari browsers (custom prompt) */
+  if (navigator.userAgent.indexOf("Firefox") !== -1 || (navigator.userAgent.indexOf("Safari") !== -1 &&
+  navigator.userAgent.indexOf("Chrome") === -1)) {
+      batchSDKUIConfig = {
+          alert: {
+            icon: 'https://secure.url.to.your.icon.jpg'
+          }
+      }
+  }
+
+  /* Finalize the Batch SDK setup */
+  batchSDK('setup', {
+      apiKey: 'B4F3F8331D9C487DA0A0B07FAD0DD53D',
+      subdomain: 'tryuppercut',
+      authKey: '2.e86CptoFqllnyG6I8VoLXek62r9hPXk4F8s6fEIFKwM=',
+      dev: true, // remove this for prod
+      vapidPublicKey: 'BBW5NmI4pa394q4BETyzuy/Vsc5OqFPJP0UzqAMSK2oFfmEpM8xgNhjugvjCj0xMMr+J1sa8GcD0dI4utC2dx/w=',
+      ui: batchSDKUIConfig,
+      // defaultIcon: 'https://path.to/my/logo-192/png', // for Chrome desktop
+      // smallIcon: 'https://path.to/my/icon-96.png', // for Chrome Android
+      
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the button by its ID
     var button = document.getElementById("experiential-chat");
 
     // Add a click event listener to the button
