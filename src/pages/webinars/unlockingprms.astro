@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/LandingLayout.astro';
+
+import Hero from '../../components/widgets/Hero.astro';
+import CallToAction from '../../components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Uppercut Deep Cuts: Unlocking the full potential of PRM’s',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="resin-hero"
+    tagline="Upcoming Webinar"
+    title="Uppercut Deep Cuts: Unlocking the full potential of PRM’s"
+    subtitle="Join us on October 30th at 2pm EST for an thought-provoking session where we dive into the 'R' of PRM's, and how your organization can go from just managing a glorified affiliate program, to actually nurturing relationships that drive revenue both to and from your partners."
+    actions={[
+      { variant: 'primary', text: 'Register Now', href: 'https://app.zuddl.com/p/a/event/8a9fb4b4-a024-43c4-a4f5-004182548fac', icon: 'tabler:square-rounded-arrow-right' },
+    ]}
+  />
+
+  <div id="zuddl-embeddable-form" data-zuddl-event-id="8a9fb4b4-a024-43c4-a4f5-004182548fac" data-env="" style="width:100%;height:100%;overflow-y:scroll;"></div>
+  <link rel="stylesheet" href="https://static.zuddl.com/embed/reg-form.css">
+  <script>const global = globalThis;</script>
+  <script src="https://static.zuddl.com/embed/reg-form.js"></script>
+
+  <CallToAction
+    id="resin-cta"
+    title="Coming soon"
+    subtitle="Resin has an expected launch date around Early 2024! Join the waiting list to be notified of updates"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Join the waiting list',
+        href: 'https://uypfr5suyzz.typeform.com/to/H7De7dZh',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>
