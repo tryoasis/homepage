@@ -302,6 +302,18 @@ import { UI } from '~/utils/config';
     });
   });
 
+    window.ap3c = window.ap3c || {};
+    var ap3c = window.ap3c;
+    ap3c.cmd = ap3c.cmd || [];
+    ap3c.cmd.push(function() {
+        ap3c.init('ZSnAHF4HYOrXqburdXBwZXJjdXQ', 'https://ortto.tryuppercut.com/');
+        ap3c.track({v: 0});
+    });
+    ap3c.activity = function(act) { ap3c.act = (ap3c.act || []); ap3c.act.push(act); };
+    var s, t; s = document.createElement('script'); s.type = 'text/javascript'; s.src = "https://ortto.tryuppercut.com/app.js";
+    t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+
+
   document.addEventListener("DOMContentLoaded", function () {
     // Find the button by its ID
     var button = document.getElementById("resin-hero");
