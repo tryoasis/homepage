@@ -43,10 +43,17 @@ const metadata = {
   tagline="Schedule a proof-of-value demo"
   inputs={[
     {
-      label: 'Name',
-      name: 'name',
+      label: 'First Name',
+      name: 'first-name',
       type: 'text',
-      placeholder: 'John Doe',
+      placeholder: 'John',
+      required: true,
+    },
+    {
+      label: 'Last Name',
+      name: 'last-name',
+      type: 'text',
+      placeholder: 'Doe',
       required: true,
     },
     {
