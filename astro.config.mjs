@@ -10,6 +10,7 @@ import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
+import serviceWorker from "astrojs-service-worker";
 
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
@@ -36,6 +37,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
+    serviceWorker(),
     mdx(),
     icon({
       include: {
