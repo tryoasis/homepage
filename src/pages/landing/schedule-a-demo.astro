@@ -13,9 +13,10 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Contact from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'Schedule a Demo | Uppercut',
 };
 ---
 
@@ -27,7 +28,7 @@ const metadata = {
         {
           variant: 'secondary',
           text: 'Schedule a consultation',
-          href: 'https://calendly.com/jbohrman/30min',
+          href: 'https://www.tryuppercut.com/landing/schedule-a-demo',
         },
       ]}
       isSticky
@@ -36,53 +37,89 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2
-    tagline="Become a partner"
-    actions={[
-      { variant: 'primary', target: '_blank', text: 'Chat Now', href: 'https://wa.me/message/DUSWAIWLJG6DO1' },
-      { text: 'Schedule a chat', href: 'https://calendly.com/jbohrman/30min' },
-    ]}
-  >
-    <Fragment slot="title">
-      Let's grow <span class="text-primary dark:text-white highlight"
-      >together</span>. Tell us what your goals are.
-      <br />
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Let's tackle some obstacles as an ecosystem. Start a convo with us today and let's so how we can collaborate for success.
-    </Fragment>
-  </Hero2>
-
-  <!-- Features Widget *************** -->
+<Contact 
+  title="Learn how we can increase your partner ROI"
+  subtitle="Get a free no-obligation consultation where one of our experts will walk you through our proof-of-value demonstration and how we can help you grow your total partnership ROI."
+  tagline="Schedule a proof-of-value demo"
+  inputs={[
+    {
+      label: 'Name',
+      name: 'name',
+      type: 'text',
+      placeholder: 'John Doe',
+      required: true,
+    },
+    {
+      label: 'Email',
+      name: 'email',
+      type: 'email',
+      placeholder: 'Your Email',
+      required: true,
+    },
+    {
+      label: 'Company',
+      name: 'company',
+      type: 'text',
+      placeholder: 'Your Company',
+      required: true,
+    },
+    {
+      label: 'Website',
+      name: 'website',
+      type: 'text',
+      placeholder: 'Your Website',
+      required: true,
+    },
+    {
+      label: 'Partner Team Size',
+      name: 'partner-team-size',
+      type: 'number',
+      placeholder: 'Your Partnership Team Size',
+      required: true,
+    },
+  ]}
+  textarea={{
+    label: 'Message',
+    name: 'message',
+    placeholder: 'What is the main priority in your partner program right now? ',
+    required: true,
+  }}
+  disclaimer={{
+    label: 'By submitting this form, you agree to our Privacy Policy and Terms of Service.',
+    name: 'disclaimer',
+    required: true,
+  }}
+  button="Schedule a Demo"
+  id="schedule-demo"
+  description="We'll reach out to you within 24 hours to schedule a time to chat."
+  />
 
   <Features
     id="features"
-    title="How We Approach Partnerships"
-    subtitle="In our ecosystem, we treat our partners like our customers. We want to make sure you have a phenomonal experience working with us."
+    title="What we'll cover in your POV demonstration"
+    subtitle="In your free proof-of-value demo, we'll cover the following:"
     columns={2}
     items={[
       {
-        title: 'Discounts and early access',
+        title: 'Tooling and Processes',
         description:
-          'By being a Uppercut partner, you will have access to discounts and early access to both our own, and the ecosystems products and services.',
+          'We will walk you through our tooling and processes to help you understand how we can help you grow your partnership program.',
         icon: 'tabler:coin',
       },
       {
-        title: 'Co-marketing Opportunities',
-        description: `We work each month to provide our partners with co-marketing opportunities to help you grow your business.`,
+        title: 'Our client experience',
+        description: `We will dive into what it means to be an Uppercut customer and the experience you can expect when working with us`,
         icon: 'tabler:speakerphone',
       },
       {
-        title: 'Hosted Sales Pages',
+        title: 'Potential Deliverables',
         description:
-          'For partners in our Homies and above teir, we will host a sales page for your product or service on our website.',
+          'We will walk you through our potential deliverables to help you understand how we can help you enable your partner success.',
         icon: 'tabler:building-store',
       },
       {
-        title: 'Account Mapping',
-        description: `We will work with you to map out your accounts and help you identify opportunities to grow your business.`,
+        title: '360° Partnership ROI Analysis',
+        description: `We'll walk you through our 360° Partnership ROI Analysis to help you identify exactly where we will be able to help you grow your partnership revenue.`,
         icon: 'tabler:arrows-right-left',
       },
     ]}
@@ -338,19 +375,12 @@ const metadata = {
       text: 'Chat with us instantly',
       href: 'https://wa.me/message/DUSWAIWLJG6DO1',
       icon: 'tabler:brand-whatsapp',
-    }, {
-      variant: "secondary",
-      target: '_blank',
-      id: 'partner-benefits-download',
-      text: 'Download Benefits Sheet',
-      href: 'https://drive.google.com/uc?export=download&id=1owraS8ntnh6dqdrmaHoT314YZHcuk8X_',
-      icon: 'tabler:file-download',
-    }]}
+    },]}
   >
-    <Fragment slot="title">Learn about our partner experience</Fragment>
+    <Fragment slot="title">Learn how we can boost your partner ROI</Fragment>
 
     <Fragment slot="subtitle">
-      Chat with a member of our team to learn more about our partner experience and how we can grow together.
+      Chat with a member of our team to learn more about our client experience and how we can help you grow.
     </Fragment>
   </CallToAction>
 

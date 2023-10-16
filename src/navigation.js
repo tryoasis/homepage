@@ -71,7 +71,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Schedule a chat', href: 'https://calendly.com/jbohrman/30min', target: '_blank' }],
+  actions: [{ text: 'Schedule a chat', href: 'https://www.tryuppercut.com/landing/schedule-a-demo', target: '_blank' }],
 };
 
 export const footerData = {

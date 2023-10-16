@@ -413,7 +413,7 @@
               "required": ["colors", "fonts"]
             }
           },
-          "required": ["default", "dark"]
+          "required": ["default", "light"]
         }
       },
       "required": ["theme", "tokens"]
