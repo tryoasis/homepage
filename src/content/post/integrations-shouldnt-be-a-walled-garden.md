@@ -9,7 +9,7 @@ tags:
     - growth
     - unified apis
 metadata:
-    canonical: https://www.tryuppercut.com/blog/integrations-shouldnt-be-walled-gardens
+    canonical: https://www.tryuppercut.com/integrations-shouldnt-be-walled-gardens
 ---
 
 Integration has become a strategic imperative for modern software companies. The ability to connect and exchange data with third-party apps and services is now a baseline expectation for any platform. Users demand seamless interoperability.

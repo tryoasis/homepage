@@ -9,7 +9,7 @@ tags:
     - churn
     - experience
 metadata:
-    canonical: https://www.tryuppercut.com/blog/experential-partner-relationships
+    canonical: https://www.tryuppercut.com/experential-partner-relationships
 ---
 
 I can tell you the number one reason that partners churn out. But before I do that, let's think about what the phrase "partner experience" means to you...does it mean what PRM your organizations uses? Does it mean your commission payout structure? Or is it more than that? The definition of experience according to Oxford is "an event or occurrence that leaves an impression on someone."
