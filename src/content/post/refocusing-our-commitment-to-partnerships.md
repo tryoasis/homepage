@@ -9,7 +9,7 @@ tags:
     - growth
     - unified apis
 metadata:
-    canonical: https://www.tryuppercut.com/blog/refocusing-our-commitment-to-partnerships
+    canonical: https://www.tryuppercut.com/refocusing-our-commitment-to-partnerships
 ---
 
 At Uppercut, we believe that partnerships are the resin that bonds business relationships together and drives success. As we look ahead to the second half of 2023, we are reaffirming and evolving our commitment to partnership-focused consulting. While integrations remain crucial, we aim to position integration management as an enabler of partnerships versus the sole focus.
