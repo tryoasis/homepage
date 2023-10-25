@@ -61,12 +61,8 @@ export const headerData = {
           href: getPermalink('/partners/become-a-partner'),
         },
         {
-          text: 'Mindmatrix',
-          href: getPermalink('/partners/mindmatrix'),
-        },
-        {
-          text: 'Reveal',
-          href: getPermalink('/partners/reveal'),
+          text: 'Partnership Leaders',
+          href: getPermalink('/partners/partnership-leaders'),
         },
       ],
     },

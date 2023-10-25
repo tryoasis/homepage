@@ -169,23 +169,6 @@ import { UI } from '~/utils/config';
 
   document.addEventListener("DOMContentLoaded", function () {
     // Find the button by its ID
-    var button = document.getElementById("mindmatrix-header");
-
-    // Add a click event listener to the button
-    button.addEventListener("click", function () {
-      // Track the event using Segment
-      analytics.track("Mindmatrix Header Clicked", {
-        // You can include additional properties here
-        button_text: "Schedule a consultation",
-        value: 12.75,
-        currency: "USD",
-        // Add any other relevant properties
-      });
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the button by its ID
     var button = document.getElementById("partner-chat");
 
     // Add a click event listener to the button

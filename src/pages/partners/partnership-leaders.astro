@@ -1,0 +1,134 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Image from '~/components/common/Image.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SaaS Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Schedule a consultation',
+          href: 'https://calendly.com/jbohrman/30min',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+  <Hero2
+    logo="https://asset.brandfetch.io/idHv_Ax9-0/ido3AGYPwX.svg"
+    tagline="Join the Leading Global Community in Partnerships"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Apply Now', href: 'https://refer.partnershipleaders.com/jamesbohrman' },
+    ]}
+    image={{
+      src: 'https://www.hockeystickadvisory.com/hs-fs/hubfs/Sydney%20Event%20LR-68.jpg?width=4000&height=2668&name=Sydney%20Event%20LR-68.jpg',
+      alt: 'Partnership Leaders',
+    }}
+  >
+    <Fragment slot="title">
+      Do you <span class="text-primary dark:text-white highlight"
+      >thrive</span> on building bridges 🌉?
+      <br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Access the premier community for the best Partnerships, Channel, Alliances, BD and Ecosystem professionals around the world. Get a $50 credit through Uppercut.
+        </span>
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Welcome to Partnership Leaders"
+    subtitle="Unlock unparalleled opportunities by becoming a part of our exclusive community of top-tier leaders and experts in the realm of Partnerships and beyond."
+    columns={2}
+    items={[
+      {
+        title: 'Build and learn from the best',
+        description:
+          'Connect with the best and brightest in the industry. Learn from their experiences and share your own.',
+        icon: 'tabler:books',
+      },
+      {
+        title: 'Access exclusive opportunities',
+        description: `Get access to exclusive events, collaboration opportunities, and resources to help you grow your career.`,
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Meet key decision makers',
+        description:
+          'Connect with the best and brightest in the industry. Access key insights into the desision making process of the top partnerships in the world.',
+        icon: 'tabler:affiliate',
+      },
+      {
+        title: 'Grow a network',
+        description: `Connect with other members through a private Slack community, and join exclusive events.`,
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+
+  <Brands
+  title="Why you should join Partnership Leaders"
+  subtitle=" Join the 1500+ leaders transforming Partnerships ."
+  icons={[]}
+/>
+
+<div class="flex justify-center">
+  <Image width={800} src="https://www.hockeystickadvisory.com/hs-fs/hubfs/logos-applynow%20(4).webp?width=2200&height=1500&name=logos-applynow%20(4).webp" alt="Partnership Leaders" />
+</div>
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      target: '_blank',
+      id: 'partner-chat',
+      text: 'Apply for a membership',
+      href: 'https://refer.partnershipleaders.com/jamesbohrman',
+    },
+    ]}
+  >
+    <Fragment slot="title">Join the premier community for partner professionals</Fragment>
+
+    <Fragment slot="subtitle">
+      Apply for membership today and get a $50 discount through Uppercut
+    </Fragment>
+  </CallToAction>
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with Uppercut's blog"
+    information={`Explore our collection of articles, guides, and tutorials on partner operations, and effectively building partner relationships.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#FFEDF4] dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

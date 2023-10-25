@@ -208,6 +208,7 @@ export interface Form {
 // WIDGETS
 export interface Hero extends Headline, Widget {
   content?: string;
+  logo?: string | unknown;
   image?: string | unknown;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
