@@ -8,6 +8,7 @@ tags:
     - parnerships
     - churn
     - experience
+slug: experential-partner-relationships
 metadata:
     canonical: https://www.tryuppercut.com/experential-partner-relationships
 ---

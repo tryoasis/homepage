@@ -6,6 +6,7 @@ import Button from '~/components/ui/Button.astro';
 export interface Props {
   title?: string;
   subtitle?: string;
+  logo?: string;
   tagline?: string;
   content?: string;
   actions?: string | CallToAction[];
@@ -15,6 +16,7 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
+  logo = await Astro.slots.render('logo'),
   tagline,
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
@@ -28,14 +30,19 @@ const {
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
       <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
-        {
-          tagline && (
+        <div class="flex flex-col items-start">
+          {logo && (
+            <div class="max-w-xs mb-4">
+              <img src={logo} alt="Logo" />
+            </div>
+          )}
+          {tagline && (
             <p
               class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
               set:html={tagline}
             />
-          )
-        }
+          )}
+        </div>
         {
           title && (
             <h1
