@@ -8,7 +8,7 @@ import type { Features } from '~/types';
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.s.render('subtitle'),
-  tagline = await Astro.s.render('tagline'),
+  tagline = await Astro.slots.render('tagline'),
   image,
   items = [],
   columns,
