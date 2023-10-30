@@ -184,6 +184,17 @@ import { UI } from '~/utils/config';
     });
   });
 
+  (function(d, w, c) {
+        w.BrevoConversationsID = '653f35b2d1fc0d1e3b7a8fc0';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+
   document.addEventListener("DOMContentLoaded", function () {
     // Find the button by its ID
     var button = document.getElementById("partner-benefits-download");

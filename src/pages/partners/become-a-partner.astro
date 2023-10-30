@@ -39,8 +39,8 @@ const metadata = {
   <Hero2
     tagline="Become a partner"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Chat Now', href: 'https://wa.me/message/DUSWAIWLJG6DO1' },
-      { text: 'Schedule a chat', href: 'https://calendly.com/jbohrman/30min' },
+      { variant: 'primary', target: 'BrevoConversations', text: 'Chat Now', href: '#brevoConversationsExpanded' },
+      { text: 'Schedule onboarding call', href: 'https://7cdbb5bd.sibforms.com/serve/MUIFADxEdowceLTJX9tBPyObpuoQHzd60RTud_2oeGQ1foXpqFRHGl3M6NbexI6gKXJVvzjBO_7SkmlD53ttXDeR_Yqms2I4ETwCOOHreagLFAG5HvQcoyG5Mf_g0mw1gsqYcAf8z-qvNaHJFTD7NnsmJKEStkmKX7wTdZDEW6HxL4J815Qusf_wFLs7Agq_mMUE_L-2rc9yJrEb' },
     ]}
     image={{
       src: 'https://images.pexels.com/photos/2542332/pexels-photo-2542332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -333,11 +333,10 @@ const metadata = {
   <CallToAction
     actions={[{
       variant: "primary",
-      target: '_blank',
       id: 'partner-chat',
       text: 'Chat with us instantly',
-      href: 'https://wa.me/message/DUSWAIWLJG6DO1',
-      icon: 'tabler:brand-whatsapp',
+      href: '#brevoConversationsExpanded',
+      icon: 'tabler:message',
     }, {
       variant: "secondary",
       target: '_blank',

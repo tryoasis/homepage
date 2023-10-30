@@ -16,7 +16,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: 'Schedule a Demo | Uppercut',
+  title: 'Register as a Partner | Uppercut',
 };
 ---
 
@@ -38,14 +38,11 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
 <Contact 
-  title="Learn how we can increase your partner ROI"
-  subtitle="Get a free no-obligation consultation where one of our experts will walk you through our proof-of-value demonstration and how we can help you grow your total partnership ROI."
-  tagline="Schedule a proof-of-value demo"
+  title="Schedule your partner onboarding call"
+  subtitle="We'll walk you through our process and help you understand how we our collaboration will look."
+  tagline="Become a Uppercut partner"
   />
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/jbohrman/30min" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
+  <iframe width="940" height="1105" src="https://7cdbb5bd.sibforms.com/serve/MUIFAPvD1A-ygEmUKQaKPoylaVyPpvsTHJsDaIbqFPaisnreARRz9GJYPUK3H2cWUwdbx0FYChYZZScU2KeqPtCn6n4yVCMi8qG4sGjkHCp_TZ_hNimACQTD3YnzFsEQ-YI7UTFm_OGXz1z-3igThXdPLyJSDI-E1syOns-F_dDa0rY2PhZB-7aYS-LquXJaprRNAihQ3KNQX5DU" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
   <Features
     id="features"
     title="What we'll cover in your POV demonstration"
@@ -56,7 +53,7 @@ const metadata = {
         title: 'Tooling and Processes',
         description:
           'We will walk you through our tooling and processes to help you understand how we can help you grow your partnership program.',
-        icon: 'tabler:settings',
+        icon: 'tabler:coin',
       },
       {
         title: 'Our client experience',
@@ -67,7 +64,7 @@ const metadata = {
         title: 'Potential Deliverables',
         description:
           'We will walk you through our potential deliverables to help you understand how we can help you enable your partner success.',
-        icon: 'tabler:box',
+        icon: 'tabler:building-store',
       },
       {
         title: '360° Partnership ROI Analysis',
@@ -76,7 +73,6 @@ const metadata = {
       },
     ]}
   />
-
   <Brands
   title="Our Ecosystem"
   subtitle="You'll be in good company by partnering with us."
