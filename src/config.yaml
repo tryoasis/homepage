@@ -1,6 +1,6 @@
 site:
   name: Oasis
-  site: 'https://www.tryoasis.com'
+  site: 'https://www-tryoasis-io.vercel.app/'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Oasis
     template: '%s — Oasis'
-  description: "\U0001F680 The Real-time Communication Suite for Nearbound Collaboration"
+  description: "\U0001F680 The Real-time Collaboration Suite for Partner Collaboration"
   robots:
     index: true
     follow: true
@@ -71,7 +71,7 @@ ui:
   tokens:
     default:
       fonts:
-        sans: InterVariable
+        sans: PoppinsVariable
         serif: var(--ph-font-sans)
         heading: var(--ph-font-sans)
       colors:
