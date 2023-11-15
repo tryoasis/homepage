@@ -11,7 +11,7 @@ metadata:
   title:
     default: Oasis
     template: '%s — Oasis'
-  description: "\U0001F680 The Real-time Communication Suite for Nearbound Collaboration"
+  description: "\U0001F680 The brandable hub for real time partner collaboraiton."
   robots:
     index: true
     follow: true
