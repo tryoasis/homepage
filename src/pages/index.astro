@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Uppercut - The best solution for partnership-led growth',
+  title: 'Oasis - The best solution for partnership-led growth',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,32 +25,26 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get a free consultation',
-        href: 'https://calendly.com/jbohrman/30min',
+        text: 'Join the waiting list',
+        href: 'https://uypfr5suyzz.typeform.com/to/H7De7dZh',
         target: '_blank',
-        icon: 'tabler:calendar-event',
       },
       { text: 'Learn more', href: '#sauce' },
     ]}
   >
     <Fragment slot="title">
-      The Partnerships Agency for the Modern Enterprise 
+      Your partner Oasis is beckoning.
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Whatever your partner program goals are, we can help you get there. Our processes and tool stack are designed to help you get the most ROI out of your partner relationships.
+        Current PRM solutions are a desert of missed collaboration opportunities. <br class="hidden sm:inline" /> Come learn why real-time PRM is the future of partner management.
     </Fragment>
   </Hero>
 
-  <div id="tolstoy-container" style="line-height:0;overflow:hidden;height:100%;width:100%;text-align:center">
-    <iframe id="tolstoy" class="mx-auto px-4 mb-16" src="https://player.gotolstoy.com/polcxf6xc0xc8?host"
-            style="width:100%;height:640px;max-width:960px"
-            scrolling="no" frameborder="0" allow="autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;">
-    </iframe>
-    <script src="https://widget.gotolstoy.com/script.js" defer></script>
-  </div>
-
+  <div class="flex flex-wrap md-w-40 pb-10 justify-center">
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="650" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FNach0N9pUN6NtAXswQSaoq%2FOasis-UI-Mockups%3Ftype%3Ddesign%26node-id%3D6928-5904%26t%3DNqCbUsakVUH6GKfW-1%26scaling%3Dscale-down%26page-id%3D6421%253A135421%26mode%3Ddesign" allowfullscreen></iframe>
+</div>
 
   <!-- Note Widget ******************* -->
 
@@ -61,44 +55,32 @@ const metadata = {
   <Features
     id="sauce"
     tagline="The Sauce"
-    title="What makes Uppercut unique?"
+    title="What makes Oasis unique?"
     subtitle="We're your partner for building nearbound trust and authenticity. We're not just LARPing as partner professionals, we've drunk the koolaid."
     items={[
       {
-        title: 'Partner Operations',
+        title: 'Real-time PRM',
         description:
-          'We will tweak your operations and tooling to maximize program efficiency. Whether you need a full overhaul or just a few tweaks, we can help.',
-        icon: 'tabler:settings',
+          'Communicate with your partners in real-time instead of asynschronously via one-off email communications. ',
+        icon: 'tabler:messages',
       },
       {
-        title: 'Collaborative Selling',
+        title: 'Cross-ecosystem Collaboration',
         description:
-          'Ready to start selling with your partners? We can help you build a collaborative selling program that will help you close more deals.',
+          'Add partners from other ecosystems to your Oasis and collaborate as a cohesive group in real-time.',
         icon: 'tabler:heart-handshake',
       },
       {
-        title: 'Onboarding Strategy',
+        title: 'Embedded Account Mapping',
         description:
-          'We will help you build a partner onboarding strategy that will help you get your partners up and running quickly, while providing a great experience.',
-        icon: 'tabler:arrow-ramp-left',
+          'Invite partners from both within your Oasis and externally to map CRM accounts to your own.',
+        icon: 'tabler:map',
       },
       {
-        title: 'Attribution Analytics',
+        title: 'Attributable Org Profiles',
         description:
-          'Is your attribution a black box? We can help you build a custom attribution model that will help you understand the true ROI of your partner program.',
+          'Track the performance of the organizations in your Oasis in real-time with attributable organicational profiles.',
         icon: 'tabler:dashboard',
-      },
-      {
-        title: 'Account Mapping',
-        description:
-          "We'll help you build a program that will help you map your partner's accounts to your own, so you can get the most out of your partner relationships.",
-        icon: 'tabler:compass',
-      },
-      {
-        title: 'Experience-led Relationships',
-        description:
-          'We will help plan experiences that will keep your partners engaged and excited about your program. Let us handle that planning, so you can  just execute.',
-        icon: 'tabler:bulb',
       },
     ]}
   />
@@ -107,23 +89,23 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Why Uppercut"
-    title="Uppercut's Blueprint: Your Fractional PSM"
+    tagline="Why Oasis?"
+    title="Realtime Collaboration: The Future of Nearbound"
     items={[
       {
-        title: 'Engineering + Partner Success',
+        title: 'Community + Collaboration',
         description:
-          'Reap the benefits of a team that has a deep understanding of the technical aspects of partnerships, as well as the operational side.',
+          'We believe that the power of tools like Slack lies in the ability to send a message while it is top of mind, and get a reply at the earliest possible convenience. This is a missing piece in PRMs today.',
       },
       {
-        title: 'Engaging in Ecosystems',
+        title: 'Seamless Login Experience',
         description:
-          'We always do everything we can to learn about our clients ecosystem, so we can provide the most value possible.',
+          'Nobody wants yet another tool to log in to, and another password to remember. But guess what? We don’t even support passwords! We use WebAuthn to provide a seamless login experience.',
       },
       {
-        title: 'A Bit Client Obsessed',
+        title: 'Isolated by Design',
         description:
-          'We are always looking for new ways to up the ante on our client experience, and we go feral for providing value.',
+          'When you create your Oasis, you are creating your own private partner hub to collaborate in real-time with your ecosystem. You can also invite partners from other Oasis to collaborate with you via "Roads".',
       },
     ]}
     image={{
@@ -137,13 +119,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#FFEDF4] dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
-  <!-- Steps Widget ****************** -->
+  <!--
 
   <Steps
     title="Get your dream partner program off the ground with a fractional PSM team."
@@ -241,7 +223,7 @@ const metadata = {
     </Fragment>
   </Features2>
 -->
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- HighlightedPosts Widget ******* 
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
@@ -249,45 +231,45 @@ const metadata = {
                         Each new article will be an exclusive look into the world of partnerships as well as new announcements
                         related to Uppercut.
                 `}
-  />
+  />-->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into what makes Uppercut special."
+    subtitle="Dive into the following questions to gain insights into what makes Oasis special."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'So what do you actually do?',
+        title: 'So.....its Slack?',
         description:
-          "Our engagements vary, but typically we are involved in building out the partner operations framework for our clients such as atrribution, strategy, and technical implementations. We're also happy to help with any other partner-related projects you might have.",
+          "Listen, everything is derivative and all that. But we're not just slapping a new coat of paint on Slack into a new vertical. While Slack can be used for partner collaboration, it's not built for it, and it's definitely not brandable. We're building Oasis from the ground up to be a real-time partner collaboration tool.",
       },
       {
-        title: 'Can you help find partners for me?',
+        title: 'Why is realtime collaboration important?',
         description:
-          "Depending on your package, yes we do handle partner outreach. We have a network of partners that we can reach out to on your behalf, and we can also help you build a strategy for finding partners that are a good fit for your program.",
+          "We believe that the power of tools like Slack lies in the ability to send a message while it is top of mind, and get a reply at the earliest possible convenience. This is a missing piece in PRMs today.",
       },
       {
-        title: 'How much does your service cost?',
+        title: 'Can I use my own custom domain?',
         description:
-          'We have a fairly flexible pricing model which you can find linked at the top of our page, but we typically charge a quarterly retainer for our services.',
+          'While we wont be supporting that in the first version, it is 100% on our roadmad to be launched soon after.',
       },
       {
-        title: 'Do you handle webinars?',
+        title: 'What tools do you support for account mapping?',
         description:
-          "For most engagements, we handle the planning aspect of webinars, as well as conversion plans, but the execution is typically handled by the client. We're happy to help with execution as well, but that is not included in our standard packages.",
+          "Right now, only Hubspot, but in the future we will be supporting Salesforce, Pipedrive, and more. If you have a specific tool you'd like us to support, please let us know.",
       },
       {
-        title: "How many people are on your team?",
+        title: "What's your pricing model?",
         description:
-          "At the moment, Uppercut is only two very talented people, but we're looking to expand our team in the near future. We also have a network of partners that we can work with to help our clients with any needs that we can't handle ourselves.",
+          "We plan to offer a free teir up to 5 partners, and then a paid teir for larger organizations. We're still working out the details, but we're aiming to be affordable for even the smallest of organizations.",
       },
       {
-        title: 'What kind of tools do you use?',
+        title: 'How do you handle security?',
         description:
-          "We use a variety of tools to help our clients, but we typically use Segment, Hubspot, and Clearbit for our engagements. We're also happy to work with any tools that you might already be using.",
+          "We use WebAuthn for authentication, which is the same technology that's used for passwordless authentication.",
       },
     ]}
   />
@@ -309,19 +291,19 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get a free consultation',
+        text: 'Reserve your Oasis',
         href: 'https://calendly.com/jbohrman/30min',
         target: '_blank',
-        icon: 'tabler:calendar-event',
+        icon: 'tabler:clipboard-list',
       },
     ]}
   >
     <Fragment slot="title">
-      Tap into <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">a fractional PSM team</span>
+      Reserve your custom Oasis  <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">today</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Get your partner ops off the ground for a fraction of the cose. <br class="hidden md:inline" />Let us do the heavy lifting.
+      Save your Oasis by signing up to our waitlist <br class="hidden md:inline" /> and be the first to know when we launch.
     </Fragment>
   </CallToAction>
 </Layout>
