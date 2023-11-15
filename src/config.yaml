@@ -1,6 +1,6 @@
 site:
-  name: Uppercut
-  site: 'https://www.tryuppercut.com'
+  name: Oasis
+  site: 'https://www.tryoasis.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Uppercut
-    template: '%s — Uppercut'
-  description: "\U0001F680 The Partnerships Agency for the Modern Enterprise "
+    default: Oasis
+    template: '%s — Oasis'
+  description: "\U0001F680 The Real-time Communication Suite for Nearbound Collaboration"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Uppercut
+    site_name: Oasis
     images:
       - url: '~/assets/images/default.png'
         width: 1200
