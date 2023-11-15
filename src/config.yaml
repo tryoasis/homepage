@@ -1,6 +1,6 @@
 site:
   name: Oasis
-  site: 'https://www.tryoasis.com'
+  site: 'https://www-tryoasis-io.vercel.app/'
   base: '/'
   trailingSlash: false
 
