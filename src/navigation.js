@@ -16,20 +16,20 @@ export const headerData = {
       ],
     },
     {
-      text: 'Partners',
+      text: 'About',
       links: [
         {
-          text: 'Become a Partner',
-          href: getPermalink('/partners/become-a-partner'),
+          text: 'Pricing',
+          href: getPermalink('/pricing'),
         },
         {
-          text: 'Partnership Leaders',
-          href: getPermalink('/partners/partnership-leaders'),
+          text: 'Join the waitlist',
+          href: ('https://forms.fillout.com/t/bHn1ZhE6oLus'),
         },
       ],
     },
   ],
-  actions: [{ text: 'Enter the Oasis 🏝', href: '/waiting-list', target: '_blank' }],
+  actions: [{ text: 'Join the waitlist', href: 'https://forms.fillout.com/t/bHn1ZhE6oLus', target: '_blank' }],
 };
 
 export const footerData = {
