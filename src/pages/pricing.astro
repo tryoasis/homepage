@@ -8,7 +8,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Pilot License',
 };
 ---
 
@@ -16,72 +16,20 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Pricing"
-    title="Unbeatable Engagement Models"
-    subtitle="Flexible pricing plans for all kinds of businesses"
+    tagline="Join the Pilot Program"
+    title="Power your cross-channel collaboration with Oasis"
+    subtitle="Become an early adopter and gain access to exclusive benefits."
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
-    title="Our packages"
-    subtitle="Choose from a range of pricing plans designed to accommodate different budgets and requirements."
     prices={[
       {
-        title: 'Explorers Package',
-        subtitle: 'For small ecosystems with big dreams',
-        price: ["Free"],
-        period: 'Up to 10 partners',
-        items: [
-          {
-            description: 'Embedded Account Mapping',
-          },
-          {
-            description: 'Branded real-time partner chat',
-          },
-          {
-            description: 'Org and User Profiles',
-          },
-          {
-            description: 'WebAuthn login',
-          },
-        ],
-        callToAction: {
-          text: 'Chat with us',
-          href: '#brevoConversationsExpanded',
-        },
-      },
-      {
-        title: 'Adventurers Package',
-        subtitle: 'For scaling ecosystems with passion',
-        price: ["$6"],
-        period: 'Per Partner/Per Month',
-        items: [
-          {
-            description: 'Everything in Explorers Package',
-          },
-          {
-            description: 'Adventurers Integrations',
-          },
-          {
-            description: 'Ephemeral Co-selling Chat',
-          },
-          {
-            description: 'Org and User Profiles',
-          },
-        ],
-        callToAction: {
-          text: 'Chat with us',
-          href: '#brevoConversationsExpanded',
-        },
-        hasRibbon: false,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise License',
+        title: 'Pilot License',
         subtitle: 'Tap into unbeatable partner collaboration.',
-        price: ["$160k"],
-        period: 'Unlimited Usage',
+        price: ["$35k"],
+        period: '3 Months',
         items: [
           {
             description: 'Fully unlocked platform',
@@ -90,15 +38,15 @@ const metadata = {
             description: 'Unlimited partners',
           },
           {
-            description: 'SSO (Coming Soon)',
+            description: 'Unlimited users',
           },
           {
-            description: 'SOC2 Compliance (Coming Soon)',
+            description: '30+ Lead Integration Sources',
           },
         ],
         callToAction: {
-          text: 'Chat with us',
-          href: '#brevoConversationsExpanded',
+          text: 'Join the Beta',
+          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
         },
       },
     ]}
@@ -153,11 +101,11 @@ const metadata = {
     isReversed={true}
     items={[
       {
-        title: 'Explore plans',
+        title: 'Sign Up',
         icon: 'tabler:number-1',
       },
       {
-        title: 'Select a plan',
+        title: 'Complete Onboarding',
         icon: 'tabler:number-2',
       },
       {
@@ -169,7 +117,7 @@ const metadata = {
         icon: 'tabler:number-4',
       },
       {
-        title: 'Map Accounts',
+        title: 'Share Leads',
         icon: 'tabler:number-5',
       },
       {
