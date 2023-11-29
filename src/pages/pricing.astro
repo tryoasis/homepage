@@ -8,7 +8,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pilot License',
+  title: 'Pricing',
 };
 ---
 
@@ -26,10 +26,60 @@ const metadata = {
   <Prices
     prices={[
       {
-        title: 'Pilot License',
-        subtitle: 'Tap into unbeatable partner collaboration.',
-        price: ["$35k"],
-        period: '3 Months',
+        title: 'Explorer Package',
+        subtitle: 'Your first step into the Oasis',
+        price: ["Free"],
+        period: 'Up to 10 partners',
+        items: [
+          {
+            description: 'Embedded Account Mapping',
+          },
+          {
+            description: 'Branded real-time partner chat',
+          },
+          {
+            description: 'Org and User Profiles',
+          },
+          {
+            description: 'WebAuthn login',
+          },
+        ],
+        callToAction: {
+          text: 'Join the Beta',
+          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
+        },
+      },
+      {
+        title: 'Adventurer Package',
+        subtitle: 'Your adventure into collaboration.',
+        price: ["$6"],
+        period: 'Per Partner/Per Month',
+        items: [
+          {
+            description: 'Everything in Explorers Package',
+          },
+          {
+            description: 'Adventurers Integrations',
+          },
+          {
+            description: 'Ephemeral Co-selling Chat',
+          },
+          {
+            description: 'Org and User Profiles',
+          },
+        ],
+        callToAction: {
+          text: 'Join the beta',
+          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Enterprise Pilot',
+        subtitle: 'Your epic story of mutual growth',
+        price: ["$160k"],
+        period: 'Unlimited Usage',
         items: [
           {
             description: 'Fully unlocked platform',
@@ -38,15 +88,15 @@ const metadata = {
             description: 'Unlimited partners',
           },
           {
-            description: 'Unlimited users',
+            description: 'SSO Integration',
           },
           {
-            description: '30+ Lead Integration Sources',
+            description: 'SOC2 Compliance (Coming Soon)',
           },
         ],
         callToAction: {
-          text: 'Join the Beta',
-          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
+          text: 'Chat with us',
+          href: 'https://calendly.com/jbohrman/30min',
         },
       },
     ]}
