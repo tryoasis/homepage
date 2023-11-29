@@ -142,6 +142,7 @@ export interface Price {
   description?: string;
   price?: number;
   period?: string;
+  subperiod?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
   hasRibbon?: boolean;
