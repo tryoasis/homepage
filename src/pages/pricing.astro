@@ -26,10 +26,60 @@ const metadata = {
   <Prices
     prices={[
       {
+        title: 'Community Plan',
+        subtitle: 'The first step into the Oasis',
+        price: ["$250"],
+        period: 'Per Month | Community Features Only',
+        items: [
+          {
+            description: 'Unlimited users',
+          },
+          {
+            description: 'Branded real-time partner chat',
+          },
+          {
+            description: 'Org and User Profiles',
+          },
+          {
+            description: 'WebAuthn login',
+          },
+        ],
+        callToAction: {
+          text: 'Get a 14-day free trial',
+          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
+        },
+      },
+      {
+        title: 'Sales Plan',
+        subtitle: 'Your path to co-selling success',
+        price: ["Flexible"],
+        period: 'Contact us for pricing',
+        items: [
+          {
+            description: 'Everything in Community Plan',
+          },
+          {
+            description: '50 Partner Minimum',
+          },
+          {
+            description: 'Ephemeral Co-selling Chat',
+          },
+          {
+            description: 'Org and User Profiles',
+          },
+        ],
+        callToAction: {
+          text: 'Get a instant quote',
+          href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
         title: 'Enterprise Pilot',
         subtitle: 'Your epic story of mutual growth',
-        price: ["$35k"],
-        period: 'Flat fee + 10.50 per exported lead per month',
+        price: ["$160k"],
+        period: 'Unlimited Usage',
         items: [
           {
             description: 'Fully unlocked platform',
@@ -38,18 +88,16 @@ const metadata = {
             description: 'Unlimited partners',
           },
           {
-            description: 'All features included',
+            description: 'SSO Integration',
           },
           {
-            description: 'Priority support',
+            description: 'SOC2 Compliance (Coming Soon)',
           },
         ],
         callToAction: {
-          text: 'Get 14 -Day Free Trial',
+          text: 'Chat with us',
           href: 'https://forms.fillout.com/t/bHn1ZhE6oLus',
         },
-        hasRibbon: true,
-        ribbonTitle: 'Lowest Price',
       },
     ]}
   />
