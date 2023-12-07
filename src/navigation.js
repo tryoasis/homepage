@@ -16,20 +16,11 @@ export const headerData = {
       ],
     },
     {
-      text: 'About',
-      links: [
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'Join the waitlist',
-          href: ('https://forms.fillout.com/t/bHn1ZhE6oLus'),
-        },
-      ],
+      text: 'Pricing',
+      href: getPermalink('/pricing'),
     },
   ],
-  actions: [{ text: 'Join the waitlist', href: 'https://forms.fillout.com/t/bHn1ZhE6oLus', target: '_blank' }],
+  actions: [{ text: 'Get a 14-day free trial', href: 'https://forms.fillout.com/t/bHn1ZhE6oLus', target: '_blank' }],
 };
 
 export const footerData = {
