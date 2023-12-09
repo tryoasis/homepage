@@ -13,7 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Fractional Partner Success Manager',
+  title: 'Ephemeral Co-selling Channels',
 };
 ---
 
@@ -35,24 +35,24 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Real-time PRM"
+    tagline="Ephemeral Co-selling"
     actions={[
       { variant: 'primary', target: '_blank', text: 'Join the waitlist', href: 'https://forms.fillout.com/t/bHn1ZhE6oLus' },
     ]}
     image={{
-      src: 'https://images.pexels.com/photos/7459424/pexels-photo-7459424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      src: '~/assets/images/roads.png',
       alt: 'Oasis Hero Image',
     }}
   >
     <Fragment slot="title">
-      Create a <span class="text-primary dark:text-white highlight"
-        >fully-brandable</span
-      > collaboration hub for your partners to exchange ideas<br />
+      Open <span class="text-primary dark:text-white highlight"
+        >temporary</span
+      > guest channels to co-sell across channels<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Give your partners a central hub to collaborate, share ideas, and grow together.  
+        Give your partners a place to invite warm leads to discuss opportunities with your team in real-time while keeping your data safe and secure.
     </Fragment>
   </Hero2>
 
@@ -60,14 +60,14 @@ const metadata = {
 
   <Features
     id="features"
-    title="Why choose realtime?"
-    subtitle="While there's nothing wrong with traditional PRM's, todays remote culture requires something more. By creating and brandable collaboration hub, you can give your partners a place to share ideas, collaborate, and grow together."
+    title="What is an ephermal channel?"
+    subtitle="When co-selling together, the common approach is to simply rely on hectic email threads with leads who are already managing a million other priorities. With co-selling channels, you can give warm leads a place to discuss your opportunity in real-time while keeping their confidential data secure and locked-down."
     columns={2}
     items={[
       {
         title: 'Stop relying on email',
         description:
-          'Email is a great tool, but it was never designed for collaboration. Give your partners a central location to communicate and discuss ideas in real-time.',
+          'Email is a great tool, but it was never designed for collaboration. Collaborate with leads in real-time, and keep your data secure.',
         icon: 'tabler:bulb',
       },
       {
@@ -76,25 +76,15 @@ const metadata = {
         icon: 'tabler:layers-intersect',
       },
       {
-        title: 'Brandable and customizable',
+        title: 'Keep your data secure',
         description:
-          'Customize the feel of your Oasis to match your brand. Add your logo, change the colors, and make it your own. All the way down to the URL and login. You cant do that with Slack even.',
-        icon: 'tabler:palette',
+          'Work through the buying process with your leads, and keep their data secure with our built-in security features.',
+        icon: 'tabler:lock',
       },
       {
-        title: 'Map accounts, and more',
-        description: `Take advantage of our embedded account mapping, and extra features that make it easy to collaborate on mapped accounts in chats`,
+        title: 'Build trust with your partners',
+        description: `Give your partners a place to invite warm leads to discuss opportunities with your team in real-time and in sync.`,
         icon: 'tabler:podium',
-      },
-      {
-        title: 'Seamless logins',
-        description: `With our passwordless WebAuthn integrations, your partners and other stakeholders don't need to  need to bother with another password.`,
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'User and Org Profiles',
-        description: `Give your partners a place to share their story, and show off their expertise. With our user and org profiles, you can give your partners a place to shine.`,
-        icon: 'tabler:droplet',
       },
     ]}
   />
@@ -284,7 +274,7 @@ const metadata = {
       {
         title: 'When are you planning to launch?',
         description:
-          'Good question! We plan to launch our first version of Oasis before the first of the new year. If you want to be notified when we launch, please sign up for the waitlist.',
+          'Good question! We plan to launch our first version os Oasis before the first of the new year. If you want to be notified when we launch, please sign up for the waitlist.',
         icon: 'tabler:chevrons-right',
       },
       {

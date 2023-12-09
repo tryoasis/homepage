@@ -9,7 +9,7 @@ tags:
     - data
     - ecosystems
 metadata:
-    canonical: https://www.tryuppercut.com/partner-ecosystems-web-standards
+    canonical: https://www.getoasis.io/partner-ecosystems-web-standards
 ---
 
 With the depreciation of third-party cookies and technologies like fingerprinting under increased scrutiny, marketers and advertisers are having to completely rework how they go about gathering key info about their audience and tracking attributable events. Even industries that largely have a high degree of trust involved have been affected by browsers doing away with third-party cookies and opting for a first-party cookie experience alltogether. 

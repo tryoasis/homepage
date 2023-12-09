@@ -9,7 +9,7 @@ tags:
     - churn
     - experience
 metadata:
-    canonical: https://www.tryuppercut.com/quantifying-partner-experience
+    canonical: https://www.getoasis.io/quantifying-partner-experience
 ---
 
 

@@ -42,6 +42,11 @@ const metadata = {
         The current approach to PRM is broken. Tap into an platform that favors synchronous collaboration.
     </Fragment>
   </Hero>
+
+  <div class="flex flex-wrap md-w-40 pb-10 justify-center">
+    <img src="../../src/assets/images/mockrocket-capture.png" />
+</div>
+
   <Note />
 
   <!-- Features Widget *************** -->
@@ -50,7 +55,7 @@ const metadata = {
     id="sauce"
     tagline="The Sauce"
     title="What makes Oasis unique?"
-    subtitle="We're your partner for building nearbound trust and authenticity. We're not just LARPing as partner professionals, we've drunk the koolaid."
+    subtitle="We're taking the stale and unfilled promise of PRMs and bringing the power of real-time collaboration to partnerships."
     items={[
       {
         title: 'Real-time PRM',
@@ -108,10 +113,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on heavy technical experience</h3>
-       Leverage a team that can help you architect a world-class partner operations framework
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">More than just an affiliate revenue tracking  stack</h3>
+      Oasis enables you to sync with your partners like never before while tapping into realtime co-selling features.
     </Fragment>
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
     </Fragment>
@@ -236,9 +240,9 @@ const metadata = {
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'So.....its Slack?',
+        title: 'Why would I not just use Slack?',
         description:
-          "Listen, everything is derivative and all that. But we're not just slapping a new coat of paint on Slack into a new vertical. While Slack can be used for partner collaboration, it's not built for it, and it's definitely not brandable. We're building Oasis from the ground up to be a real-time partner collaboration tool.",
+          "We aren't trying to compete with Slack for starters. But the simple answer to this is that our tool is build especially for GTM professionals and partnership teams to facilitate cross organizational collaboration, where Slack requires a restrictive Pro subscription to take advantage of cross-organizational collaboration to it's full extent. This can often cost tens of thousands of dollars at large organizations, where our base collaboration package will only require a monthly subscription of $350",
       },
       {
         title: 'Why is realtime collaboration important?',
@@ -246,24 +250,24 @@ const metadata = {
           "We believe that the power of tools like Slack lies in the ability to send a message while it is top of mind, and get a reply at the earliest possible convenience. This is a missing piece in PRMs today.",
       },
       {
-        title: 'Can I use my own custom domain?',
+        title: 'How does this compare to tools like PartnerStack?',
         description:
-          'While we wont be supporting that in the first version, it is 100% on our roadmap to be launched soon after.',
+          'PartnerStack and other PRM tools are great if you have a low-activity partnership program and are looking for a way to track revenue. But if you are looking to build a high-velocity partnership program that engages your partners frequently, you need a tool that enables you to collaborate with your partners in real-time.',
       },
       {
-        title: 'What tools do you support for account mapping?',
+        title: 'What integrations do you support for account mapping?',
         description:
           "Right now, only Hubspot, but in the future we will be supporting Salesforce, Pipedrive, and more. If you have a specific tool you'd like us to support, please let us know.",
       },
       {
         title: "What's your pricing model?",
         description:
-          "We plan to offer a free tier up to 10 partners, and then a paid tier for larger organizations. We're aiming to be affordable for even the smallest of organizations.",
+          "We offer two seperate pricing packages, one for our community features and one for our Sales plan. The community package is $350/mo and the Sales package is $2500/mo.",
       },
       {
         title: 'How do you handle security?',
         description:
-          "We use WebAuthn for authentication, which is the same technology that's used for passwordless authentication.",
+          "We use WebAuthn to handle passwordless auth, but we also plan to support enterprise SSO in the near future. All of our data is encrypted at the application level and we use a variety of security tools to ensure that our application is secure. For our enterprise customers, we offer the ability to host Oasis on your own infrastructure, and are working on E2EE channels that should be available in the near future.",
       },
     ]}
   />

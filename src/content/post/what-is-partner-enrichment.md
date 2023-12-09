@@ -9,7 +9,7 @@ tags:
     - enrichment
     - sales
 metadata:
-    canonical: https://www.tryuppercut.com/what-is-partner-enrichment
+    canonical: https://www.getoasis.io/what-is-partner-enrichment
 ---
 
 With the moonlighting of third-party cookies and changes in privacy laws changing the marketing landscape, revenue leaders are having to think very hard about how to measure intent and identify relavent opportunities while keeping customers privacy top of mind. In a 2021 report titled ["Next in Personalization"](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying), Mckinsey & Company found that 71% of respondents "expect personalization" from the brands they interact with, while also becoming frustrated when this need is not met. 

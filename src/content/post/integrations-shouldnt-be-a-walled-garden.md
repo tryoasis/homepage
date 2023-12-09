@@ -9,7 +9,7 @@ tags:
     - growth
     - unified apis
 metadata:
-    canonical: https://www.tryuppercut.com/integrations-shouldnt-be-walled-gardens
+    canonical: https://www.getoasis.io/integrations-shouldnt-be-walled-gardens
     
 ---
 

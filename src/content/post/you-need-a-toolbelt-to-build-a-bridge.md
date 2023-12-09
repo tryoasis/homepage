@@ -9,7 +9,7 @@ tags:
     - tooling
     - b2b
 metadata:
-    canonical: https://www.tryuppercut.com/you-need-a-toolbelt
+    canonical: https://www.getoasis.io/you-need-a-toolbelt
 ---
 
 How does one solve the problem of chaotic and inefficient partnership programs? That’s something I’m going to be diving heavily into over the next month or so, and believe very strongly about, because at the end of the day, we all want that sweet effervescent nectar of partner-sourced leads that we all strive for when running programs.
