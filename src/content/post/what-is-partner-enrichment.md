@@ -42,7 +42,7 @@ So now that we know what second party data is, let's look at what the future hol
 
 What if there was a better way? What if we could take the best parts of tools partner data sharing tools like [Reveal](https://www.reveal.co) and [Crossbeam](https://www.crossbeam.com), and have a solution that identified intent based on the data shared by a partner, and not a arbitrary third-party. 
 
-As circumstances would have it, that's exactly what we're working on with [Resin](https://resin.tryuppercut.com). I've always loved tools like Clearbit, but when I entered the partnerships space I knew there had to be a better way. The way we're approaching this is simple. Using OSS analytics libraries that use absolutely no third-party cookies, we're bulding the first Partner Intent Platform for enabling realtime enrichment of partner influence. 
+As circumstances would have it, that's exactly what we're working on with [Resin](https://resin.tryuppercut.com). I've always loved tools like Clearbit, but when I entered the partnerships space I knew there had to be a better way. The way we're approaching this is simple. Using OSS analytics libraries that use absolutely no third-party cookies, we're building the first Partner Intent Platform for enabling realtime enrichment of partner influence. 
 
 ### Partner influence omnipotence 🔮
 
